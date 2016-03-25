@@ -1,0 +1,12 @@
+[project]
+name = ksurf
+
+[alternatives.sv]
+name = Swedish
+primary = yes
+locale = sv_SE
+
+[alternatives.en]
+name = English
+url_prefix = /en/
+locale = en

@@ -1,0 +1,39 @@
+{
+  "nav": [
+    {
+      "url": "/",
+      "sv": "Hem",
+      "en": "Home"
+    },
+    {
+      "url": "/location",
+      "sv": "Hitta hit",
+      "en": "Location"
+    },
+    {
+      "url": "/news",
+      "sv": "Nyheter",
+      "en": "News"
+    },
+    {
+      "url": "/courses",
+      "sv": "Kurser",
+      "en": "Courses"
+    },
+    {
+      "url": "/rentals",
+      "sv": "Uthyrning",
+      "en": "Rentals"
+    },
+    {
+      "url": "/weather",
+      "sv": "Väder",
+      "en": "Weather"
+    },
+    {
+      "url": "/contact",
+      "sv": "Kontakta oss",
+      "en": "Contact"
+    }
+  ]
+}
