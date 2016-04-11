@@ -10,6 +10,3 @@ locale = sv_SE
 name = English
 url_prefix = /en/
 locale = en
-
-[packages]
-lektor-webpack-support = 0.1

@@ -79,7 +79,7 @@
     display: inline-block;
     width: 16px;
     height: 11px;
-    background:url(../static/flags.png) no-repeat;
+    background:url(flags.png) no-repeat;
     text-decoration: none;
 }
 

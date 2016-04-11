@@ -1,6 +1,4 @@
 PYTHON_BIN := .venv/bin
-BOOTSTRAP_RLS := https://github.com/twbs/bootstrap-sass/archive/v3.3.6.tar.gz
-BOOTSTRAP_DIR := webpack/bootstrap
 
 all: ubuntu-deps install
 
@@ -26,14 +24,3 @@ server:
 
 build: .venv
 	$(PYTHON_BIN)/lektor --project site build --output-path .build
-
-
-assets:
-	$(PYTHON_BIN)/lektor --project site build -f webpack
-
-
-bootstrap: $(BOOTSTRAP_DIR)/package.json
-
-
-$(BOOTSTRAP_DIR)/package.json:
-	curl -L $(BOOTSTRAP_RLS) | tar -zx -C $(BOOTSTRAP_DIR) --strip-components=1
