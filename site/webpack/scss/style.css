@@ -1,0 +1,106 @@
+
+/* Layout */
+.surf-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.surf-main{
+    margin-top: 70px;
+}
+
+
+/* Nav */
+.surf-menu-container {
+    background-color: rgba(89, 188, 217, 1);
+    padding: 6px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+}
+
+.pure-menu.surf {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.pure-menu-link.surf,
+.pure-menu-link.surf:visited,
+.pure-menu-heading.surf {
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+
+.pure-menu-link:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.pure-menu-link.selected:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.pure-menu-link:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.pure-menu-link.surf.selected,
+.pure-menu-link.surf:hover,
+.pure-menu-link.surf:focus {
+    color: #d1ecff;
+    background-color: rgba(89, 188, 217, 1);
+}
+
+
+/* Nav Flags */
+.surf-menu-flags{
+    padding-top: 11px;
+    width: 40px;
+    float: right;
+}
+
+.flag-link {
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    background:url(../assets/static/flags.png) no-repeat;
+    text-decoration: none;
+}
+
+.flag-link.flag-gb {background-position: -16px 0}
+.flag-link.flag-se {background-position: 0 -11px}
+
+
+
+/* Splash */
+.splash-container {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 650px;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+}
