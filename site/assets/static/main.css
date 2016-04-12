@@ -40,16 +40,9 @@ h1, h2, h3 {
 }
 
 /* carousel customizations */
-#home-carousel-container {
-    position: fixed;
-    top: 65px;
-    z-index: -1000;
-}
 
-#home-carousel-buffer {
-  width: 100%;
-  display: inline-block;
-  position: relative;
+#surf .carousel-indicators {
+    cursor: pointer;
 }
 
 #home-carousel-buffer:after {
@@ -61,4 +54,20 @@ h1, h2, h3 {
 
 #surf .panel-body {
     padding: 0px;
+}
+
+#surf .carousel-caption {
+    font-size: 4vw;
+}
+
+#caption-1, #caption-3 {
+    left:    5%;
+    right: auto;
+    top:    10%;
+}
+#caption-2, #caption-4, #caption-5 {
+    left:  auto;
+    right:   5%;
+    top:   auto;
+    bottom: 10%;
 }

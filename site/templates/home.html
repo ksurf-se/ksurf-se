@@ -1,11 +1,14 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
+{% set images = this.attachments.images %}
 {% block body %}
   <div class="container-fluid" id="home-carousel-container">
     <div id="home-carousel"
          class="carousel slide"
          data-ride="carousel"
-         data-interval="5000">
+         data-interval="5000"
+         data-pause="hover">
+
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
@@ -17,41 +20,40 @@
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
-        <div class="item active splash">
-          <img src="{{ 'home-carousel-1.jpg' | url }}" alt="Image 1">
-          <div class="carousel-caption">
-            foo 1
+        <div class="item active">
+          <img src="{{ images.get('home-carousel-1.jpg') | url }}" alt="Location: Skanör, Swedenr">
+          <div class="carousel-caption" id="caption-1">
+            Location: Skanör, Sweden
           </div>
         </div>
-        <div class="item splash">
-          <img src="{{ 'home-carousel-2.jpg' | url }}" alt="Image 2">
-          <div class="carousel-caption">
-            bar 2
+        <div class="item">
+          <img src="{{ images.get('home-carousel-2.jpg') | url }}" alt="Our story">
+          <div class="carousel-caption" id="caption-2">
+            Our story
           </div>
         </div>
-        <div class="item splash">
-          <img src="{{ 'home-carousel-3.jpg' | url }}" alt="Image 3">
-          <div class="carousel-caption">
-            bar 2
+        <div class="item">
+          <img src="{{ images.get('home-carousel-3.jpg') | url }}" alt="Kite surfing">
+          <div class="carousel-caption" id="caption-3">
+            Kite surfing
           </div>
         </div>
-        <div class="item splash">
-          <img src="{{ 'home-carousel-4.jpg' | url }}" alt="Image 4">
-          <div class="carousel-caption">
-            bar 2
+        <div class="item">
+          <img src="{{ images.get('home-carousel-4.jpg') | url }}" alt="Stand up paddling">
+          <div class="carousel-caption" id="caption-4">
+            Stand up paddling
           </div>
         </div>
-          <div class="item splash">
-          <img src="{{ 'home-carousel-5.jpg' | url }}" alt="Image 5">
-          <div class="carousel-caption">
-            bar 2
+          <div class="item">
+          <img src="{{ images.get('home-carousel-5.jpg') | url }}" alt="Trips: Morocco">
+          <div class="carousel-caption" id="caption-5">
+            Trips: Morocco
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="home-carousel-buffer"></div>
+  </div>
 
   <section class="container">
 
@@ -68,7 +70,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">Kite surfing</div>
           <div class="panel-body">
-            <img class="img-responsive" src="{{ 'home-activities-1.jpg' | url }}" alt="Kite surfing">
+            <img class="img-responsive" src="{{ images.get('home-activities-1.jpg') | url }}" alt="Kite surfing">
           </div>
           <div class="panel-footer">
             Some text describing kite surfing, and why it is super great.
@@ -81,7 +83,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">SUP boarding</div>
           <div class="panel-body">
-            <img class="img-responsive" src="{{ 'home-activities-2.jpg' | url }}" alt="SUP boarding">
+            <img class="img-responsive" src="{{ images.get('home-activities-2.jpg') | url }}" alt="SUP boarding">
           </div>
           <div class="panel-footer">
             Some text describing stand up board paddling, and why it is super great.
@@ -96,7 +98,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">Children's activities</div>
           <div class="panel-body">
-            <img class="img-responsive" src="{{ 'home-activities-3.jpg' | url }}" alt="Children's activities">
+            <img class="img-responsive" src="{{ images.get('home-activities-3.jpg') | url }}" alt="Children's activities">
           </div>
           <div class="panel-footer">
             Some text describing Children's activities, and why it is super great.
@@ -109,7 +111,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">Rentals</div>
           <div class="panel-body">
-            <img class="img-responsive" src="{{ 'home-activities-4.jpg' | url }}" alt="Rentals">
+            <img class="img-responsive" src="{{ images.get('home-activities-4.jpg') | url }}" alt="Rentals">
           </div>
           <div class="panel-footer">
             Equipment at great prices
@@ -121,7 +123,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">Camps</div>
           <div class="panel-body">
-            <img class="img-responsive" src="{{ 'home-activities-5.jpg' | url }}" alt="Camps">
+            <img class="img-responsive" src="{{ images.get('home-activities-5.jpg') | url }}" alt="Trips">
           </div>
           <div class="panel-footer">
             Some text describing Camps, and why it is super great.
