@@ -6,9 +6,16 @@
       "en": "Home"
     },
     {
-      "url": "/location",
-      "sv": "Hitta hit",
-      "en": "Location"
+      "url": "/activities",
+      "sv": "Aktiviteter",
+      "en": "Activities",
+      "subNav": [
+        {
+          "anchor": "kite-surfing",
+          "sv": "Kite surfing",
+          "en": "Kite surfing"
+        }
+      ]
     },
     {
       "url": "/news",
@@ -16,24 +23,14 @@
       "en": "News"
     },
     {
-      "url": "/courses",
-      "sv": "Kurser",
-      "en": "Courses"
+      "url": "/book",
+      "sv": "Boka nu",
+      "en": "Book now"
     },
     {
-      "url": "/rentals",
-      "sv": "Uthyrning",
-      "en": "Rentals"
-    },
-    {
-      "url": "/weather",
-      "sv": "Väder",
-      "en": "Weather"
-    },
-    {
-      "url": "/contact",
-      "sv": "Kontakta oss",
-      "en": "Contact"
+      "url": "/about",
+      "sv": "Om oss",
+      "en": "About us"
     }
   ]
 }

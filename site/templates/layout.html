@@ -12,8 +12,10 @@
     <title>{% block title %}KSurf{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" rel="stylesheet">
-    <link href="{{ '/static/style.css' | url }}" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link href="{{ '/static/theme.min.css' | url }}" rel="stylesheet">
+    <link href="{{ '/static/main.css' | url }}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -22,21 +24,70 @@
     <![endif]-->
   </head>
 
-  <body>
-    <header class="surf-menu-container">
-      <nav class="pure-menu pure-menu-horizontal pure-menu-scrollable surf">
-        <a href="{{ '/' | url(alt=alt) }}" class="pure-menu-heading surf">KSurf</a>
-        <ul class="pure-menu-list">
-        {% for link in bag('navigation', 'nav') %}
-        {% set target = site.get(link.url) %}
-          <li class="pure-menu-item surf">
-            <a class="pure-menu-link surf{% if this.is_child_of(target) %} selected{% endif %}" href="{{ target | url(alt=alt) }}">{{ link[alt] }}</a>
-          </li>
-        {% endfor %}
-        </ul>
-        <div class="surf-menu-flags">
-          <a class="flag-link flag-se" alt="Swedish"  href="{{ '.' | url(alt='se') }}">&nbsp;</a>
-          <a class="flag-link flag-gb" alt="English"  href="{{ '.' | url(alt='en') }}">&nbsp;</a>
+  <body id="surf">
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <!-- Mobile nav -->
+          <div class="navbar-header">
+            <button type="button"
+                    class="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#navbar"
+                    aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ '/' | url(alt=alt) }}">
+              <img alt="Brand" src="http://placehold.it/25x25/0c84e4">ksurf.se
+            </a>
+          </div>
+
+          <!-- Desktop nav -->
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              {% for link in bag('navigation', 'nav') %}
+              {% set target = site.get(link.url) %}
+
+              {% if not link.subNav %}
+              <li class="{% if this.is_child_of(target) %}active{% endif %}">
+                <a href="{{ target | url(alt=alt) }}">{{ link[alt] }}</a>
+              </li>
+              {% else %}
+
+              <li class="dropdown {% if this.is_child_of(target) %}active{% endif %}">
+                <a href="#"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown"
+                   role="button"
+                   aria-haspopup="true"
+                   aria-expanded="false">{{ link[alt] }} <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  {% for subLink in link.subNav %}
+                  <li>
+                    <a href="{{ target | url(alt=alt) }}#{{ subLink.anchor }}">{{ subLink[alt] }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a alt="Svenska"  href="{{ '.' | url(alt='se') }}">
+                  <span class="flag-link flag-se">&nbsp;</span>Svenska
+                </a>
+              </li>
+              <li>
+                <a alt="English"  href="{{ '.' | url(alt='en') }}">
+                  <span class="flag-link flag-gb">&nbsp;</span>English
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -48,11 +99,12 @@
 
 
     <footer>
-      &copy; Copyright 2016 by KSurf.se
+      &copy; Copyright 2016 by ksurf.se
     </footer>
 
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="{{ '/static/site.js' | url }}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="{{ '/static/main.js' | url }}"></script>
   </body>
 </html>
