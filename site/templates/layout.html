@@ -98,8 +98,50 @@
     </main>
 
 
-    <footer>
-      &copy; Copyright 2016 by ksurf.se
+    <footer id="footer">
+      <div class="primary-footer bg-primary">
+        <section class="container">
+          <div class="row">
+            <address class="col-sm-6 vcard">
+               <div class="adr">
+                  <div class="street-address">{{ bag('contact', 'street-address') }}</div>
+                  <div class="locality">{{ bag('contact', 'locality') }}</div>
+                  <div>
+                    <span class="postal-code">{{ bag('contact', 'postal-code') }}</span>
+                    <span class="country-name">{{ bag('contact', 'country-name') }}</span>
+                  </div>
+               </div>
+               <div><i class="fa fa-phone"></i> <a class="tel" href="tel:{{ bag('contact', 'tel') }}">{{ bag('contact', 'tel') }}</a></div>
+               <div><i class="fa fa-at"></i> <a class="email" href="mailto:{{ bag('contact', 'email') }}">{{ bag('contact', 'email') }}</a></div>
+               <div><i class="fa fa-home"></i> <a class="url" href="{{ bag('contact', 'url') }}">{{ bag('contact', 'url') }}</a></div>
+            </address>
+            <div class="col-sm-6 text-right">
+              <div>
+                <span class="text-uppercase">ksurf.se</span>
+              </div>
+              <div>
+                <a href="{{ bag('contact', 'facebook-url') }}" target="_blank">
+                  on Facebook<i class="fa fa-large fa-facebook-square"></i>
+                </a>
+              </div>
+              <div>
+                <a href="{{ bag('contact', 'instagram-url') }}" target="_blank">
+                  on Instagram<i class="fa fa-large fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="secondary-footer bg-primary">
+        <section class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              &copy; Copyright 2016 ksurf.se
+            </div>
+          </div>
+        </section>
+      </div>
     </footer>
 
     <!-- Placed at the end of the document so the pages load faster -->

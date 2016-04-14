@@ -71,3 +71,29 @@ h1, h2, h3 {
     top:   auto;
     bottom: 10%;
 }
+
+#footer a {
+    color: white;
+}
+#footer a:hover {
+    color: #bce8f1;
+}
+
+#footer .primary-footer{
+    background-color: #11557C;
+    padding-top: 25px;
+    font-size: larger;
+}
+
+#footer .fa-large {
+    font-size: xx-large;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+#footer .secondary-footer{
+    background-color: #444444;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: larger;
+}
