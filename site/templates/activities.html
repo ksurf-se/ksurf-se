@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block extra_css %}
+  <link href="{{ '/static/activities.css' | url }}" rel="stylesheet">
+{% endblock %}
+
+{% set images = this.attachments.images %}
+{% block body %}
+
+  <section class="bg-paper">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h5 class="border-line-bottom text-uppercase margin-md-top">
+            Prova på kite surfing
+          </h5>
+        </div>
+      </div>
+      <div class="row margin-xs-top">
+        <div class="col-md-4">
+          <div>
+             <img class="img-responsive" src="{{ images.get('home-activities-1.jpg') | url }}" alt="Kite surfing">
+          </div>
+          <div>
+             <button type="button" class="btn btn-warning btn-block margin-sm-top">Boka prova på lektion</button>
+          </div>
+
+        </div>
+
+        <div class="col-md-8">
+<script type="text/javascript" src="//ksurf.checkfront.com/lib/interface--30.js"></script>
+<!-- CHECKFRONT BOOKING PLUGIN v23-->
+<div id="CHECKFRONT_WIDGET_01"><p id="CHECKFRONT_LOADER" style="background: url('//ksurf.checkfront.com/images/loader.gif') left center no-repeat; padding: 5px 5px 5px 20px">Searching Availability...</p></div>
+<script>
+new CHECKFRONT.Widget ({
+host: 'ksurf.checkfront.com',
+target: 'CHECKFRONT_WIDGET_01',
+item_id: '2',
+category_id: '2',
+lang_id: 'sv',
+options: 'tabs,hidesearch',
+style: 'font-family: Helvetica, sans-serif',
+provider: 'droplet'
+}).render();
+</script>
+<noscript><a href="https://ksurf.checkfront.com/reserve/" style="font-size: 16px">Continue to Secure Booking System &raquo;</a></noscript>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+{% endblock %}

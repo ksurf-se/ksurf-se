@@ -63,6 +63,10 @@
     margin-top: 30px;
 }
 
+#surf .margin-xs-top {
+    margin-top: 10px;
+}
+
 #surf .border-line-bottom {
     border-bottom: solid 1px #c2c2c2;
 }
