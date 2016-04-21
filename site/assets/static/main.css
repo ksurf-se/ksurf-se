@@ -1,4 +1,12 @@
+/* Overall Typography */
 
+#surf {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#surf .text-serif{
+    font-family: 'Lora', serif;
+}
 
 /* Overall structure */
 .surf-main {
@@ -9,6 +17,13 @@
     padding: 0px;
 }
 
+
+/* BG colors */
+
+#surf .bg-paper {
+    background-color: #f7f7f7;
+}
+
 /* Nav Brand */
 .navbar-brand img{
     float: left;
@@ -17,6 +32,7 @@
 }
 .navbar {
     text-transform: uppercase;
+    font-size: larger;
 }
 
 /* Nav Flags */
@@ -34,43 +50,37 @@
 .flag-link.flag-gb {background-position: -16px 0}
 .flag-link.flag-se {background-position: 0 -11px}
 
-/* header customizations */
-h1, h2, h3 {
-    border-bottom: solid 1px #9d9d9d;
+/* customizations */
+#surf .margin-lg-top {
+    margin-top: 100px;
 }
 
-/* carousel customizations */
-
-#surf .carousel-indicators {
-    cursor: pointer;
+#surf .margin-md-top {
+    margin-top: 50px;
 }
 
-#home-carousel-buffer:after {
-  padding-top: 40%;
-  display: block;
-  content: '';
+#surf .margin-sm-top {
+    margin-top: 30px;
+}
+
+#surf .border-line-bottom {
+    border-bottom: solid 1px #c2c2c2;
+}
+
+#surf .overflow-hidden {
+    overflow: hidden;
+}
+
+#surf .position-relative {
+    position: relative;
+}
+
+#surf .inline-block {
+    display: inline-block;
 }
 
 
-#surf .panel-body {
-    padding: 0px;
-}
-
-#surf .carousel-caption {
-    font-size: 4vw;
-}
-
-#caption-1, #caption-3 {
-    left:    5%;
-    right: auto;
-    top:    10%;
-}
-#caption-2, #caption-4, #caption-5 {
-    left:  auto;
-    right:   5%;
-    top:   auto;
-    bottom: 10%;
-}
+/* Footer*/
 
 #footer a {
     color: white;

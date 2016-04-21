@@ -7,33 +7,23 @@
     },
     {
       "url": "/activities",
-      "sv": "Aktiviteter",
-      "en": "Activities",
+      "sv": "Aktiviteter / kurser",
+      "en": "Activities / lessons",
       "subNav": [
         {
           "anchor": "kite-surfing",
-          "sv": "Kite surfing",
-          "en": "Kite surfing"
+          "sv": "Kite surfing kurser",
+          "en": "Kite surfing lessons"
         },
         {
-          "anchor": "sup-paddling",
-          "sv": "SUP paddling",
-          "en": "SUP paddling"
+          "anchor": "sup",
+          "sv": "Stand up paddling",
+          "en": "Stand up paddling"
         },
         {
           "anchor": "surf-skin-boarding",
           "sv": "Surf & skin boarding",
           "en": "Surf & skin boarding"
-        },
-        {
-          "anchor": "rentals",
-          "sv": "Rentals",
-          "en": "Uthyrning"
-        },
-        {
-          "anchor": "trips",
-          "sv": "Resor",
-          "en": "Trips"
         }
       ]
     },
@@ -43,9 +33,9 @@
       "en": "News"
     },
     {
-      "url": "/book",
-      "sv": "Boka nu",
-      "en": "Book now"
+      "url": "/rentals",
+      "sv": "Uthyrning",
+      "en": "Rentals"
     },
     {
       "url": "/about",
