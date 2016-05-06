@@ -80,15 +80,25 @@
               {% endfor %}
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li>
-                <a alt="Svenska"  href="{{ '.' | url(alt='se') }}">
-                  <span class="flag-link flag-se">&nbsp;</span>Svenska
-                </a>
-              </li>
-              <li>
-                <a alt="English"  href="{{ '.' | url(alt='en') }}">
-                  <span class="flag-link flag-gb">&nbsp;</span>English
-                </a>
+              <li class="dropdown">
+                <a href="#"
+                   class="dropdown-toggle"
+                   data-toggle="dropdown"
+                   role="button"
+                   aria-haspopup="true"
+                   aria-expanded="false"><span class="flag-link flag-{{ alt }}">&nbsp;</span> <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a alt="Svenska"  href="{{ '.' | url(alt='sv') }}">
+                      <span class="flag-link flag-sv">&nbsp;</span>Svenska
+                    </a>
+                  </li>
+                  <li>
+                    <a alt="English"  href="{{ '.' | url(alt='en') }}">
+                      <span class="flag-link flag-en">&nbsp;</span>English
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
