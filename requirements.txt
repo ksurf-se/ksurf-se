@@ -1,2 +1,2 @@
-Lektor==1.2
+Lektor==2.2
 s3cmd
