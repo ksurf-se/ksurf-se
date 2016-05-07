@@ -1,8 +1,12 @@
 
 /* carousel customizations */
 
+#surf #home-carousel-container{
+  padding: 0px;
+}
+
 #surf .carousel-indicators {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #home-carousel-buffer:after {
@@ -54,7 +58,7 @@
   position: absolute;
   width: 100%;
   bottom: 0px;
-  height: 40%;
+  height: 55%;
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 46%, rgba(0, 0, 0, 0.76));
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 46%, rgba(0, 0, 0, 0.76));
 }

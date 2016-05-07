@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% from "macros/google_map.html" import google_map %}
 {% block title %}{{ this.title }}{% endblock %}
 
 {% block extra_css %}
@@ -40,134 +41,56 @@
   </section>
 
 
-
-  <section class="bg-paper">
+  {% set section = bag('home-sections', 'activities') %}
+  <section>
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h4 class="border-line-bottom text-center text-uppercase margin-lg-top">
-            Aktiviteter
+          <h4 id="{{ section.anchor }}" class="border-line-bottom text-center text-uppercase margin-lg-top">
+            {{ section[alt] }}
           </h4>
         </div>
       </div>
 
       <div class="row margin-sm-top">
-        <div class="col-md-6">
-          <a href="{{ '/activities/#kite-surfing' | url(alt=alt) }}" class="inline-block position-relative featured featured-lg hvr-float">
-            <div class="overflow-hidden">
-              <img class="img-responsive" src="{{ images.get('home-activities-1.jpg') | url }}" alt="Kite surfing">
-            </div>
-            <div class="featured-desc">
-              <div class="text-serif featured-title">
-                Kite surfing kurser
+        {% for activity in section.values() %}
+          {% if activity.image %}
+          <div class="col-md-4">
+            <a href="{{ activity.link | url(alt=alt) }}" class="inline-block position-relative featured featured-lg hvr-float">
+              <div class="overflow-hidden">
+                <img class="img-responsive" src="{{ images.get(activity.image) | url }}" alt="Kite surfing">
               </div>
-              <div class="featured-body">
-                Ta din kite surfing till nästa nivå, eller bara prova på,
-                vi har kurser som passar både nybörjare och världsmästare.
+              <div class="featured-desc">
+                <div class="text-serif featured-title">
+                  {{ activity[alt] }}
+                </div>
+                <div class="featured-body">
+                  {{ activity['desc_' + alt] }}
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-6">
-
-          <a href="{{ '/activities/#sup' | url(alt=alt) }}" class="inline-block position-relative featured featured-lg hvr-float">
-            <div class="overflow-hidden">
-              <img class="img-responsive" src="{{ images.get('home-activities-2.jpg') | url }}" alt="Stand up paddling">
-            </div>
-            <div class="featured-desc">
-              <div class="text-serif featured-title">
-                Stand up paddling
-              </div>
-              <div class="featured-body">
-                Träning för kropp och själ, tränar kordination och balans,
-                perfekt för att lämna stressen bakom sig.
-              </div>
-            </div>
-          </a>
-
-        </div>
+            </a>
+          </div>
+          {% endif %}
+        {% endfor %}
       </div>
+    </div>
+  </section>
 
-      <div class="row margin-sm-top">
-        <div class="col-md-4">
-
-          <a href="{{ '/activities/#skin' | url(alt=alt) }}" class="inline-block position-relative featured featured-sm hvr-float">
-            <div class="overflow-hidden">
-              <img class="img-responsive" src="{{ images.get('home-activities-3.jpg') | url }}" alt="Skin boarding">
-            </div>
-            <div class="featured-desc">
-              <div class="text-serif featured-title">
-                Skin boarding
-              </div>
-              <div class="featured-body">
-                Hitta nya sätt att ha roligt på stranden,
-                passar alla åldrar, perfekt för dem som är lite yngre
-              </div>
-            </div>
-          </a>
-
-        </div>
-
-
-        <div class="col-md-4">
-
-          <a href="{{ '/rentals' | url(alt=alt) }}" class="inline-block position-relative featured featured-sm hvr-float">
-            <div class="overflow-hidden">
-              <img class="img-responsive" src="{{ images.get('home-activities-4.jpg') | url }}" alt="Rentals">
-            </div>
-            <div class="featured-desc">
-              <div class="text-serif featured-title">
-                Uthyrning
-              </div>
-              <div class="featured-body">
-                Hyr kites, brädor och annan utrustning, över dagen eller helgen,
-                till förmånliga priser
-              </div>
-            </div>
-          </a>
-
-        </div>
-        <div class="col-md-4">
-
-          <a href="{{ '/travel' | url(alt=alt) }}" class="inline-block position-relative featured featured-sm hvr-float">
-            <div class="overflow-hidden">
-              <img class="img-responsive" src="{{ images.get('home-activities-5.jpg') | url }}" alt="Travel">
-            </div>
-            <div class="featured-desc">
-              <div class="text-serif featured-title">
-                Resor
-              </div>
-              <div class="featured-body">
-                Trött på kylan?<br>
-                Följ med oss till Morocco på kite surfing läger
-              </div>
-            </div>
-          </a>
-
-        </div>
-      </div>
-
+  {% set section = bag('home-sections', 'location') %}
+  <section>
+    <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h4 class="border-line-bottom text-center text-uppercase margin-md-top">
-            Hitta hit
+          <h4 id="{{ section.anchor }}" class="border-line-bottom text-center text-uppercase margin-md-top">
+            {{ section[alt] }}
           </h4>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <iframe
-            width="100%"
-            height="450"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCWL32YkvKsVF77E2GF9M12jWMtDQNS7po&q=Badhytten,Skanör,Sverige&zoom=10" allowfullscreen>
-          </iframe>
-
+          {{ google_map(section.map_url, '100%', '450') }}
         </div>
       </div>
-
-
     </div>
   </section>
 

@@ -2,6 +2,11 @@
 
 #surf {
     font-family: 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+}
+
+#surf section {
+    margin-top: 4em;
 }
 
 /* Overall structure */
@@ -9,16 +14,6 @@
     margin-top: 65px;
 }
 
-#surf .container-fluid {
-    padding: 0px;
-}
-
-
-/* BG colors */
-
-#surf .bg-paper {
-    background-color: #f7f7f7;
-}
 
 /* Nav Brand */
 .navbar-brand img{
@@ -47,22 +42,6 @@
 .flag-link.flag-sv {background-position: 0 -11px}
 
 /* customizations */
-#surf .margin-lg-top {
-    margin-top: 100px;
-}
-
-#surf .margin-md-top {
-    margin-top: 50px;
-}
-
-#surf .margin-sm-top {
-    margin-top: 30px;
-}
-
-#surf .margin-xs-top {
-    margin-top: 10px;
-}
-
 #surf .border-line-bottom {
     border-bottom: solid 1px #c2c2c2;
 }
@@ -81,7 +60,9 @@
 
 
 /* Footer*/
-
+#footer {
+    margin-top: 8em;
+}
 #footer a {
     color: white;
 }
@@ -95,15 +76,12 @@
     font-size: larger;
 }
 
-#footer .fa-large {
-    font-size: xx-large;
-    margin-left: 15px;
-    vertical-align: middle;
-}
-
 #footer .secondary-footer{
     background-color: #444444;
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: larger;
+}
+#footer .fa-2x {
+  vertical-align: middle;
 }
