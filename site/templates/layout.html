@@ -52,13 +52,16 @@
           <!-- Desktop nav -->
           <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
-              {% for link in bag('navigation', 'nav') %}
+
+              {% for id, link in bag('navigation').iteritems() %}
               {% set target = site.get(link.url) %}
 
-              {% if not link.subNav %}
+              {% if not link.nested %}
+
               <li class="{% if this.is_child_of(target) %}active{% endif %}">
                 <a href="{{ target | url(alt=alt) }}">{{ link[alt] }}</a>
               </li>
+
               {% else %}
 
               <li class="dropdown {% if this.is_child_of(target) %}active{% endif %}">
@@ -69,10 +72,12 @@
                    aria-haspopup="true"
                    aria-expanded="false">{{ link[alt] }} <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  {% for subLink in link.subNav %}
-                  <li>
-                    <a href="{{ target | url(alt=alt) }}#{{ subLink.anchor }}">{{ subLink[alt] }}</a>
-                  </li>
+                  {% for sub_id, subLink in bag('navigation', id).iteritems() %}
+                    {% if subLink.anchor %}
+                    <li>
+                      <a href="{{ target | url(alt=alt) }}#{{ subLink.anchor }}">{{ subLink[alt] }}</a>
+                    </li>
+                    {% endif %}
                   {% endfor %}
                 </ul>
               </li>
@@ -118,11 +123,11 @@
           <div class="row">
             <address class="col-sm-6 vcard">
                <div class="adr">
-                  <div class="street-address">{{ bag('contact', 'street-address') }}</div>
+                  <div class="street-address">{{ bag('contact', 'street_address') }}</div>
                   <div class="locality">{{ bag('contact', 'locality') }}</div>
                   <div>
-                    <span class="postal-code">{{ bag('contact', 'postal-code') }}</span>
-                    <span class="country-name">{{ bag('contact', 'country-name') }}</span>
+                    <span class="postal-code">{{ bag('contact', 'postal_code') }}</span>
+                    <span class="country-name">{{ bag('contact', 'country_name') }}</span>
                   </div>
                </div>
                <div><i class="fa fa-phone"></i> <a class="tel" href="tel:{{ bag('contact', 'tel') }}">{{ bag('contact', 'tel') }}</a></div>
@@ -134,12 +139,12 @@
                 <span class="text-uppercase">ksurf.se</span>
               </div>
               <div>
-                <a href="{{ bag('contact', 'facebook-url') }}" target="_blank">
+                <a href="{{ bag('contact', 'facebook_url') }}" target="_blank">
                   on Facebook<i class="fa fa-large fa-facebook-square"></i>
                 </a>
               </div>
               <div>
-                <a href="{{ bag('contact', 'instagram-url') }}" target="_blank">
+                <a href="{{ bag('contact', 'instagram_url') }}" target="_blank">
                   on Instagram<i class="fa fa-large fa-instagram"></i>
                 </a>
               </div>

@@ -7,8 +7,11 @@
 
 {% set images = this.attachments.images %}
 {% block body %}
-  <div class="container-fluid" id="home-carousel-container">
-    <div id="home-carousel"
+
+  {% set carousel_id = 'carousel-' ~ get_random_id() %}
+  <section class="container-fluid" id="home-carousel-container">
+
+    <div id="{{ carousel_id }}"
          class="carousel slide"
          data-ride="carousel"
          data-interval="5000"
@@ -16,49 +19,27 @@
 
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#home-carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#home-carousel" data-slide-to="1"></li>
-        <li data-target="#home-carousel" data-slide-to="2"></li>
-        <li data-target="#home-carousel" data-slide-to="3"></li>
-        <li data-target="#home-carousel" data-slide-to="4"></li>
+        {% for id, slide in bag('home-slideshow').iteritems() %}
+        <li data-target="#{{ carousel_id }}" data-slide-to="{{ loop.index0 }}"{% if loop.first %} class="active"{% endif %}></li>
+        {% endfor %}
       </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="{{ images.get('home-carousel-1.jpg') | url }}" alt="Location: Skanör, Swedenr">
-          <div class="carousel-caption" id="caption-1">
-            Location: Skanör, Sweden
+        {% for id, slide in bag('home-slideshow').iteritems() %}
+        <div class="item {% if loop.first %} active{% endif %}">
+          <img src="{{  images.get(slide.image) | url  }}" alt="{{ slide[alt] }}">
+          <div class="carousel-caption {{ slide.text_location }}">
+            {{ slide[alt] }}
           </div>
         </div>
-        <div class="item">
-          <img src="{{ images.get('home-carousel-2.jpg') | url }}" alt="Our story">
-          <div class="carousel-caption" id="caption-2">
-            Our story
-          </div>
-        </div>
-        <div class="item">
-          <img src="{{ images.get('home-carousel-3.jpg') | url }}" alt="Kite surfing">
-          <div class="carousel-caption" id="caption-3">
-            Kite surfing
-          </div>
-        </div>
-        <div class="item">
-          <img src="{{ images.get('home-carousel-4.jpg') | url }}" alt="Stand up paddling">
-          <div class="carousel-caption" id="caption-4">
-            Stand up paddling
-          </div>
-        </div>
-          <div class="item">
-          <img src="{{ images.get('home-carousel-5.jpg') | url }}" alt="Trips: Morocco">
-          <div class="carousel-caption" id="caption-5">
-            Trips: Morocco
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
 
-  </div>
+  </section>
+
+
 
   <section class="bg-paper">
     <div class="container">

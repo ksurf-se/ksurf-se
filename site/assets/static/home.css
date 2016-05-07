@@ -19,18 +19,24 @@
 #surf .carousel-caption {
   font-size: 4vw;
 }
-
-#caption-1, #caption-3 {
+#surf .carousel-caption.up-left {
   left:    5%;
   right: auto;
   top:    10%;
 }
-#caption-2, #caption-4, #caption-5 {
+#surf .carousel-caption.down-right {
   left:  auto;
   right:   5%;
   top:   auto;
   bottom: 10%;
 }
+#surf .carousel-caption.down-left {
+  left:    5%;
+  right: auto;
+  top:   auto;
+  bottom: 10%;
+}
+
 
 /* home components */
 
