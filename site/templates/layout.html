@@ -116,35 +116,35 @@
       {% block body %}{% endblock %}
     </main>
 
-
+    {% set contact = bag('contact') %}
     <footer id="footer">
       <div class="primary-footer bg-primary">
         <div class="container">
           <div class="row">
             <address class="col-sm-6 vcard">
                <div class="adr">
-                  <div class="street-address">{{ bag('contact', 'street_address') }}</div>
-                  <div class="locality">{{ bag('contact', 'locality') }}</div>
+                  <div class="street-address">{{ contact.street_address }}</div>
+                  <div class="locality">{{ contact.locality }}</div>
                   <div>
-                    <span class="postal-code">{{ bag('contact', 'postal_code') }}</span>
-                    <span class="country-name">{{ bag('contact', 'country_name') }}</span>
+                    <span class="postal-code">{{ contact.postal_code }}</span>
+                    <span class="country-name">{{ contact.country_name }}</span>
                   </div>
                </div>
-               <div><i class="fa fa-phone"></i> <a class="tel" href="tel:{{ bag('contact', 'tel') }}">{{ bag('contact', 'tel') }}</a></div>
-               <div><i class="fa fa-at"></i> <a class="email" href="mailto:{{ bag('contact', 'email') }}">{{ bag('contact', 'email') }}</a></div>
-               <div><i class="fa fa-home"></i> <a class="url" href="{{ bag('contact', 'url') }}">{{ bag('contact', 'url') }}</a></div>
+               <div><i class="fa fa-phone"></i> <a class="tel" href="tel:{{ contact.tel }}">{{ contact.tel }}</a></div>
+               <div><i class="fa fa-at"></i> <a class="email" href="mailto:{{ contact.email | safe}}">{{ contact.email | safe }}</a></div>
+               <div><i class="fa fa-home"></i> <a class="url" href="{{ contact.url }}">{{ contact.url }}</a></div>
             </address>
             <div class="col-sm-6 text-right">
               <div>
                 <span class="text-uppercase">ksurf.se</span>
               </div>
               <div>
-                <a href="{{ bag('contact', 'facebook_url') }}" target="_blank">
+                <a href="{{ contact.facebook_url }}" target="_blank">
                   on Facebook&nbsp;<i class="fa fa-2x fa-facebook-square"></i>
                 </a>
               </div>
               <div>
-                <a href="{{ bag('contact', 'instagram_url') }}" target="_blank">
+                <a href="{{ contact.instagram_url }}" target="_blank">
                   on Instagram&nbsp;<i class="fa fa-2x fa-instagram"></i>
                 </a>
               </div>
