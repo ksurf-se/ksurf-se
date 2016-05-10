@@ -5,6 +5,11 @@
     background-color: #f7f7f7;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 0.15em;
+}
+
 #surf section {
     margin-top: 4em;
 }
@@ -16,14 +21,21 @@
 
 
 /* Nav Brand */
-.navbar-brand img{
-    float: left;
-    margin-top: -2px;
-    margin-right: 4px;
-}
 .navbar {
     text-transform: uppercase;
     font-size: larger;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 0.15em;
+}
+
+#surf .navbar-brand {
+    padding: 19px 15px;
+}
+
+#surf .navbar-brand img {
+    float: left;
+    margin-top: -10px;
+    margin-right: -5px;
 }
 
 /* Nav Flags */
@@ -59,21 +71,25 @@
 }
 
 
+
+
 /* Footer*/
 #footer {
     margin-top: 8em;
 }
-#footer a {
-    color: white;
-}
-#footer a:hover {
-    color: #bce8f1;
-}
 
 #footer .primary-footer{
-    background-color: #11557C;
+    background-color: #c8c4b7;
+    color: #333333;
     padding-top: 25px;
     font-size: larger;
+}
+
+#footer .primary-footer a{
+    color: #333333;
+}
+#footer .primary-footer a:hover{
+    color: #000000;
 }
 
 #footer .secondary-footer{
@@ -82,6 +98,7 @@
     padding-bottom: 20px;
     font-size: larger;
 }
+
 #footer .fa-2x {
   vertical-align: middle;
 }
