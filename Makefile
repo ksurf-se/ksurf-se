@@ -26,7 +26,7 @@ build: .venv
 	$(PYTHON_BIN)/lektor --project site build --output-path .build
 
 deploy-test: check-aws-env build
-	$(PYTHON_BIN)/s3cmd sync --no-mime-magic --no-preserve --delete-removed --delete-after ./site/.build/ s3://test.ksurf.se/
+	$(PYTHON_BIN)/s3cmd sync --add-header="Cache-Control:max-age=3600" --no-mime-magic --no-preserve --delete-removed --delete-after ./site/.build/ s3://test.ksurf.se/
 
 check-aws-env:
 ifndef AWS_ACCESS_KEY_ID
