@@ -3,8 +3,9 @@
     border: #1999d8 3px solid;
 }
 
-#surf .surf-feature h3{
+#surf .surf-feature h4{
     margin: 0;
+    text-transform: uppercase;
     padding: 15px 0;
 }
 
