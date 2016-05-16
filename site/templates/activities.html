@@ -6,33 +6,90 @@
 {% endblock %}
 
 {% set images = this.attachments.images %}
+{% set data = bag('activities-sections') %}
 {% block body %}
 
-  <section>
-    <div class="container">
+  <section class="container">
 
-      <div class="row">
-        <div class="col-md-12">
-          <h5 class="border-line-bottom text-uppercase margin-md-top">
-            Prova på kite surfing
-          </h5>
-        </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h5 class="border-line-bottom text-uppercase margin-md-top">
+          {{ data.kite_surf_group[alt] }}
+        </h5>
       </div>
-      <div class="row margin-xs-top">
-        <div class="col-md-4">
-          <div>
-             <img class="img-responsive" src="{{ images.get('home-activities-1.jpg') | url }}" alt="Kite surfing">
-          </div>
-          <div>
-             <button type="button" class="btn btn-warning btn-block margin-sm-top">Boka prova på lektion</button>
-          </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
 
+        <div class="surf-feature">
+          <h3 class="text-center bg-primary">{{ data.kite_surf_group_1.name }}</h3>
+
+          <img class="img-responsive" src="{{ images.get(data.kite_surf_group_1.image) | url }}">
+          <h3 class="text-center feature-price">{{ data.kite_surf_group_1.duration_price }}</h3>
+
+          <div class="feature-action text-center">
+            <a href="#">{{ data.more_button[alt] }}</a>
+            <button type="button" class="btn btn-primary btn-block">{{ data.book_button[alt] }}</button>
+          </div>
         </div>
 
-        <div class="col-md-8">
-          <div class="panel">
-            <div class="panel-body">
+      </div>
 
+      <div class="col-md-4">
+
+        <div class="surf-feature">
+          <h3 class="text-center bg-primary">{{ data.kite_surf_group_2.name }}</h3>
+
+          <img class="img-responsive" src="{{ images.get(data.kite_surf_group_2.image) | url }}">
+          <h3 class="text-center feature-price">{{ data.kite_surf_group_2.duration_price }}</h3>
+
+          <div class="feature-action text-center">
+            <a href="#">{{ data.more_button[alt] }}</a>
+            <button type="button" class="btn btn-primary btn-block">{{ data.book_button[alt] }}</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-4">
+
+        <div class="surf-feature">
+          <h3 class="text-center bg-primary">{{ data.kite_surf_group_3.name }}</h3>
+
+          <img class="img-responsive" src="{{ images.get(data.kite_surf_group_3.image) | url }}">
+          <h3 class="text-center feature-price">{{ data.kite_surf_group_3.duration_price }}</h3>
+
+          <div class="feature-action text-center">
+            <a href="#">{{ data.more_button[alt] }}</a>
+            <button type="button" class="btn btn-primary btn-block">{{ data.book_button[alt] }}</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="surf-feature">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="text-center bg-primary">{{ data.kite_surf_private[alt] }}</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <p class="text-center"> {{ data.kite_surf_private['desc_' + alt] | safe }} </p>
+              <h3 class="text-center feature-price">{{ data.kite_surf_private.duration_price }}</h3>
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                  <div class="feature-action text-center">
+                    <a href="#">{{ data.more_button[alt] }}</a>
+                    <button type="button" class="btn btn-primary btn-block">{{ data.book_button[alt] }}</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img class="img-responsive" src="{{ images.get(data.kite_surf_private.image) | url }}">
             </div>
           </div>
 
@@ -40,6 +97,12 @@
       </div>
 
     </div>
+
+  </section>
+
+  <section class="container">
+
+    
   </section>
 
 {% endblock %}

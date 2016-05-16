@@ -1,0 +1,18 @@
+#surf .surf-feature{
+    margin-top: 25px;
+    border: #1999d8 3px solid;
+}
+
+#surf .surf-feature h3{
+    margin: 0;
+    padding: 15px 0;
+}
+
+#surf .surf-feature .feature-price{
+    padding: 9px 0;
+}
+
+#surf .surf-feature .feature-action{
+    padding: 15px 10px;
+}
+
