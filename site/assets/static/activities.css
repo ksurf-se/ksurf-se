@@ -10,6 +10,11 @@
 }
 
 #surf .surf-feature .feature-price{
+    padding: 15px 0;
+}
+
+#surf .surf-feature.surf-feature-horizontal  .feature-price{
+    margin: 0 0;
     padding: 9px 0;
 }
 

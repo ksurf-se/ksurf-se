@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block extra_css %}
+  <link href="{{ '/static/booking.css' | url }}" rel="stylesheet">
+{% endblock %}
+
+{% set images = this.attachments.images %}
+{% set data = bag('booking') %}
+{% block body %}
+
+  <section class="container">
+
+    <div class="row">
+      <div class="col-md-9 col-md-offset-2">
+        <h3 class="border-line-bottom text-uppercase" id="group">
+          {{ data.kite_surf_group[alt] }}
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9 col-md-offset-2">
+        <script type="text/javascript" src="//ksurf.checkfront.com/lib/interface--30.js"></script>
+        <!-- CHECKFRONT BOOKING PLUGIN v23-->
+        <div id="CHECKFRONT_WIDGET_01">
+          <div class="text-center">
+            <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+            <p>{{ data.loading[alt] }}...</p>
+          </div>
+        </div>
+        <script>
+          new CHECKFRONT.Widget({
+            host: 'ksurf.checkfront.com',
+            pipe: 'http://www.ksurf.se/static/checkfront-helper.html',
+            target: 'CHECKFRONT_WIDGET_01',
+            lang_id: '{{ alt }}',
+            item_id: '3,12,13',
+            options: 'tabs,hidesearch,hidedates',
+            provider: 'droplet',
+            tid: 'ksurf.se'
+          }).render();
+        </script>
+
+        <noscript><a href="https://ksurf.checkfront.com/reserve/" style="font-size: 16px">Continue to Secure Booking System &raquo;</a></noscript>
+
+
+      </div>
+    </div>
+
+  </section>
+  <section class="container">
+
+    <div class="row">
+      <div class="col-md-9 col-md-offset-2">
+        <h3 class="border-line-bottom text-uppercase text-right" id="private">
+          {{ data.kite_surf_private[alt] }}
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9 col-md-offset-2">
+        <script type="text/javascript" src="//ksurf.checkfront.com/lib/interface--30.js"></script>
+        <!-- CHECKFRONT BOOKING PLUGIN v23-->
+        <div id="CHECKFRONT_WIDGET_02">
+          <div class="text-center">
+            <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+            <p>{{ data.loading[alt] }}...</p>
+          </div>
+        </div>
+        <script>
+          new CHECKFRONT.Widget({
+            host: 'ksurf.checkfront.com',
+            pipe: 'http://www.ksurf.se/static/checkfront-helper.html',
+            target: 'CHECKFRONT_WIDGET_02',
+            item_id: '14',
+            lang_id: '{{ alt }}',
+            options: 'tabs,hidesearch,hidedates',
+            provider: 'droplet',
+            tid: 'ksurf.se'
+          }).render();
+        </script>
+
+        <noscript><a href="https://ksurf.checkfront.com/reserve/" style="font-size: 16px">Continue to Secure Booking System &raquo;</a></noscript>
+
+
+      </div>
+    </div>
+
+  </section>
+
+{% endblock %}

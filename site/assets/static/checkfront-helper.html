@@ -1,0 +1,22 @@
+<html>
+    <body onload="parentIframeResize()">
+		<p>This is a static helper file that helps improve performance and
+		rendering of the Checkfront Booking System.</p>
+<script>
+function parentIframeResize() {
+                var height = getParam('height');
+                parent.parent.resizeIframe(height);
+            }
+            function getParam( name ) {
+                name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+                var regexS = "[\\?&]"+name+"=([^&#]*)";
+                var regex = new RegExp( regexS );
+                var results = regex.exec( window.location.href );
+                if( results == null )
+                return "";
+                else
+                return results[1];
+            }
+        </script>
+    </body>
+</html>
