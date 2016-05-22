@@ -22,7 +22,7 @@
       <div class="col-md-4">
 
         <div class="surf-feature">
-          <h4 class="text-center bg-primary">{{ data.kite_surf_group_1.name }}</h4>
+          <h4 class="text-center">{{ data.kite_surf_group_1.name }}</h4>
 
           <img class="img-responsive" src="{{ images.get(data.kite_surf_group_1.image) | url }}">
           <h3 class="text-center feature-price">{{ data.kite_surf_group_1.duration_price }}</h3>
@@ -38,7 +38,7 @@
       <div class="col-md-4">
 
         <div class="surf-feature">
-          <h4 class="text-center bg-primary">{{ data.kite_surf_group_2.name }}</h4>
+          <h4 class="text-center">{{ data.kite_surf_group_2.name }}</h4>
 
           <img class="img-responsive" src="{{ images.get(data.kite_surf_group_2.image) | url }}">
           <h3 class="text-center feature-price">{{ data.kite_surf_group_2.duration_price }}</h3>
@@ -54,7 +54,7 @@
       <div class="col-md-4">
 
         <div class="surf-feature">
-          <h4 class="text-center bg-primary">{{ data.kite_surf_group_3.name }}</h4>
+          <h4 class="text-center">{{ data.kite_surf_group_3.name }}</h4>
 
           <img class="img-responsive" src="{{ images.get(data.kite_surf_group_3.image) | url }}">
           <h3 class="text-center feature-price">{{ data.kite_surf_group_3.duration_price }}</h3>
@@ -72,7 +72,7 @@
         <div class="surf-feature surf-feature-horizontal">
           <div class="row">
             <div class="col-md-12">
-              <h4 class="text-center bg-primary">{{ data.kite_surf_private[alt] }}</h4>
+              <h4 class="text-center feature-header">{{ data.kite_surf_private[alt] }}</h4>
             </div>
           </div>
           <div class="row">
@@ -112,14 +112,69 @@
     </div>
 
     <div class="row">
+      <div class="col-sm-12">
+        <div class="surf-feature surf-feature-horizontal">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="text-center feature-header">
+                {% if alt == 'en' %}
+                  SUP fitness group lessons
+                {% endif %}
+                {% if alt == 'sv' %}
+                  SUP fitness gruppkurs
+                {% endif %}
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
 
+              <div class="row">
+                <div class="col-sm-12 text-center">
+                  <p>
+                    {% if alt == 'en' %}
+                      With SUP you develop and improve balance, strength, coordination and body posture.
+                      The goal is to align your mind and body and to rid the mind and body of everyday stress.
+                      The availability is weather dependent.
+                    {% endif %}
+                    {% if alt == 'sv' %}
+                      Med SUP förbättrar du balansen, koordination och tränar upp din styrka på samma gång.
+                      SUP är en träningsform där du utmanar alla kroppens sinnen.
+                      Målet är att föra samman kropp och själ och att fly vardagsstressen.
+                      Vädret styr tillgängligeten.
+                    {% endif %}
+                  </p>
+                  <p>
+                    {% if alt == 'en' %}
+                      You can either book at KSurf center in Skanör or you can e-mail/call us.<br/> Wetsuit and equipment is included in the price.
+                    {% endif %}
+                    {% if alt == 'sv' %}
+                      Det går bra att boka på plats på KSurf i Skanör eller  ringa/maila oss.<br/> Våtdräkt och utrustning ingår såklart.
+                    {% endif %}
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <h3 class="text-center sup-pricing">200 SEK (1h)</h3>
+                </div>
+                <div class="col-sm-6 sup-contact-button">
+                  <a href="{{ '/contact' | url(alt=alt)  }}" type="button" class="btn btn-primary btn-block">{{ data.contact_button[alt] }}</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <img class="img-responsive" src="{{ images.get(data.kite_surf_private.image) | url }}">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
     </div>
-    <div class="row">
-
-    </div>
-
 
   </section>
+
   <section class="container">
 
     <div class="row">
@@ -129,6 +184,157 @@
         </h3>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="surf-feature surf-feature-horizontal">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="text-center feature-header">
+                {% if alt == 'en' %}
+                  Surf & SUP lessons (ages 6 to 12)
+                {% endif %}
+                {% if alt == 'sv' %}
+                  Surf & SUP lektioner (från 6 till 12 år)
+                {% endif %}
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <img class="img-responsive" src="{{ images.get(data.kite_surf_private.image) | url }}">
+            </div>
+            <div class="col-sm-8">
+
+              <div class="row">
+                <div class="col-sm-12 text-center">
+                  <p>
+                    {% if alt == 'en' %}
+                     Surf och SUP group lessons for the young ones. Price includes equipment rent.<br/>
+                      A maximum of 4 participants per course. One session is two hours.
+                    {% endif %}
+                    {% if alt == 'sv' %}
+                      Surf and SUP gruppkurs för dem lite yngre. I priset ingår hyra för utrustning.<br/>
+                      Högst 4 deltagare per kurs. Ett pass är två timmar.
+                    {% endif %}
+                  </p>
+                  <div class="row">
+
+                    <div class="col-sm-4">
+                      <div>1 pass</div>
+                      <h4>380 SEK</h4>
+                    </div>
+                    <div class="col-sm-4">
+                      <div>3 pass</div>
+                      <h4>1040 SEK</h4>
+                    </div>
+                    <div class="col-sm-4">
+                      <div>5 pass</div>
+                      <h4>1590 SEK</h4>
+                    </div>
+
+                  </div>
+                  <p>
+                    {% if alt == 'en' %}
+                      You can either book at KSurf center in Skanör or you can e-mail/call us.
+                    {% endif %}
+                    {% if alt == 'sv' %}
+                      Det går bra att boka på plats på KSurf i Skanör eller  ringa/maila oss.
+                    {% endif %}
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                  <a href="{{ '/contact' | url(alt=alt)  }}" type="button" class="btn btn-primary btn-block">{{ data.contact_button[alt] }}</a>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="surf-feature surf-feature-horizontal">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="text-center feature-header">
+                {% if alt == 'en' %}
+                  Beach week package
+                {% endif %}
+                {% if alt == 'sv' %}
+                  Strandveckan-paketet
+                {% endif %}
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3 class="text-center feature-price">1990 SEK</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 text-center">
+                  {% if alt == 'sv' %}
+                    <p>
+                      Ett 5-dagars paket som består av olika aktiviteter för de yngre.
+                      Sammanlagt 9 timmar med roliga aktiviteter som att prova på kite, lära sig SUP, surf och skimboarding.
+                    </p>
+                    <p>
+                      Högst 4 deltagare i gruppen. Instruktören har fullt fokus på deltagarna.
+                      I priset ingår hyra för utrustning. Flytväst är obligatoriskt.
+                    </p>
+
+                  {% endif %}
+                </div>
+                <div class="col-sm-6">
+                  {% if alt == 'sv' %}
+                    <div class="text-center"><strong>Paketet består av</strong>:</div>
+                    <ul>
+                      <li>4 timmar surflektion</li>
+                      <li>1 timme SUP lektion</li>
+                      <li>2 timmar kite på stranden</li>
+                      <li>2 timmar skimboard</li>
+                    </ul>
+                    <p class="text-center">
+                      Programmet uppdateras dagligen under veckan då flera aktiviteter är väderberoende.
+                    </p>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+
+
+                </div>
+              </div>
+
+
+              <div class="row">
+
+                <div class="col-sm-6 sup-contact-button col-sm-offset-3">
+                  <a href="{{ '/contact' | url(alt=alt)  }}" type="button" class="btn btn-primary btn-block">{{ data.contact_button[alt] }}</a>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <img class="img-responsive" src="{{ images.get(data.kite_surf_private.image) | url }}">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
   </section>
 
 {% endblock %}

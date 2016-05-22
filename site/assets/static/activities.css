@@ -1,6 +1,6 @@
 #surf .surf-feature{
     margin-top: 25px;
-    border: #1999d8 3px solid;
+    border: #c0c0c0 1px solid;
 }
 
 #surf .surf-feature h4{
@@ -13,6 +13,11 @@
     padding: 15px 0;
 }
 
+#surf .surf-feature.surf-feature-horizontal .feature-header{
+    border-bottom: #c0c0c0 1px solid;
+}
+
+
 #surf .surf-feature.surf-feature-horizontal  .feature-price{
     margin: 0 0;
     padding: 9px 0;
@@ -22,3 +27,10 @@
     padding: 15px 10px;
 }
 
+#surf .sup-contact-button{
+    padding-top: 10px;
+}
+
+#surf .sup-pricing{
+    margin-top: 8px;
+}
