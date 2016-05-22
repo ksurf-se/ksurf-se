@@ -91,21 +91,17 @@
                 </div>
               </div>
             </div>
-
           </div>
-
         </div>
       </div>
-
     </div>
-
   </section>
 
   <section class="container">
 
     <div class="row">
       <div class="col-md-12">
-        <h3 class="border-line-bottom text-uppercase text-right">
+        <h3 class="border-line-bottom text-uppercase">
           {{ data.sup_group[alt] }}
         </h3>
       </div>
@@ -127,8 +123,15 @@
             </div>
           </div>
           <div class="row">
+            <div class="col-sm-4">
+              <img class="img-responsive" src="{{ images.get(data.kite_surf_private.image) | url }}">
+            </div>
             <div class="col-sm-8">
-
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3 class="text-center sup-pricing">200 SEK (1h)</h3>
+                </div>
+              </div>
               <div class="row">
                 <div class="col-sm-12 text-center">
                   <p>
@@ -155,20 +158,13 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-6">
-                  <h3 class="text-center sup-pricing">200 SEK (1h)</h3>
-                </div>
-                <div class="col-sm-6 sup-contact-button">
+                <div class="col-sm-6 col-sm-offset-3 sup-contact-button">
                   <a href="{{ '/contact' | url(alt=alt)  }}" type="button" class="btn btn-primary btn-block">{{ data.contact_button[alt] }}</a>
+                  <p></p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
-              <img class="img-responsive" src="{{ images.get(data.kite_surf_private.image) | url }}">
-            </div>
-
           </div>
-
         </div>
       </div>
     </div>
@@ -192,10 +188,10 @@
             <div class="col-md-12">
               <h4 class="text-center feature-header">
                 {% if alt == 'en' %}
-                  Surf & SUP lessons (ages 6 to 12)
+                  Surf or SUP lessons (ages 6 to 12)
                 {% endif %}
                 {% if alt == 'sv' %}
-                  Surf & SUP lektioner (från 6 till 12 år)
+                  Surf or SUP lektioner (från 6 till 12 år)
                 {% endif %}
               </h4>
             </div>
@@ -205,35 +201,23 @@
               <img class="img-responsive" src="{{ images.get(data.kite_surf_private.image) | url }}">
             </div>
             <div class="col-sm-8">
-
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3 class="text-center sup-pricing">390 SEK (2h)</h3>
+                </div>
+              </div>
               <div class="row">
                 <div class="col-sm-12 text-center">
                   <p>
                     {% if alt == 'en' %}
-                     Surf och SUP group lessons for the young ones. Price includes equipment rent.<br/>
-                      A maximum of 4 participants per course. One session is two hours.
+                      Surf or SUP group lessons for the young ones. Price includes equipment rent.<br/>
+                      A maximum of 4 participants per course.
                     {% endif %}
                     {% if alt == 'sv' %}
-                      Surf and SUP gruppkurs för dem lite yngre. I priset ingår hyra för utrustning.<br/>
-                      Högst 4 deltagare per kurs. Ett pass är två timmar.
+                      Surf eller SUP gruppkurs för dem lite yngre. I priset ingår hyra för utrustning.<br/>
+                      Högst 4 deltagare per kurs.
                     {% endif %}
                   </p>
-                  <div class="row">
-
-                    <div class="col-sm-4">
-                      <div>1 pass</div>
-                      <h4>380 SEK</h4>
-                    </div>
-                    <div class="col-sm-4">
-                      <div>3 pass</div>
-                      <h4>1040 SEK</h4>
-                    </div>
-                    <div class="col-sm-4">
-                      <div>5 pass</div>
-                      <h4>1590 SEK</h4>
-                    </div>
-
-                  </div>
                   <p>
                     {% if alt == 'en' %}
                       You can either book at KSurf center in Skanör or you can e-mail/call us.
@@ -252,7 +236,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -263,15 +246,18 @@
             <div class="col-md-12">
               <h4 class="text-center feature-header">
                 {% if alt == 'en' %}
-                  Beach week package
+                  Beach week package (ages 6 to 12)
                 {% endif %}
                 {% if alt == 'sv' %}
-                  Strandveckan-paketet
+                  Strandveckan-paketet (från 6 till 12 år)
                 {% endif %}
               </h4>
             </div>
           </div>
           <div class="row">
+            <div class="col-sm-4">
+              <img class="img-responsive" src="{{ images.get(data.kite_surf_private.image) | url }}">
+            </div>
             <div class="col-sm-8">
               <div class="row">
                 <div class="col-sm-12">
@@ -280,6 +266,16 @@
               </div>
               <div class="row">
                 <div class="col-sm-6 text-center">
+                  {% if alt == 'en' %}
+                    <p>
+                      A 5-day package consisting of different activities for the young ones.
+                      A total of 9 hours with fun activities like trying out to fly a kite on land, learn SUP, surfing and skimboarding.
+                    </p>
+                    <p>
+                      A maximum of 4 participants per group. The instructor will have full focus on the participants.
+                      The package includes equipment rent. Being able to swim is required, life jackets are provided.
+                    </p>
+                  {% endif %}
                   {% if alt == 'sv' %}
                     <p>
                       Ett 5-dagars paket som består av olika aktiviteter för de yngre.
@@ -287,12 +283,23 @@
                     </p>
                     <p>
                       Högst 4 deltagare i gruppen. Instruktören har fullt fokus på deltagarna.
-                      I priset ingår hyra för utrustning. Flytväst är obligatoriskt.
+                      I priset ingår hyra för utrustning. Simkunskaper är obligatoriskt, flytväst ingår.
                     </p>
-
                   {% endif %}
                 </div>
                 <div class="col-sm-6">
+                  {% if alt == 'en' %}
+                    <div class="text-center"><strong>The package consists of</strong>:</div>
+                    <ul>
+                      <li>4 hours surf lessons</li>
+                      <li>1 hour SUP lesson</li>
+                      <li>2 hours kite on the beach</li>
+                      <li>2 hours skimboarding</li>
+                    </ul>
+                    <p class="text-center">
+                      As some activities are weather dependant, the program will be updated daily during the week.
+                    </p>
+                  {% endif %}
                   {% if alt == 'sv' %}
                     <div class="text-center"><strong>Paketet består av</strong>:</div>
                     <ul>
@@ -307,28 +314,15 @@
                   {% endif %}
                 </div>
               </div>
-              <div class="row">
-                <div class="col-sm-4 col-sm-offset-4">
-
-
-                </div>
-              </div>
-
 
               <div class="row">
-
                 <div class="col-sm-6 sup-contact-button col-sm-offset-3">
                   <a href="{{ '/contact' | url(alt=alt)  }}" type="button" class="btn btn-primary btn-block">{{ data.contact_button[alt] }}</a>
                   <p></p>
                 </div>
               </div>
             </div>
-            <div class="col-sm-4">
-              <img class="img-responsive" src="{{ images.get(data.kite_surf_private.image) | url }}">
-            </div>
-
           </div>
-
         </div>
       </div>
     </div>
