@@ -5,7 +5,7 @@ $(function(){
         event.preventDefault();
 
         $.ajax({
-            url: "https://formspree.io/jt@ordolabs.io",
+            url: "https://formspree.io/info@ksurf.se",
             method: "POST",
             data: {
                 _subject: "Please contact me",
