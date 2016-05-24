@@ -85,19 +85,19 @@
                     {% if alt == 'en' %}Name{% endif %}{% if alt == 'sv' %}Namn{% endif %}
                   </label>
                   <input required type="text" class="form-control" id="nameInput" placeholder="{% if alt == 'en' %}First Last{% endif %}{% if alt == 'sv' %}Förnamn Efternamn{% endif %}" name="name">
-                  <div class="help-block with-errors">foo</div>
+                  <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                   <label for="emailInput">E-mail</label>
                   <input required type="email" class="form-control" id="emailInput" placeholder="john@gmail.com" name="email">
-                  <div class="help-block with-errors">bar</div>
+                  <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                   <label for="phoneInput">{% if alt == 'en' %}Phone{% endif %}{% if alt == 'sv' %}Mobil{% endif %}</label>
                   <input required type="text" data-minlength="7" class="form-control" id="phoneInput" placeholder="070 ...." name="phone">
-                  <div class="help-block with-errors">baz</div>
+                  <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
