@@ -70,30 +70,34 @@
           <div class="panel panel-default">
 
             <div class="panel-body">
-              <h4 class=" text-center">
-                {% if alt == 'en' %}
-                  Leave your contact details,<br/>we will get back to you.
-                {% endif %}
-                {% if alt == 'sv' %}
-                  Lämna dina kontaktuppgifter,<br/>så kontaktar vi dig.
-                {% endif %}
-              </h4>
-              <form>
+
+              <form id="contact-me-form" role="form" data-toggle="validator">
+                <h4 class=" text-center">
+                  {% if alt == 'en' %}
+                    Leave your contact details,<br/>we will get back to you.
+                  {% endif %}
+                  {% if alt == 'sv' %}
+                    Lämna dina kontaktuppgifter,<br/>så kontaktar vi dig.
+                  {% endif %}
+                </h4>
                 <div class="form-group">
                   <label for="nameInput">
                     {% if alt == 'en' %}Name{% endif %}{% if alt == 'sv' %}Namn{% endif %}
                   </label>
-                  <input type="text" class="form-control" id="nameInput" placeholder="{% if alt == 'en' %}First Last{% endif %}{% if alt == 'sv' %}Förnamn Efternamn{% endif %}" name="name">
+                  <input required type="text" class="form-control" id="nameInput" placeholder="{% if alt == 'en' %}First Last{% endif %}{% if alt == 'sv' %}Förnamn Efternamn{% endif %}" name="name">
+                  <div class="help-block with-errors">foo</div>
                 </div>
 
                 <div class="form-group">
                   <label for="emailInput">E-mail</label>
-                  <input type="email" class="form-control" id="emailInput" placeholder="john@gmail.com" name="email">
+                  <input required type="email" class="form-control" id="emailInput" placeholder="john@gmail.com" name="email">
+                  <div class="help-block with-errors">bar</div>
                 </div>
 
                 <div class="form-group">
                   <label for="phoneInput">{% if alt == 'en' %}Phone{% endif %}{% if alt == 'sv' %}Mobil{% endif %}</label>
-                  <input type="phone" class="form-control" id="phoneInput" placeholder="070 ...." name="phone">
+                  <input required type="text" data-minlength="7" class="form-control" id="phoneInput" placeholder="070 ...." name="phone">
+                  <div class="help-block with-errors">baz</div>
                 </div>
 
                 <div class="form-group">
@@ -112,6 +116,14 @@
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">{% if alt == 'en' %}Contact me{% endif %}{% if alt == 'sv' %}Kontakta mig{% endif %}</button>
               </form>
+              <div id="contact-me-form-alert" class="alert alert-success text-center hidden" role="alert" style="margin-bottom: 0">
+                {% if alt == 'en' %}
+                  <strong>Thank you!</strong> We'll get in touch as soon as possible.
+                {% endif %}
+                {% if alt == 'sv' %}
+                  <strong>Tack!</strong> Vi kontaktar dig snart vi kan.
+                {% endif %}
+              </div>
             </div>
           </div>
 
