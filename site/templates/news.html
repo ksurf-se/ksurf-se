@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block extra_css %}
+
+{% endblock %}
+
+{% set news = bag('news') %}
+
+{% block body %}
+
+  <section class="container">
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h3 class="border-line-bottom text-uppercase">
+          {% if alt == 'en' %}
+            Latest posts
+          {% endif %}
+          {% if alt == 'sv' %}
+            Senaste nytt
+          {% endif %}
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        {% for post in news.posts %}
+        <div class="fb-post" data-href="{{ post }}" data-width="750"></div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </section>
+
+  <script>window.fbAsyncInit = function() {
+    FB.init({
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+    }; (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+{% endblock %}

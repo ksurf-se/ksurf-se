@@ -2,7 +2,7 @@
 {% block title %}{{ this.title }}{% endblock %}
 
 {% block extra_css %}
-  <link href="{{ '/static/contact.css' | url }}" rel="stylesheet">
+
 {% endblock %}
 
 {% set images = this.attachments.images %}
@@ -90,13 +90,13 @@
 
                 <div class="form-group">
                   <label for="emailInput">E-mail</label>
-                  <input required type="email" class="form-control" id="emailInput" placeholder="john@gmail.com" name="email">
+                  <input required type="email" class="form-control" id="emailInput" placeholder="email@example.com" name="email">
                   <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                   <label for="phoneInput">{% if alt == 'en' %}Phone{% endif %}{% if alt == 'sv' %}Mobil{% endif %}</label>
-                  <input required type="text" data-minlength="7" class="form-control" id="phoneInput" placeholder="070 ...." name="phone">
+                  <input required type="text" data-minlength="9" class="form-control" id="phoneInput" placeholder="070 ...." name="phone">
                   <div class="help-block with-errors"></div>
                 </div>
 
