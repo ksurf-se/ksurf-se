@@ -2,7 +2,7 @@ PYTHON_BIN := .venv/bin
 
 all: ubuntu-deps install
 
-.PHONY: install .venv ubuntu-deps deploy-test clean server build check-aws-env
+.PHONY: install .venv ubuntu-deps deploy-test deploy clean server build check-aws-env
 
 install: .venv
 
@@ -27,6 +27,9 @@ build: .venv
 
 deploy-test: check-aws-env build
 	$(PYTHON_BIN)/s3cmd sync --add-header="Cache-Control:max-age=3600" --no-mime-magic --no-preserve --delete-removed --delete-after ./site/.build/ s3://test.ksurf.se/
+
+deploy: check-aws-env build
+	$(PYTHON_BIN)/s3cmd sync --add-header="Cache-Control:max-age=3600" --no-mime-magic --no-preserve --delete-removed --delete-after ./site/.build/ s3://www.ksurf.se/
 
 check-aws-env:
 ifndef AWS_ACCESS_KEY_ID
