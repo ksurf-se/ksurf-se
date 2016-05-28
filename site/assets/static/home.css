@@ -1,47 +1,12 @@
 
-/* carousel customizations */
-
-#surf #home-carousel-container{
-  padding: 0px;
-}
-
-#surf .carousel-indicators {
-  cursor: pointer;
-}
-
-#home-carousel-buffer:after {
-  padding-top: 40%;
-  display: block;
-  content: '';
-}
-
-
 #surf .panel-body {
   padding: 0px;
 }
 
-#surf .carousel-caption {
-  font-size: 4vw;
-}
-#surf .carousel-caption.up-left {
-  left:    5%;
-  right: auto;
-  top:    10%;
-}
-#surf .carousel-caption.down-right {
-  left:  auto;
-  right:   5%;
-  top:   auto;
-  bottom: 10%;
-}
-#surf .carousel-caption.down-left {
-  left:    5%;
-  right: auto;
-  top:   auto;
-  bottom: 10%;
-}
 
-
+#surf .home-text{
+  font-size: 20px;
+}
 /* home components */
 
 #surf .featured {
@@ -58,7 +23,7 @@
   position: absolute;
   width: 100%;
   bottom: 0px;
-  height: 55%;
+  height: 30%;
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 46%, rgba(0, 0, 0, 0.76));
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6) 46%, rgba(0, 0, 0, 0.76));
 }
@@ -66,6 +31,8 @@
 #surf .featured.featured-lg .featured-title {
   color: white;
   font-size: x-large;
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 0.15em;
 }
 
 #surf .featured.featured-lg .featured-body{
@@ -77,14 +44,17 @@
 }
 
 #surf .featured.featured-sm .featured-title {
-  font-size: medium;
+  color: #f7f7f7;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 0.6);
 }
 
 #surf .featured.featured-sm .featured-body {
   font-size: small;
 }
 
-
+#surf .featured {
+  margin-bottom: 5em;
+}
 #surf .featured img {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);

@@ -7,52 +7,172 @@
 {% endblock %}
 
 {% set images = this.attachments.images %}
+{% set slides = bag('home-slideshow') %}
 {% block body %}
 
-  {% set carousel_id = 'carousel-' ~ get_random_id() %}
-  <section class="container-fluid" id="home-carousel-container">
-
-    <div id="{{ carousel_id }}"
-         class="carousel slide"
-         data-ride="carousel"
-         data-interval="5000"
-         data-pause="hover">
-
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        {% for id, slide in bag('home-slideshow').iteritems() %}
-        <li data-target="#{{ carousel_id }}" data-slide-to="{{ loop.index0 }}"{% if loop.first %} class="active"{% endif %}></li>
-        {% endfor %}
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        {% for id, slide in bag('home-slideshow').iteritems() %}
-        <div class="item {% if loop.first %} active{% endif %}">
-          <img src="{{  images.get(slide.image) | url  }}" alt="{{ slide[alt] }}">
-          <div class="carousel-caption {{ slide.text_location }}">
-            {{ slide[alt] }}
-          </div>
+  <div class='jarallax' style='min-height: 60vh; background-image: url({{ images.get('home-ksurf-banner.jpg') | url }})'>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="text-center text-uppercase surf-heading">
+            KSurf
+          </h1>
         </div>
-        {% endfor %}
       </div>
     </div>
+  </div>
 
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="text-center text-uppercase surf-heading-3">
+            {% if alt == 'en' %}
+              Surfcenter Skanör / Falsterbo
+            {% endif %}
+            {% if alt == 'sv' %}
+              Surf center Skanör / Falsterbo
+            {% endif %}
+          </h2>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <div class='jarallax' style='min-height: 30vh; background-image: url({{ images.get('home-about-us-banner.jpg') | url }})'>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 ">
+          <h1 class="text-center text-uppercase surf-heading-2">
+            {% if alt == 'en' %}
+              Our story
+            {% endif %}
+            {% if alt == 'sv' %}
+              Om oss
+            {% endif %}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="text-center home-text">
+            {% if alt == 'en' %}
+              KSURF was founded by Yassine and Julia.<br/>
+              Our goal is to create a meeting place for people of all ages and make the ocean accessible to everybody!<br/>
+              We offer Kitesurfing lessons, SUP fitness/SUP, rentals and activities for children, like surfing and skimboarding.
+              <br/><br/>
+            {% endif %}
+            {% if alt == 'sv' %}
+              KSURF grundades av Yassine och Julia.<br/>
+              Vårt mål är att skapa en mötesplats för människor i alla åldrar och att göra havet tillgängligt för alla!<br/>
+              Vi erbjuder Kitesurfing lektioner, SUP fitness/SUP, uthyrning samt aktiviteter för barn, som surfing och skimboarding.
+              <br/><br/>
+            {% endif %}
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="border-line-bottom text-uppercase">
+            Yassine
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img-responsive" src="{{ images.get('home-yassine.jpg') | url }}" alt="Yassine">
+        </div>
+        <div class="col-md-8">
+          <p class="home-text">
+            {% if alt == 'en' %}
+              Yassine will be your instructor this summer. He has been in and around the Atlantic ocean for many years. <br/>
+              His lifestyle and passion is all about surfing.
+              Yassine is always smiling and bringing a positive vibe to the atmosphere with a professional attitude.
+              He has over 9 years worth of experience working as IKO level 2-qualified Kitesurfing instructor and has taught more than 4000 people how to Kitesurf.
+            {% endif %}
+            {% if alt == 'sv' %}
+              Yassine kommer att vara din instruktör i sommar. Han har varit i och runt Atlanten i många år. <br/>
+              Surfing är hans passion och livsstil. Han har över 9 års erfarenhet av att arbeta som IKO nivå 2-kvalificerad Kitesurfing instruktör och har utbildat över 4000 deltagare i Kitesurfing.
+            {% endif %}
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="home-text">
+            {% if alt == 'en' %}
+              Yassine has achieved a top five ranking in the PKRA World Tour of 2011.
+              He finished first place in the Moroccan championship of 2013.
+              During the Swedish Championship of 2015, he won first place in the Big Air category.
+              <br/><br/>
+            {% endif %}
+            {% if alt == 'sv' %}
+              Yassine har tävlat i PKRA  och placerade sig i topp fem 2011.
+              Han kom på första plats i det Marockanska Mästerskapet 2013 och knep första platsen i Big Air kategorin under Svenska Mästerskapet 2015.
+            {% endif %}
+          </p>
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-md-12">
+          <h3 class="border-line-bottom text-uppercase text-right">
+            Julia
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <p class="home-text">
+            {% if alt == 'en' %}
+              Julia was introduced to kitesurfing in 2013.
+              Kitesurfing and surfing has become a big happy place in her life.
+              Julia just finished her general medical training program in Dalarna and will pursue her medical career in Skåne.
+              Julia will answer your questions. Feel free to call, write or grab her on the beach by the surf centre.
+            {% endif %}
+            {% if alt == 'sv' %}
+              Julia introducerades för kitesurfing 2013.
+              Kite och surfing har blivit en stor del av hennes liv. Julia har precis avslutat sin
+              allmäntjänstgöring i Dalarna och kommer fortsätta sin läkarkarriär i Skåne.
+              Julia kommer att besvara dina frågor. Välkommen att ringa, skriva eller prata med henne på stranden.
+            {% endif %}
+
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive" src="{{ images.get('home-julia.jpg') | url }}" alt="Julia">
+        </div>
+      </div>
+    </div>
+  <p><br/><br/><br/><br/><br/><br/></p>
+  </section>
+
+
+  <div class='jarallax' style='min-height: 30vh; background-image: url({{ images.get('home-activities-banner.jpg') | url }})'>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 ">
+          <h1 class="text-center text-uppercase surf-heading-2">
+            {% if alt == 'en' %}
+              Activities
+            {% endif %}
+            {% if alt == 'sv' %}
+              Aktiviteter
+            {% endif %}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
 
   {% set section = bag('home-sections', 'activities') %}
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
-          <h4 id="{{ section.anchor }}" class="border-line-bottom text-center text-uppercase margin-lg-top">
-            {{ section[alt] }}
-          </h4>
-        </div>
-      </div>
-
-      <div class="row margin-sm-top">
         {% for activity in section.values() %}
           {% if activity.image %}
           <div class="col-md-4">
@@ -61,12 +181,9 @@
                 <img class="img-responsive" src="{{ images.get(activity.image) | url }}" alt="Kite surfing">
               </div>
               <div class="featured-desc">
-                <div class="text-serif featured-title">
+                <h4 class="text-center text-uppercase featured-title">
                   {{ activity[alt] }}
-                </div>
-                <div class="featured-body">
-                  {{ activity['desc_' + alt] }}
-                </div>
+                </h4>
               </div>
             </a>
           </div>
@@ -76,31 +193,50 @@
     </div>
   </section>
 
+
+  <div class='jarallax' style='min-height: 30vh; background-image: url({{ images.get('home-location-banner.jpg') | url }})'>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 ">
+          <h1 class="text-center text-uppercase surf-heading-2">
+            {% if alt == 'en' %}
+              Location
+            {% endif %}
+            {% if alt == 'sv' %}
+              Hitta hit
+            {% endif %}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
   {% set section = bag('home-sections', 'location') %}
-  <section>
+
+  <section class="section">
+
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h4 id="{{ section.anchor }}" class="border-line-bottom text-center text-uppercase margin-md-top">
-            {{ section[alt] }}
-          </h4>
+          {{ google_map('https://www.google.com/maps/embed/v1/place?key=AIzaSyCWL32YkvKsVF77E2GF9M12jWMtDQNS7po&q=Badhytten,Skanör,Sverige&zoom=10', '100%', '450') }}
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          {{ google_map(section.map_url, '100%', '450') }}
+          <p class="text-center home-text">
+            {% if alt == 'en' %}
+              The surf center is located in Skanör/Falsterbo just next to Badhytten on the beach, next to Skanörs hamn.
+            {% endif %}
+            {% if alt == 'sv' %}
+              Surfcentret är hittar ni i Skanör/Falsterbo, på stranden intill Badhytten, bredvid Skanörs hamn.
+            {% endif %}
+          </p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-
-        </div>
-      </div>
-
-
-
-
     </div>
   </section>
+
+
+
 
 {% endblock %}

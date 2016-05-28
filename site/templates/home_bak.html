@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+{% from "macros/google_map.html" import google_map %}
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block extra_css %}
+  <link href="{{ '/static/home.css' | url }}" rel="stylesheet">
+{% endblock %}
+
+{% set images = this.attachments.images %}
+{% block body %}
+
+  {% set carousel_id = 'carousel-' ~ get_random_id() %}
+  <section class="container-fluid" id="home-carousel-container">
+
+    <div id="{{ carousel_id }}"
+         class="carousel slide"
+         data-ride="carousel"
+         data-interval="5000"
+         data-pause="hover">
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        {% for id, slide in bag('home-slideshow').iteritems() %}
+        <li data-target="#{{ carousel_id }}" data-slide-to="{{ loop.index0 }}"{% if loop.first %} class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        {% for id, slide in bag('home-slideshow').iteritems() %}
+        <div class="item {% if loop.first %} active{% endif %}">
+          <img src="{{  images.get(slide.image) | url  }}" alt="{{ slide[alt] }}">
+          <div class="carousel-caption {{ slide.text_location }}">
+            {{ slide[alt] }}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </section>
+
+
+  {% set section = bag('home-sections', 'activities') %}
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h4 id="{{ section.anchor }}" class="border-line-bottom text-center text-uppercase margin-lg-top">
+            {{ section[alt] }}
+          </h4>
+        </div>
+      </div>
+
+      <div class="row margin-sm-top">
+        {% for activity in section.values() %}
+          {% if activity.image %}
+          <div class="col-md-4">
+            <a href="{{ activity.link | url(alt=alt) }}" class="inline-block position-relative featured featured-lg hvr-float">
+              <div class="overflow-hidden">
+                <img class="img-responsive" src="{{ images.get(activity.image) | url }}" alt="Kite surfing">
+              </div>
+              <div class="featured-desc">
+                <div class="text-serif featured-title">
+                  {{ activity[alt] }}
+                </div>
+                <div class="featured-body">
+                  {{ activity['desc_' + alt] }}
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% set section = bag('home-sections', 'location') %}
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h4 id="{{ section.anchor }}" class="border-line-bottom text-center text-uppercase margin-md-top">
+            {{ section[alt] }}
+          </h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          {{ google_map(section.map_url, '100%', '450') }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </section>
+
+{% endblock %}

@@ -11,8 +11,36 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 0.15em;
 }
 
+
+#surf .surf-heading{
+    color: #f7f7f7;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.6);
+    padding-top: 23rem;
+    font-size: 10em;
+}
+
+#surf .surf-heading-2{
+    color: #f7f7f7;
+    padding-top: 13rem;
+    font-size: 5em;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.6);
+}
+
+#surf .surf-heading-3{
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+}
+
 #surf section {
-    margin-top: 4em;
+    padding-top: 4em;
+    background-color: #f7f7f7;
+}
+
+#surf .jarallax {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 /* Overall structure */
