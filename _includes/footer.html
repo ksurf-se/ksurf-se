@@ -1,0 +1,45 @@
+<footer id="footer">
+  <div class="primary-footer">
+    <div class="container">
+      <div class="row">
+        <address class="col-sm-6 vcard">
+           <div class="adr">
+              <div class="street-address">{{ site.contact.street_address }}</div>
+              <div class="locality">{{ site.contact.locality }}</div>
+              <div>
+                <span class="postal-code">{{ site.contact.postal_code }}</span>
+                <span class="country-name">{{ site.contact.country_name }}</span>
+              </div>
+           </div>
+           <div><i class="fa fa-phone"></i> <a class="tel" href="tel:{{ site.contact.tel }}">{{ site.contact.tel }}</a></div>
+           <div><i class="fa fa-at"></i> <a class="email" href="mailto:{{ site.contact.email | safe}}">{{ site.contact.email | safe }}</a></div>
+           <div><i class="fa fa-home"></i> <a class="url" href="{{ site.contact.url }}">{{ site.contact.url }}</a></div>
+        </address>
+        <div class="col-sm-6 text-right">
+          <div>
+            <span class="text-uppercase">ksurf.se</span>
+          </div>
+          <div>
+            <a href="{{ site.contact.facebook_url }}" target="_blank">
+              on Facebook&nbsp;<i class="fa fa-2x fa-facebook-square"></i>
+            </a>
+          </div>
+          <div>
+            <a href="{{ site.contact.instagram_url }}" target="_blank">
+              on Instagram&nbsp;<i class="fa fa-2x fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="secondary-footer bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          &copy; Copyright - ksurf.se
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

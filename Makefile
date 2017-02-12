@@ -1,40 +1,19 @@
-PYTHON_BIN := .venv/bin
+define HELP_MESSAGE
+Usage: make [COMMAND]
 
-all: ubuntu-deps install
+Commands:
+	help     Display this help message.
+	serve    Run dev server.
+endef
 
-.PHONY: install .venv ubuntu-deps deploy-test deploy clean server build check-aws-env
+export HELP_MESSAGE
 
-install: .venv
+PWD := $(shell pwd)
 
-.venv: $(PYTHON_BIN)/activate
+.PHONY: serve
 
-$(PYTHON_BIN)/activate: requirements.txt
-	test -d $(PYTHON_BIN) || virtualenv .venv
-	$(PYTHON_BIN)/pip install -Ur requirements.txt
-	touch $(PYTHON_BIN)/activate
+serve:
+	docker run -it --rm --label=jekyll --volume=$(PWD):/srv/jekyll -p 127.0.0.1:4000:4000 jekyll/jekyll:pages jekyll serve --drafts
 
-ubuntu-deps:
-	sudo apt-get install -y libssl-dev libffi-dev
-
-clean:
-	rm -rf .venv
-
-server:
-	$(PYTHON_BIN)/lektor --project site server
-
-build: .venv
-	$(PYTHON_BIN)/lektor --project site build --output-path .build
-
-deploy-test: check-aws-env build
-	$(PYTHON_BIN)/s3cmd sync --add-header="Cache-Control:max-age=3600" --no-mime-magic --no-preserve --delete-removed --delete-after ./site/.build/ s3://test.ksurf.se/
-
-deploy: check-aws-env build
-	$(PYTHON_BIN)/s3cmd sync --add-header="Cache-Control:max-age=3600" --no-mime-magic --no-preserve --delete-removed --delete-after ./site/.build/ s3://www.ksurf.se/
-
-check-aws-env:
-ifndef AWS_ACCESS_KEY_ID
-	$(error AWS_ACCESS_KEY_ID is undefined)
-endif
-ifndef AWS_SECRET_ACCESS_KEY
-	$(error AWS_SECRET_ACCESS_KEY is undefined)
-endif
+help:
+	docker run -it --rm --label=jekyll jekyll/jekyll:pages jekyll --help
