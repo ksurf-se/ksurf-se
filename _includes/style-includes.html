@@ -1,2 +1,7 @@
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,600' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="{{ site.url }}/css/main.css">
+
+{% if layout.custom_css %}
+<link rel="stylesheet" href="{{ site.url }}/css/{{ layout.custom_css }}.css" >
+{% endif %}

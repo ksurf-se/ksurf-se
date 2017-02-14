@@ -1,6 +1,121 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
 @import "variables";
 @import "bootstrap";
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  letter-spacing: 0.15em;
+}
+
+#ksurf .surf-heading{
+    color: #f7f7f7;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.8);
+    padding-top: 23rem;
+    padding-bottom: 10rem;
+    font-size: 8em;
+    background-repeat: no-repeat;
+    background-position: 50% 93%;
+}
+
+#ksurf .surf-heading-2{
+    color: #f7f7f7;
+    padding-top: 13rem;
+    font-size: 4em;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.8);
+}
+
+#ksurf .surf-heading-3{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    font-size: 2.8em;
+}
+
+
+/* Nav Brand */
+#ksurf .navbar {
+  text-transform: uppercase;
+  font-size: larger;
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 0.15em;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+
+  .lang-selector{
+    font-size: 13px;
+  }
+}
+
+#ksurf .navbar-brand {
+  padding: 20px 15px;
+  line-height: 23px;
+  font-size: 24px;
+  img {
+    float: left;
+    margin-top: -10px;
+    margin-right: -5px;
+  }
+}
+
+/* Nav Flags */
+
+.flag-link {
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    background:url({{site.url}}/images/nav/flags.png) no-repeat;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.flag-link.flag-en {background-position: -16px 0}
+.flag-link.flag-sv {background-position: 0 -11px}
+
+/* Overall structure */
+.ksurf-main {
+    margin-top: 65px;
+    min-height: 50vh;
+}
+
+#ksurf section {
+    padding: 4em 0 4em 0;
+    background-color: #f7f7f7;
+}
+
+#ksurf .jarallax {
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+
+/* Footer */
+#footer {
+  margin-top: 4em;
+
+  .primary-footer{
+    background-color: #c8c4b7;
+    color: #333333;
+    padding-top: 25px;
+    font-size: larger;
+    a{
+      color: #333333;
+    }
+    a:hover{
+      color: #000000;
+    }
+  }
+
+  .secondary-footer{
+    background-color: #444444;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: larger;
+  }
+
+  .fa-2x {
+    vertical-align: middle;
+  }
+}

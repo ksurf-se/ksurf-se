@@ -27,7 +27,7 @@
           {% for nav in site.nav %}
             {% assign nav_page = site.pages | where: 'role', nav | where: 'lang', @page.lang | first %}
 
-            <li {% if nav_page.url==page.url %}class="active"{% endif %}>
+            <li {% if nav_page==page.url %}class="active"{% endif %}>
               <a href="{{ site.url }}{{ nav_page.url }}">{{ nav_page.nav_text }}</a>
             </li>
           {% endfor %}
@@ -40,18 +40,18 @@
                data-toggle="dropdown"
                role="button"
                aria-haspopup="true"
-               aria-expanded="false"><span class="flag-link flag-sv">&nbsp;</span> <span class="caret"></span></a>
-            <ul class="dropdown-menu">
+               aria-expanded="false"><span class="flag-link flag-{{ page.lang }}">&nbsp;</span> <span class="caret"></span></a>
+            <ul class="dropdown-menu lang-selector">
               {% assign sv_page = site.pages | where: 'role', @page.role | where: 'lang', 'sv' | first %}
               {% assign en_page = site.pages | where: 'role', @page.role | where: 'lang', 'en' | first %}
-              <li>
+              <li class="text-right">
                 <a alt="Svenska"  href="{{ site.url }}{{ sv_page.url }}">
-                  <span class="flag-link flag-sv">&nbsp;</span>Svenska
+                  Svenska <span class="flag-link flag-sv">&nbsp;</span>
                 </a>
               </li>
-              <li>
+              <li class="text-right">
                 <a alt="English"  href="{{ site.url }}{{ en_page.url }}">
-                  <span class="flag-link flag-en">&nbsp;</span>English
+                  English <span class="flag-link flag-en">&nbsp;</span>
                 </a>
               </li>
             </ul>
