@@ -6,17 +6,21 @@ sass:
 exclude:
   - Makefile
 
-
 # Setup
 title: KSurf
 url: https://www.ksurf.se
 baseurl: ""
+collections:
+  activities:
+    output: true
+    permalink: /activities/:path/
 
 languages:
   - sv
   - en
 
 nav:
+  - home
   - news
   - activities
   - contact
@@ -36,3 +40,11 @@ contact:
 
   facebook_url: https://www.facebook.com/ksurf.se
   instagram_url: https://www.instagram.com/ksurf.se/
+
+en: &DEFAULT_I18N
+  buttons:
+    read_more: Read more
+    request_booking: Request booking
+
+sv:
+  <<: *DEFAULT_I18N

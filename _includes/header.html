@@ -22,26 +22,22 @@
 
       <!-- Desktop nav -->
       <div class="collapse navbar-collapse" id="navbar">
-        <ul class="nav navbar-nav">
-
+        <ul class="nav navbar-nav navbar-right pull-right">
           {% for nav in site.nav %}
             {% assign nav_page = site.pages | where: 'role', nav | where: 'lang', @page.lang | first %}
 
             <li {% if nav_page==page.url %}class="active"{% endif %}>
-              <a href="{{ site.url }}{{ nav_page.url }}">{{ nav_page.nav_text }}</a>
+              <a class="text-right" href="{{ site.url }}{{ nav_page.url }}">{{ nav_page.nav_text }}</a>
             </li>
           {% endfor %}
-
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="#"
-               class="dropdown-toggle"
+               class="dropdown-toggle text-right"
                data-toggle="dropdown"
                role="button"
                aria-haspopup="true"
                aria-expanded="false"><span class="flag-link flag-{{ page.lang }}">&nbsp;</span> <span class="caret"></span></a>
-            <ul class="dropdown-menu lang-selector">
+            <ul class="dropdown-menu lang-selector navbar-right">
               {% assign sv_page = site.pages | where: 'role', @page.role | where: 'lang', 'sv' | first %}
               {% assign en_page = site.pages | where: 'role', @page.role | where: 'lang', 'en' | first %}
               <li class="text-right">

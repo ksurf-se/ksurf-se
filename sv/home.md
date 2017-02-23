@@ -6,14 +6,11 @@ role: home
 lang: sv
 nav_text: Hem
 
-heading:
-  surf_center_skanor: Surfcenter Skanör / Falsterbo
-  our_story: Om oss
-  location: Hitta hit
-  
-text:
-  location: Surfcentret hittar ni i Skanör/Falsterbo, på stranden intill Badhytten, bredvid Skanörs hamn.
+surf_center_skanor: Surfcenter Skanör / Falsterbo
 
+our_story_section:
+  heading: Om oss
+  
   founded_by: |
     KSURF grundades av Yassine och Julia.<br/>
     Vårt mål är att skapa en mötesplats för människor i alla åldrar och att göra havet tillgängligt för alla!<br/>
@@ -29,8 +26,35 @@ text:
     Han tog första plats i det Marockanska Mästerskapet 2013 och knep första platsen i Big Air kategorin under Svenska Mästerskapet 2015.
   
   about_julia: |
-    Julia was introduced to kitesurfing in 2013.
-    Kitesurfing and surfing has become a big happy place in her life.
-    Julia just finished her general medical training program in Dalarna and will pursue her medical career in Skåne.
-    Julia will answer your questions. Feel free to call, write or grab her on the beach by the surf centre.
+    Julia introducerades för kitesurfing 2013.
+    Kite och surfing har blivit en stor del av hennes liv. Julia har precis avslutat sin
+    allmäntjänstgöring i Dalarna och kommer fortsätta sin läkarkarriär i Skåne.
+    Julia kommer att besvara dina fråg   or. Välkommen att ringa, skriva eller prata med henne på stranden.
+
+location_section:
+
+  heading: Hitta hit
+  text: Surfcentret hittar ni i Skanör/Falsterbo, på stranden intill Badhytten, bredvid Skanörs hamn.
+
+contact_section:
+  heading: Kontakta oss
+
+activities_section:
+  heading: Aktiviteter
+  
+  kitesurfing:
+    heading: Kitesurfing
+    desc: |
+      SAKNAS
+  
+  surfing:
+    heading: Surfing
+    desc: |
+      SAKNAS
+
+  sup:
+    heading: SUP
+    desc: |
+      SAKNAS
+
 ---

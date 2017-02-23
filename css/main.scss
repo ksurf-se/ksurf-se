@@ -10,21 +10,12 @@ h1, h2, h3, h4, h5 {
   letter-spacing: 0.15em;
 }
 
-#ksurf .surf-heading{
-    color: #f7f7f7;
-    text-shadow: 1px 1px 1px rgba(0,0,0, 0.8);
-    padding-top: 23rem;
-    padding-bottom: 10rem;
-    font-size: 8em;
-    background-repeat: no-repeat;
-    background-position: 50% 93%;
-}
 
-#ksurf .surf-heading-2{
-    color: #f7f7f7;
-    padding-top: 13rem;
-    font-size: 4em;
-    text-shadow: 1px 1px 1px rgba(0,0,0, 0.8);
+#ksurf h1{
+  color: #f7f7f7;
+  font-size: 4em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0, 0.8);
 }
 
 #ksurf .surf-heading-3{
@@ -33,6 +24,39 @@ h1, h2, h3, h4, h5 {
     font-size: 2.8em;
 }
 
+#ksurf .site-logo{
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image:  url({{ site.url }}/images/home/gray-transparent-kite-3.png);
+}
+
+#ksurf .parallax-header {
+  background: transparent;
+
+  min-height: 30vh;
+  h1{
+    line-height: 30vh;
+    padding: 0;
+    text-align: center;
+  }
+
+  &.large{
+    min-height: 50vh;
+    h1{
+      line-height: 50vh;
+      padding: 0;
+      font-size: 8em;
+    }
+  }
+  &.larger{
+    min-height: 40vh;
+    h1{
+      line-height: 40vh;
+      font-size: 6em;
+      padding: 0;
+    }
+  }
+}
 
 /* Nav Brand */
 #ksurf .navbar {
@@ -58,6 +82,17 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+/* Buttons */
+
+#ksurf .btn{
+  text-transform: uppercase;
+  font-size: smaller;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+  border: none;
+  border-radius: 0;
+  transition: all .4s;
+}
+
 /* Nav Flags */
 
 .flag-link {
@@ -72,6 +107,7 @@ h1, h2, h3, h4, h5 {
 .flag-link.flag-en {background-position: -16px 0}
 .flag-link.flag-sv {background-position: 0 -11px}
 
+
 /* Overall structure */
 .ksurf-main {
     margin-top: 65px;
@@ -79,17 +115,30 @@ h1, h2, h3, h4, h5 {
 }
 
 #ksurf section {
-    padding: 4em 0 4em 0;
-    background-color: #f7f7f7;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #f7f7f7;
 }
 
-#ksurf .jarallax {
-    position: relative;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
 
+#ksurf .panel{
+  .panel-footer, .panel-heading{
+    background-color: #ffffff;
+  }
+  .panel-heading.card-heading h3{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .panel-body.card-body {
+    padding: 0px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 
 /* Footer */
 #footer {

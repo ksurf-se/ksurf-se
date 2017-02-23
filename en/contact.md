@@ -6,6 +6,3 @@ nav_text: Contact
 ---
 
 
-English Contact!
-
-

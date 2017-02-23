@@ -20,9 +20,7 @@ $(function(){
             $('#contact-me-form-alert').hide().removeClass('hidden').fadeIn(1000);
         })
     })
-
-    $('.jarallax').jarallax({
-        speed: 0.2
-    });
+    
+    $('.parallax-header').parallax();
 
 });

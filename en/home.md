@@ -4,13 +4,10 @@ role: home
 lang: en
 nav_text: Home
 
-heading:
-  surf_center_skanor: Surfcenter Skanör / Falsterbo
-  our_story: Our story
-  location: Location
+surf_center_skanor: Surfcenter Skanör / Falsterbo
 
-text:
-  location: The surf center is located in Skanör/Falsterbo just next to Badhytten on the beach, next to Skanörs hamn.
+our_story_section:
+  heading: Our story
   
   founded_by: |
     KSURF was founded by Yassine and Julia.<br/>
@@ -33,4 +30,30 @@ text:
     Kite och surfing har blivit en stor del av hennes liv. Julia har precis avslutat sin
     allmäntjänstgöring i Dalarna och kommer fortsätta sin läkarkarriär i Skåne.
     Julia kommer att besvara dina frågor. Välkommen att ringa, skriva eller prata med henne på stranden.
+
+location_section:
+
+  heading: Location
+  text: The surf center is located in Skanör/Falsterbo just next to Badhytten on the beach, next to Skanörs hamn.
+
+
+activities_section:
+  heading: Activities
+  
+  kitesurfing:
+    heading: Kitesurfing
+    desc: |
+      We offer group, private and semi-private kitesurfing lessons,
+      at the best kitesurfing location in Sweden.
+  
+  surfing:
+    heading: Surfing
+    desc: |
+      New for 2017, private and semi-private surfing lessons.
+
+  sup:
+    heading: SUP
+    desc: |
+      The hot new trend, SUP Yoga, Fitness and SUP for young ones.
+
 ---
