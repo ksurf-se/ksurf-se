@@ -11,7 +11,7 @@
                 <span class="country-name">{{ site.contact.country_name }}</span>
               </div>
            </div>
-           <div><i class="fa fa-phone"></i> <a class="tel" href="tel:{{ site.contact.tel }}">{{ site.contact.tel }}</a></div>
+           <div><i class="fa fa-phone"></i> <a class="tel" href="tel:{{ site.contact.tel | remove: ' ' }}">{{ site.contact.tel }}</a></div>
            <div><i class="fa fa-at"></i> <a class="email" href="mailto:{{ site.contact.email | safe}}">{{ site.contact.email | safe }}</a></div>
            <div><i class="fa fa-home"></i> <a class="url" href="{{ site.contact.url }}">{{ site.contact.url }}</a></div>
         </address>

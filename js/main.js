@@ -1,26 +1,24 @@
 $(function(){
 
-    $('#contact-me-form').validator().submit(function(event){
-        var form = $(this);
-        event.preventDefault();
-
-        $.ajax({
-            url: "https://formspree.io/info@ksurf.se",
-            method: "POST",
-            data: {
-                _subject: "Please contact me",
-                email: form.find('#emailInput').val(),
-                name: form.find('#nameInput').val(),
-                phone: form.find('#phoneInput').val(),
-                via: form.find("input[type='radio']:checked").val()
-            },
-            dataType: "json"
-        });
-        form.fadeOut(1000, function(){
-            $('#contact-me-form-alert').hide().removeClass('hidden').fadeIn(1000);
-        })
-    })
-    
     $('.parallax-header').parallax();
 
+    $('#dateInput').datepicker({
+        container: $('.modal-body'),
+        autoclose: true,
+        calendarWeeks: true,
+        format: 'yyyy-mm-dd (DD)',
+        weekStart: 1,
+        startDate: 'today'
+    });
+
+    $('.btn-booking-request-activity').click(function(){
+        console.log($(this).data('hours'));
+        $('#lessonsInput').val($(this).data('hours'))
+    });
 });
+
+formden.success = function(data, form_dom){
+    $(form_dom).fadeOut(1000, function(){
+        $('.form-alert-success').hide().removeClass('hidden').fadeIn(1000);
+    });
+};

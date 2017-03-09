@@ -42,19 +42,4 @@ contact_section:
 activities_section:
   heading: Aktiviteter
   
-  kitesurfing:
-    heading: Kitesurfing
-    desc: |
-      SAKNAS
-  
-  surfing:
-    heading: Surfing
-    desc: |
-      SAKNAS
-
-  sup:
-    heading: SUP
-    desc: |
-      SAKNAS
-
 ---

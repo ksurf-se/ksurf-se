@@ -1,6 +1,54 @@
 ---
 layout: default
 ---
+{% assign site_i18n = site[page.lang] %}
+{% assign activity_groups = site.data.activities.activity_groups %}
 
-ACTIVITIES LAYOUT
-{{ content }}
+{% for group in activity_groups %}
+
+{% assign group_i18n = group[@page.lang] %}
+
+<div id="{{ group.slug }}-activities"
+     class="parallax-header"
+     data-parallax="scroll"
+     data-image-src="/images/activities/banner-{{ group.slug }}.jpg"
+     data-natural-height="800"
+     data-natural-width="2000">
+  <h1>
+    {{ group_i18n.heading }}
+  </h1>
+</div>
+
+{% assign activities = site.data.activities.activities | where_exp:"item", "item.group.slug == group.slug"%}
+<section class="container">
+  <div class="row">
+    {% for act in activities %}
+    {% assign activity_page = site.pages | where: 'role', @act.slug | where: 'lang', @page.lang | first %}
+    {% assign act_i18n = act[@page.lang] %}
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading card-heading">
+          <h3>
+            {{ act_i18n.heading }}
+          </h3>
+        </div>
+        <div class="panel-body card-body">
+          <img src="{{ site.baseurl }}/images/activities/card-{{ act.slug }}.jpg" alt="act.slug" class="img-responsive center-block"/>
+        </div>
+        <div class="panel-footer">
+          <div data-mh="activities-{{ group.slug }}-mh-group">
+            <ul style="padding-bottom: 1rem" class="fa-ul">
+              {% for feature in act_i18n.features %}
+              <li><i class="fa-li fa fa-chevron-right"></i>{{ feature }}</li>
+              {% endfor %}
+            </ul>
+          <p></p>
+          </div>
+          <a class="btn btn-lg btn-primary btn-block" href="{{ site.baseurl }}{{ activity_page.url  }}">{{ site_i18n.buttons.info_booking }}</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

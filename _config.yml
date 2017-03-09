@@ -10,10 +10,6 @@ exclude:
 title: KSurf
 url: https://www.ksurf.se
 baseurl: ""
-collections:
-  activities:
-    output: true
-    permalink: /activities/:path/
 
 languages:
   - sv
@@ -21,7 +17,7 @@ languages:
 
 nav:
   - home
-  - news
+#  - news
   - activities
   - contact
 #  - trips
@@ -42,9 +38,42 @@ contact:
   instagram_url: https://www.instagram.com/ksurf.se/
 
 en: &DEFAULT_I18N
+
   buttons:
-    read_more: Read more
-    request_booking: Request booking
+    learn_more: learn more
+    info_booking: info & booking
+    request_booking: request booking
+
+  booking_form:
+    heading: Booking request
+    cancel: Cancel
+    close: Close
+    send: Send booking request
+    thank_you: |
+      <strong>Thank you!</strong><br/>
+      We'll get in touch as soon as possible.
+
+    name:
+      label: Your name
+    email:
+      label: E-mail
+    phone:
+      label: Phone
+    lessons:
+      label: Lessons
+    start_date:
+      label: Desired start date
+    participants:
+      label: Participants
+    special_requests:
+      label: Special requests
+
 
 sv:
   <<: *DEFAULT_I18N
+
+
+fb_posts:
+  - https://www.facebook.com/ksurf.se/posts/1754096081282716
+  - https://www.facebook.com/ksurf.se/posts/1749800888378902
+  - https://www.facebook.com/ksurf.se/posts/1747142785311379

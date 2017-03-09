@@ -18,6 +18,10 @@ h1, h2, h3, h4, h5 {
   text-shadow: 1px 1px 1px rgba(0,0,0, 0.8);
 }
 
+#ksurf .home-text{
+  font-size: 20px;
+}
+
 #ksurf .surf-heading-3{
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -27,7 +31,7 @@ h1, h2, h3, h4, h5 {
 #ksurf .site-logo{
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-image:  url({{ site.url }}/images/home/gray-transparent-kite-3.png);
+  background-image:  url({{ site.baseurl }}/images/home/gray-transparent-kite-3.png);
 }
 
 #ksurf .parallax-header {
@@ -35,25 +39,28 @@ h1, h2, h3, h4, h5 {
 
   min-height: 30vh;
   h1{
-    line-height: 30vh;
-    padding: 0;
+    line-height: 8vh;
+    padding-top: 11vh;
+    padding-bottom: 11vh;
     text-align: center;
   }
 
   &.large{
     min-height: 50vh;
     h1{
-      line-height: 50vh;
-      padding: 0;
+    line-height: 8vh;
+    padding-top: 21vh;
+    padding-bottom: 21vh;
       font-size: 8em;
     }
   }
   &.larger{
     min-height: 40vh;
     h1{
-      line-height: 40vh;
+      line-height: 8vh;
+      padding-top: 16vh;
+      padding-bottom: 16vh;
       font-size: 6em;
-      padding: 0;
     }
   }
 }
@@ -99,7 +106,7 @@ h1, h2, h3, h4, h5 {
     display: inline-block;
     width: 16px;
     height: 14px;
-    background:url({{site.url}}/images/nav/flags.png) no-repeat;
+    background:url({{site.baseurl}}/images/nav/flags.png) no-repeat;
     text-decoration: none;
     vertical-align: middle;
 }
@@ -121,21 +128,62 @@ h1, h2, h3, h4, h5 {
 }
 
 
-#ksurf .panel{
-  .panel-footer, .panel-heading{
+#ksurf .panel.panel-default{
+  >.panel-footer, >.panel-heading{
     background-color: #ffffff;
   }
-  .panel-heading.card-heading h3{
+  >.card-heading h3{
     text-align: center;
     text-transform: uppercase;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
-  .panel-body.card-body {
+  >.panel-body.card-body {
     padding: 0px;
     img {
       width: 100%;
       height: 100%;
+    }
+  }
+}
+
+#ksurf .panel.panel-pricing{
+  @extend .text-center;
+  .panel-heading{
+    .hours{
+      font-weight: 600;
+      font-size: 4rem;
+      margin: 0;
+    }
+    .hours-unit{
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-top: -1rem;
+    }
+
+
+  }
+  .panel-body{
+    .price{
+      font-weight: 600;
+      font-size: 4rem;
+      margin: 0;
+    }
+    .currency{
+      font-weight: 600;
+      font-size: 2rem;
+      margin-top: -1rem;
+    }
+    .per{
+      font-size: 1.5rem;
+      margin-top: -1rem;
+    }
+    .across{
+      font-size: 1.5rem;
+    }
+    .lessons{
+      font-size: 2rem;
+      margin-top: -2rem;
     }
   }
 }

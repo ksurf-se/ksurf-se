@@ -1,5 +1,0 @@
----
-lang: en
-parent: kitesurfing
-
----

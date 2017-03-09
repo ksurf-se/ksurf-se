@@ -1,0 +1,295 @@
+
+activity_groups:
+  - &kitesurf
+    slug: kitesurf
+    en:
+      heading: Kitesurfing
+      tag_line: |
+        We offer group, semi-private and private lessons.
+        The curriculum is customised for you skill level.
+
+  - &surf
+    slug: surf
+    en:
+      heading: Surfing
+      tag_line: |
+        New for 2017.<br/>
+        We offer group, semi-private and private lessons.
+        Life is better when you surf!
+
+  - &sup
+    slug: sup
+    en:
+      heading: SUP
+      tag_line: |
+        Improve you balance and soak up the sea!
+        Challenge yourself with an yoga class or a fitness class on a standup paddleboard.
+
+
+activities:
+  - &kitesurf-private
+    slug: kitesurf-private
+    group: *kitesurf
+    max_participants: 1
+    en:
+      heading: Private lessons
+      features:
+        - 1 on 1 lessons, fully customised
+        - Accident insurance included
+        - Wind warranty
+        - IKO certificate
+        - All equipment provided
+        - 2 hour lessons
+        - From 1890 SEK / pp
+      desc: |
+        MISSING
+    plans:
+      - lessons: 1
+        price: 1890
+        total_duration: 2
+      - lessons: 2
+        price: 3300
+        total_duration: 4
+      - lessons: 3
+        price: 4800
+        total_duration: 6
+      - lessons: 4
+        price: 5290
+        total_duration: 8
+      - lessons: 5
+        price: 7500
+        total_duration: 10
+
+  - &kitesurf-semi
+    slug: kitesurf-semi
+    group: *kitesurf
+    max_participants: 2
+    en:
+      heading: Semi-private lessons
+      features:
+        - 2 participants on 2 kites
+        - Accident insurance included
+        - Wind warranty
+        - IKO certificate
+        - All equipment provided
+        - 2 hour lessons
+        - From 1500 SEK / pp
+      desc: |
+        MISSING
+    plans:
+      - lessons: 1
+        price: 1500
+        total_duration: 2
+      - lessons: 2
+        price: 2800
+        total_duration: 4
+      - lessons: 3
+        price: 3900
+        total_duration: 6
+      - lessons: 4
+        price: 4800
+        total_duration: 8
+      - lessons: 5
+        price: 5000
+        total_duration: 10
+
+  - &kitesurf-group
+    slug: kitesurf-group
+    group: *kitesurf
+    max_participants: 4
+    en:
+      heading: Group lessons
+      features:
+        - 4 participants on 2 kites
+        - Accident insurance included
+        - Wind warranty
+        - IKO certificate
+        - All equipment provided
+        - 2 hour lessons
+        - From 1080 SEK / pp
+      desc: |
+        - Maximum 4 participants
+        - 2 kites shared by 4 participants
+        - Participants must be at least 15 years
+    plans:
+      - lessons: 1
+        price: 1080
+        total_duration: 2
+      - lessons: 2
+        price: 2040
+        total_duration: 4
+      - lessons: 3
+        price: 2600
+        total_duration: 6
+      - lessons: 4
+        price: 3200
+        total_duration: 8
+      - lessons: 5
+        price: 3500
+        total_duration: 10
+
+  - &surf-private
+    slug: surf-private
+    group: *surf
+    max_participants: 1
+    en:
+      heading: Private lessons
+      features:
+        - 1 on 1 lessons, fully customised
+        - All equipment provided
+        - 2 hour lessons
+        - From 1400 SEK / pp
+    plans:
+      - lessons: 1
+        price: 1400
+        total_duration: 2
+      - lessons: 2
+        price: 2800
+        total_duration: 4
+      - lessons: 3
+        price: 4000
+        total_duration: 6
+      - lessons: 4
+        price: 5000
+        total_duration: 8
+      - lessons: 5
+        price: 6000
+        total_duration: 10
+
+  - &surf-semi
+    slug: surf-semi
+    group: *surf
+    max_participants: 2
+    en:
+      heading: Semi-private lessons
+      features:
+        - Perfect for couples or friends
+        - All equipment provided
+        - 2 hour lessons
+        - From 800 SEK / pp
+    plans:
+      - lessons: 1
+        price: 800
+        total_duration: 2
+      - lessons: 2
+        price: 1600
+        total_duration: 4
+      - lessons: 3
+        price: 2200
+        total_duration: 6
+      - lessons: 4
+        price: 3000
+        total_duration: 8
+      - lessons: 5
+        price: 3600
+        total_duration: 10
+
+  - &surf-group
+    slug: surf-group
+    group: *surf
+    max_participants: 4
+    en:
+      heading: Group lessons
+      features:
+        - Perfect for a group of friends
+        - All equipment provided
+        - 2 hour lessons
+        - From 500 SEK / pp
+    plans:
+      - lessons: 1
+        price: 500
+        total_duration: 2
+      - lessons: 2
+        price: 1000
+        total_duration: 4
+      - lessons: 3
+        price: 1400
+        total_duration: 6
+      - lessons: 4
+        price: 1900
+        total_duration: 8
+      - lessons: 5
+        price: 2300
+        total_duration: 10
+
+  - &sup-fitness
+    slug: sup-fitness
+    group: *sup
+    max_participants: 16
+    en:
+      heading: Fitness lessons
+      features:
+        - All equipment provided
+        - 1 hour lessons
+        - From 300 SEK / pp
+    plans:
+      - lessons: 1
+        price: 300
+        total_duration: 1
+      - lessons: 2
+        price: 600
+        total_duration: 2
+      - lessons: 3
+        price: 800
+        total_duration: 3
+      - lessons: 4
+        price: 990
+        total_duration: 4
+      - lessons: 5
+        price: 1200
+        total_duration: 5
+
+  - &sup-yoga
+    slug: sup-yoga
+    group: *sup
+    max_participants: 16
+    en:
+      heading: Yoga lessons
+      features:
+        - All equipment provided
+        - 1 hour lessons
+        - From 300 SEK / pp
+    plans:
+      - lessons: 1
+        price: 300
+        total_duration: 1
+      - lessons: 2
+        price: 600
+        total_duration: 2
+      - lessons: 3
+        price: 800
+        total_duration: 3
+      - lessons: 4
+        price: 990
+        total_duration: 4
+      - lessons: 5
+        price: 1200
+        total_duration: 5
+
+  - &sup-kids
+    slug: sup-kids
+    group: *sup
+    max_participants: 16
+    en:
+      heading: SUP for kids
+      features:
+        - All equipment provided
+        - From 6 years and up
+        - 1 hour lessons
+        - From 250 SEK / pp
+    plans:
+      - lessons: 1
+        price: 250
+        total_duration: 1
+      - lessons: 2
+        price: 500
+        total_duration: 2
+      - lessons: 3
+        price: 750
+        total_duration: 3
+      - lessons: 4
+        price: 890
+        total_duration: 4
+      - lessons: 5
+        price: 1000
+        total_duration: 5
