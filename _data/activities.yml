@@ -1,4 +1,4 @@
-
+---
 activity_groups:
   - &kitesurf
     slug: kitesurf
@@ -293,3 +293,4 @@ activities:
       - lessons: 5
         price: 1000
         total_duration: 5
+...
