@@ -1,0 +1,118 @@
+---
+
+en:
+
+  - category: booking
+    q: How can I book and do I need to book in advance?
+    a: |
+      We recommend pre-booking so we can find the best day and time for your lessons.<br/>
+      You can book via the website or directly at our center.<br/>
+      You can also email or phone us.<br/>
+      If we are fully booked on the website we recommend you to call us.<br/>
+      We will do our best to find a day and time that fits you.
+
+  - category: general
+    q: Where KSurf located?
+    a: |
+      The center is located at Skanör hamn, Falsterbo just next to the restaurant Badhytten.
+
+  - category: general
+    q: What payment methods are accepted?
+    a: |
+      You can pay by Credit Card at the center, Swish us or get an invoice.
+
+  - category: general
+    q: What I'm hungry or thirsty?
+    a: |
+      You can enjoy a delicious meal or drink at the new restaurant Badhytten
+      after your session. <br/>
+      Read more at [www.badhytten.com](http://www.badhytten.com){:target="_blank"}.
+      You can also grab something small at the kiosk just next to the center.
+
+  - category: general
+    q: What are the open hours of KSurf center?
+    a: |
+      7 days a week from 09:00 – 18:00
+
+  - category: general
+    q: Where are the lessons held?
+    a: |
+      We proceed from Skanör beach / Falsterbo beach depending on the conditions and the wind direction.
+
+  - category: general
+    q: How about parking?
+    a: |
+      There is a public beach car park, they normally charge for the day.
+
+  - category: general
+    q: What do I need to bring?
+    a: |
+      Please bring a towel, swimwear that you wear under your wetsuit, sunglasses, sunscreen and any refreshments you require.<br/>
+      Make sure you have appropriate clothing for the weather.
+
+  - category: general
+    q: What happens if I hurt myself or break the equipment?
+    a: |
+      All participation is at your own risk. Therefore look into your personal accident insurance before the course starts.<br/>
+      You should have your own valid insurance that covers possible damage to person and materials.<br/>
+      Before your lesson you will have to sign a registration form with all the terams & conditions.
+
+  - category: general
+    q: What if the weather conditions are not appropriate for my booked session?
+    a: |
+      If you booked kitesurfing lessons you have Wind warranty.<br/>
+      If the conditions are not appropriate for the lesson you booked (applies for all lessons) we will try to
+      call you on the morning of your lesson and try to rearrange or offer you another day.<br/>
+      The weather is always unpredictable and we try our best to schedule lessons when we think it will be most appropriate.<br/>
+      We do not cancel a lesson if it is raining.
+
+  - category: kitesurf
+    q: What is wind warranty for kitesurfing lessons?
+    a: |
+      We cannot control nature. This is why we have the so called  “wind warranty” on all our kite courses.
+
+      Wind warranty means:
+
+      If you somehow can not complete all or part of your kite course because of the wind,
+      you will have the opportunity to complete the course during the season and throughout the coming season without additional cost.
+      We have an optional offer if you're living in, or will be visiting Stockholm.
+      You will be able to finish your lessons with our cooperating kite school in Stockholm.
+      You will get a voucher which will be valid one year.
+
+      Wind warranty applies when:
+
+      - The wind is too weak or too strong.
+      - It stops blowing, or that it decreases so that it is not possible to fly a kite.
+      - The wind increases and it starts to blow too much to fly a kite.
+      - The wind is extremely gusty.
+
+  - category: kitesurf
+    q: Don't I need to be strong to learn kitesurfing?
+    a: |
+      No, kitesurfing is not about strength.<br/>
+      It´s more about finding the right technique.
+
+  - category: kitesurf
+    q: What is the minimum age to learn kitesurfing?
+    a: |
+      Some children start kitesurfing early as 8 years, but they stay under strict & permanent supervision.<br/>
+      In general the average age to start is about 12-14 years old, depending on physical conditions.<br/>
+      IKO advices the minimum age of 12 years, because then children can understand and respect the power of a kite.
+
+  - category: kitesurf
+    q: What is IKO?
+    a: |
+      The International Kiteboarding Organization is the world’s leading kiteboarding organization specializing in kiteboarding education,
+      promoting safe practices and enhancing the standards for the industry.
+
+  - category: surf
+    q: Do I need to be strong to learn how to surf?
+    a: |
+      No, surfing is not about strength.<br/>
+      It´s more about to finding the right balance. Most people learn the basics within an hour.
+
+  - category: sup
+    q: Do I need to be strong to learn how to stand up paddle?
+    a: |
+      No, stand up paddle is not about strength.<br/>
+      It´s more about to finding the right balance. Most people learn the basics within an hour.

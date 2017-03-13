@@ -1,5 +1,6 @@
 ---
 activity_groups:
+
   - &kitesurf
     slug: kitesurf
     en:
@@ -41,8 +42,7 @@ activities:
         - All equipment provided
         - 2 hour lessons
         - From 1890 SEK / pp
-      desc: |
-        MISSING
+
     plans:
       - lessons: 1
         price: 1890
@@ -68,7 +68,6 @@ activities:
       heading: Semi-private lessons
       features:
         - 2 participants on 2 kites
-        - Accident insurance included
         - Wind warranty
         - IKO certificate
         - All equipment provided
@@ -101,7 +100,6 @@ activities:
       heading: Group lessons
       features:
         - 4 participants on 2 kites
-        - Accident insurance included
         - Wind warranty
         - IKO certificate
         - All equipment provided
@@ -110,7 +108,7 @@ activities:
       desc: |
         - Maximum 4 participants
         - 2 kites shared by 4 participants
-        - Participants must be at least 15 years
+        - Participants must be at least 15 years old
     plans:
       - lessons: 1
         price: 1080
