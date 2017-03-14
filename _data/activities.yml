@@ -8,6 +8,37 @@ activity_groups:
       tag_line: |
         We offer group, semi-private and private lessons.
         The curriculum is customised for you skill level.
+      lesson_plan: |
+        We follow the IKO program, which is held by a professional and experienced IKO certificated instructor.<br/>
+        At each compentency level you should be able to:
+
+        **Level 1**
+        - Understand safe wind directions and conditions for kiting
+        - Understand the wind window and movement of the kite inside it
+        - Set-up and fly a trainer kite on land
+        - Set-up a big kite
+        - Review and test the safety systems of a big kite
+        - Fly a big kite in the water
+        - Understand body dragging
+
+        **Level 2**
+        - Understand and use the international communication signals
+        - Enter and exit the water independently
+        - Control and fly a kite
+        - Relaunch the kite from water
+        - Control the kite with one hand
+        - Competent at body dragging
+        - Body drag upwind to recover the board with one hand
+        - Understand water start theory
+
+        **Level 3**
+        - Water start in both directions and ride a short distance
+        - Control the speed and come to a controlled stop
+        - Understand and respect the "Right of way" rules
+        - Set-up equipment and adapt to existing weather conditions
+        - Understand the theory of the "up wind effect"
+
+
 
   - &surf
     slug: surf
@@ -42,6 +73,11 @@ activities:
         - All equipment provided
         - 2 hour lessons
         - From 1890 SEK / pp
+      lesson_desc: |
+        For private lessons we tailor the lessons to suit your individual needs.
+
+        We will help you to go beyond the 3 basic levels of competency and work on your way towards mastery.
+
 
     plans:
       - lessons: 1
@@ -73,8 +109,15 @@ activities:
         - All equipment provided
         - 2 hour lessons
         - From 1500 SEK / pp
-      desc: |
-        MISSING
+      lesson_desc: |
+        Semi-private lessons we tailor the lessons to suit your needs, you will be able to get the most out of these lessons if
+        the two participants are on the same competency level. Please let us know when requesting booking, what level you are on.
+
+        If you are a complete beginner, it will take about 5 lessons (10 hours) to reach Level 3.<br/>
+        - 2 lessons for Level 1
+        - 2 lessons for Level 2
+        - 1 lesson for Level 3
+
     plans:
       - lessons: 1
         price: 1500
@@ -105,10 +148,15 @@ activities:
         - All equipment provided
         - 2 hour lessons
         - From 1080 SEK / pp
-      desc: |
-        - Maximum 4 participants
-        - 2 kites shared by 4 participants
-        - Participants must be at least 15 years old
+      lesson_desc: |
+        Group lessons are most suited for a group of friends or co-workers with no kitreboarding experience, you will be able to get the most out of these lessons if
+        all participants are on the same competency level.
+
+        If you are a complete beginner, it will take about 5 lessons (10 hours) to reach Level 3.<br/>
+        - 2 lessons for Level 1
+        - 2 lessons for Level 2
+        - 1 lesson for Level 3
+
     plans:
       - lessons: 1
         price: 1080

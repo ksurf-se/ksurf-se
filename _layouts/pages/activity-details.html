@@ -95,7 +95,12 @@ sv:
           </h3>
         </div>
         <div class="panel-footer">
-
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              {{ group_i18n.lesson_plan | markdownify }}
+              {{ act_i18n.lesson_desc | markdownify }}
+            </div>
+          </div>
         </div>
         <div class="panel-footer card-heading">
           <h3>
@@ -205,7 +210,10 @@ sv:
               <label for="requestsInput">{{ form_i18n.special_requests.label }}</label>
               <textarea class="form-control" rows="3" id="requestsInput" name="special_requests"></textarea>
             </div>
-
+            <p>
+              {% assign terms_page = site.pages | where: 'role', 'terms' | where: 'lang', @page.lang | first %}
+              <a href="{{ site.baseurl }}{{ terms_page.url }}" target="_blank">{{ terms_page.nav_text }}</a>
+            </p>
             <input type="hidden" name="subject" value="Booking request - {{ act.slug  }}">
             <button type="button" class="btn btn-default" data-dismiss="modal">{{ form_i18n.cancel }}</button>
             <button type="submit" class="btn btn-primary pull-right">{{ form_i18n.send }}</button>

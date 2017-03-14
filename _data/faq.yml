@@ -5,8 +5,8 @@ en:
   - category: booking
     q: How can I book and do I need to book in advance?
     a: |
-      We recommend pre-booking so we can find the best day and time for your lessons.<br/>
-      You can book via the website or directly at our center.<br/>
+      We recommend sending us a booking request so we can find the best day and time for your lessons.<br/>
+      You can send the request via the website or directly at our center.<br/>
       You can also email or phone us.<br/>
       If we are fully booked on the website we recommend you to call us.<br/>
       We will do our best to find a day and time that fits you.
@@ -51,11 +51,24 @@ en:
       Make sure you have appropriate clothing for the weather.
 
   - category: general
-    q: What happens if I hurt myself or break the equipment?
+    q: What happens if I hurt myself?
     a: |
       All participation is at your own risk. Therefore look into your personal accident insurance before the course starts.<br/>
-      You should have your own valid insurance that covers possible damage to person and materials.<br/>
-      Before your lesson you will have to sign a registration form with all the terams & conditions.
+      You should have your own valid home insurance that covers possible damage to person or property.<br/>
+      Before your lesson you will have to sign a registration form with all the terms & conditions as well as a release of liabilities.
+
+  - category: general
+    q: What happens if I break the equipment during my lesson?
+    a: |
+      Equipment insurance is included in the price.<br/>
+      But please be careful as our deductible is quite high.<br/>
+      Before your lesson you will have to sign a registration form with all the terms & conditions.
+
+  - category: general
+    q: What if I need to cancel or reschedule?
+    a: |
+      Contact us as soon as you can.<br/>
+      See our [terms & conditions](/en/terms/){:target="_blank"} for cancellation & reschedule policies.
 
   - category: general
     q: What if the weather conditions are not appropriate for my booked session?
@@ -73,7 +86,7 @@ en:
 
       Wind warranty means:
 
-      If you somehow can not complete all or part of your kite course because of the wind,
+      If you somehow can not complete all or part of your practical kite course because of the wind,
       you will have the opportunity to complete the course during the season and throughout the coming season without additional cost.
       We have an optional offer if you're living in, or will be visiting Stockholm.
       You will be able to finish your lessons with our cooperating kite school in Stockholm.
@@ -81,6 +94,7 @@ en:
 
       Wind warranty applies when:
 
+      - The theoretical parts of the lesson have been completed, and we cannot proceed with pratical parts of the lesson.
       - The wind is too weak or too strong.
       - It stops blowing, or that it decreases so that it is not possible to fly a kite.
       - The wind increases and it starts to blow too much to fly a kite.
