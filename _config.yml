@@ -72,6 +72,35 @@ en: &DEFAULT_I18N
 sv:
   <<: *DEFAULT_I18N
 
+  buttons:
+    learn_more: läs mer
+    info_booking: info & bokning
+    request_booking: bokning
+
+  booking_form:
+    heading: Bokningsförfrågan
+    cancel: Avbryt
+    close: Stäng
+    send: Skicka bokningsförfrågan
+    thank_you: |
+      <strong>Tusen tack!</strong><br/>
+      Vi hör av oss så fort vi kan.
+
+    name:
+      label: Ditt namn
+    email:
+      label: E-mail
+    phone:
+      label: Mobil
+    lessons:
+      label: Lektioner
+    start_date:
+      label: Önskat startdatum
+    participants:
+      label: Deltagare
+    special_requests:
+      label: Önskemål
+
 
 fb_posts:
   - https://www.facebook.com/ksurf.se/posts/1754096081282716

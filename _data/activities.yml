@@ -9,7 +9,7 @@ activity_groups:
         We offer group, semi-private and private lessons.
         The curriculum is customised for you skill level.
       lesson_plan: |
-        We follow the IKO program, which is held by a professional and experienced IKO certificated instructor.<br/>
+        We follow the IKO program, all lessons are held by a professional and experienced IKO certificated instructor.<br/>
         At each compentency level you should be able to:
 
         **Level 1**
@@ -38,7 +38,41 @@ activity_groups:
         - Set-up equipment and adapt to existing weather conditions
         - Understand the theory of the "up wind effect"
 
+    sv:
+      heading: Kitesurfing
+      tag_line: |
+        Vi erbjuder grupp, semi-privata samt privata lektioner.
+        Lektioner anpassas till Er nivå.
 
+      lesson_plan: |
+        Vi följer IKO programmet, alla lektioner hålls av en utbildad och erfaren IKO certifierad instruktör.<br/>
+        Vid de olika kunskapsnivåerna skall du kunna:
+
+        **Nivå 1**
+        - Förstå säker vindriktning och säkra förutsättningar för kitesurfing
+        - Förstå vindfönstret och kitens rörelse i den
+        - Rigga upp och flyga en träningskite på land
+        - Rigga upp en stor kite
+        - Lär dig säkerhetssystemet på en stor kite
+        - Flyga en stor kite från vattnet
+        - Prova på body dragging (du provar att ta dig fram i vatten med hjälp av kitens kraft)
+
+        **Nivå 2**
+        - Förstå och använda internationella kommunikationssignaler
+        - Ta dig i och ur vattnet självständigt
+        - Kontrollera och flyga en kite
+        - Starta om kiten i vatten
+        - Kontrollera och flyga kiten med en hand
+        - Body dragging (du lär dig att ta dig fram i vatten med hjälp av kitens kraft)
+        - Ta dig fram i motvind och hämta brädan med en hand
+        - Vattenstart-teori
+
+        **Nivå 3**
+        - Träna på vatten start och att komma upp på brädan i båda riktningar
+        - Kontrollera farten och bromsa
+        - Förstå och applicera "Rigth of way" reglerna
+        - Välja rätt utrustning utifrån vädret
+        - Teorin bakom motvind-effekten
 
   - &surf
     slug: surf
@@ -48,6 +82,12 @@ activity_groups:
         New for 2017.<br/>
         We offer group, semi-private and private lessons.
         Life is better when you surf!
+    sv:
+      heading: Surfing
+      tag_line: |
+        Nytt för 2017.<br/>
+        Vi erbjuder grupp, semi-privata samt privata kurser.
+        Livet är bättre på en bräda!
 
   - &sup
     slug: sup
@@ -56,13 +96,18 @@ activity_groups:
       tag_line: |
         Improve you balance and soak up the sea!
         Challenge yourself with an yoga class or a fitness class on a standup paddleboard.
-
+    sv:
+      heading: SUP
+      tag_line: |
+        Förbättra din balans och njut av havet!
+        Utmana dig själv med ett yoga eller fitness pass på en standup paddleboard.
 
 activities:
   - &kitesurf-private
     slug: kitesurf-private
     group: *kitesurf
     max_participants: 1
+
     en:
       heading: Private lessons
       features:
@@ -77,6 +122,21 @@ activities:
         For private lessons we tailor the lessons to suit your individual needs.
 
         We will help you to go beyond the 3 basic levels of competency and work on your way towards mastery.
+
+    sv:
+      heading: Privatlektioner
+      features:
+        - 1 on 1 lektioner, skräddarsydda för dina behov
+        - Olycksfallsförsäkring ingår
+        - Vindgaranti
+        - IKO certifikat
+        - All utrustning ingår
+        - 2 timmar per lektion
+        - Från 1890 SEK / pp
+      lesson_desc: |
+        För privatlektioner skräddarsys kursplanen efter dina individuella behov.
+
+        Vi hjälper dig att snabbt ta dig förbi de 3 nybörjarnivåerna så att du kan jobba vidare mot skicklighet.
 
 
     plans:
@@ -100,6 +160,7 @@ activities:
     slug: kitesurf-semi
     group: *kitesurf
     max_participants: 2
+
     en:
       heading: Semi-private lessons
       features:
@@ -117,6 +178,24 @@ activities:
         - 2 lessons for Level 1
         - 2 lessons for Level 2
         - 1 lesson for Level 3
+
+    sv:
+      heading: Semi-privata lektioner
+      features:
+        - 2 deltagare delar 2 kites
+        - Vindgaranti
+        - IKO certifikat
+        - All utrustning ingår
+        - 2 timmar per lektion
+        - Från 1500 SEK / pp
+      lesson_desc: |
+        Semi-privata lektioner skräddarsys efter era kunskaper, det är att föredra att båda deltagarna har ungefär samma kunskapsnivå.
+        Berätta gärna när ni bokar på vilken kunskapsnivå ni ligger på.
+
+        För en nybörjare tar det i snitt 5 lektioner (10 timmar) att uppnå nivå 3<br/>
+        - 2 lektioner för nivå 1
+        - 2 lektioner för nivå 2
+        - 1 lektion för nivå 3
 
     plans:
       - lessons: 1
@@ -139,6 +218,7 @@ activities:
     slug: kitesurf-group
     group: *kitesurf
     max_participants: 4
+
     en:
       heading: Group lessons
       features:
@@ -156,6 +236,25 @@ activities:
         - 2 lessons for Level 1
         - 2 lessons for Level 2
         - 1 lesson for Level 3
+
+    sv:
+      heading: Grupplektioner
+      features:
+        - 4 deltagare delar 2 kites
+        - Vindgaranti
+        - IKO certifikat
+        - All utrustning ingår
+        - 2 timmar per lektion
+        - Från 1080 SEK / pp
+      lesson_desc: |
+        Grupplektioner lämpar sig bäst för en grupp vänner eller medarbetare utan tidigare erfarenhet av kitesurfing,
+        ni kommer få mest nytta av lektionen om alla deltagare är på samma kunskapsnivå.
+
+        För en nybörjare tar det i snitt 5 lektioner (10 timmar) att uppnå nivå 3<br/>
+        - 2 lektioner för nivå 1
+        - 2 lektioner för nivå 2
+        - 1 lektion för nivå 3
+
 
     plans:
       - lessons: 1
@@ -178,6 +277,7 @@ activities:
     slug: surf-private
     group: *surf
     max_participants: 1
+
     en:
       heading: Private lessons
       features:
@@ -185,6 +285,15 @@ activities:
         - All equipment provided
         - 2 hour lessons
         - From 1400 SEK / pp
+
+    sv:
+      heading: Privatlektioner
+      features:
+        - 1 on 1 lektioner, skräddarsydd läroplan
+        - All utrustning ingår
+        - 2 timmar per lektion
+        - Från 1400 SEK / pp
+
     plans:
       - lessons: 1
         price: 1400
@@ -206,6 +315,7 @@ activities:
     slug: surf-semi
     group: *surf
     max_participants: 2
+
     en:
       heading: Semi-private lessons
       features:
@@ -213,6 +323,15 @@ activities:
         - All equipment provided
         - 2 hour lessons
         - From 800 SEK / pp
+
+    sv:
+      heading: Semi-privata lektioner
+      features:
+        - Perfekt för par eller vänner
+        - All utrustning ingår
+        - 2 timmar per lektion
+        - Från 800 SEK / pp
+
     plans:
       - lessons: 1
         price: 800
@@ -234,6 +353,7 @@ activities:
     slug: surf-group
     group: *surf
     max_participants: 4
+
     en:
       heading: Group lessons
       features:
@@ -241,6 +361,15 @@ activities:
         - All equipment provided
         - 2 hour lessons
         - From 500 SEK / pp
+
+    sv:
+      heading: Grupplektioner
+      features:
+        - Perfekt för en liten grupp vänner
+        - All utrustning ingår
+        - 2 timmar per lektion
+        - Från 500 SEK / pp
+
     plans:
       - lessons: 1
         price: 500
@@ -262,12 +391,21 @@ activities:
     slug: sup-fitness
     group: *sup
     max_participants: 16
+
     en:
       heading: Fitness lessons
       features:
         - All equipment provided
         - 1 hour lessons
         - From 300 SEK / pp
+
+    sv:
+      heading: Fitness-lektioner
+      features:
+        - All utrustning ingår
+        - 1 timme per lektion
+        - Från 300 SEK / pp
+
     plans:
       - lessons: 1
         price: 300
@@ -289,12 +427,21 @@ activities:
     slug: sup-yoga
     group: *sup
     max_participants: 16
+
     en:
       heading: Yoga lessons
       features:
         - All equipment provided
         - 1 hour lessons
         - From 300 SEK / pp
+
+    sv:
+      heading: Yoga-lektioner
+      features:
+        - All utrustning ingår
+        - 1 timme per lektion
+        - Från 300 SEK / pp
+
     plans:
       - lessons: 1
         price: 300
@@ -316,6 +463,7 @@ activities:
     slug: sup-kids
     group: *sup
     max_participants: 16
+
     en:
       heading: SUP for kids
       features:
@@ -323,6 +471,15 @@ activities:
         - From 6 years and up
         - 1 hour lessons
         - From 250 SEK / pp
+
+    sv:
+      heading: SUP för barn
+      features:
+        - All utrustning ingår
+        - Från 6 år
+        - 1 timme per lektion
+        - Från 250 SEK / pp
+
     plans:
       - lessons: 1
         price: 250

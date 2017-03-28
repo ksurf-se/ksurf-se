@@ -1,6 +1,5 @@
 ---
-lang: en
+lang: sv
+role: surf-semi
 layout: pages/activity-details
-role: kitesurf-group
-
 ---

@@ -36,7 +36,6 @@ location_section:
   heading: Location
   text: The surf center is located in Skanör/Falsterbo just next to Badhytten on the beach, next to Skanörs hamn.
 
-
 activities_section:
   heading: Activities
 

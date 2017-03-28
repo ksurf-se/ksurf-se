@@ -36,9 +36,6 @@ location_section:
   heading: Hitta hit
   text: Surfcentret hittar ni i Skanör/Falsterbo, på stranden intill Badhytten, bredvid Skanörs hamn.
 
-contact_section:
-  heading: Kontakta oss
-
 activities_section:
   heading: Aktiviteter
   

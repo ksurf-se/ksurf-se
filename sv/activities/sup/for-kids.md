@@ -1,6 +1,5 @@
 ---
-lang: en
+lang: sv
+role: sup-kids
 layout: pages/activity-details
-role: kitesurf-group
-
 ---
