@@ -30,9 +30,9 @@ en:
       You can also grab something small at the kiosk just next to the center.
 
   - category: general
-    q: What are the open hours of KSurf center?
+    q: What are the open hours of KSurf surf center?
     a: |
-      7 days a week from 09:00 – 18:00
+      May - September, 7 days a week from 09:00 – 18:00
 
   - category: general
     q: Where are the lessons held?
@@ -130,3 +130,134 @@ en:
     a: |
       No, stand up paddle is not about strength.<br/>
       It´s more about to finding the right balance. Most people learn the basics within an hour.
+
+sv:
+
+  - category: booking
+    q: Hur bokar jag och behöver jag förboka?
+    a: |
+      Vi rekomenderar starkt att du skickar en bokningsförfrågan så att vi kan hitta den tid och dag som passar bäst.<br/>
+      Du kan skicka förfrågan om bokning via hemsidan eller boka direkt på surfcentret.<br/>
+      Du kan även maila eller ringa oss.<br/>
+      Om det inte finns några lediga datum i kalendern, ring oss så ordnar vi nåt.<br/>
+      Vi kommer allid att göra vårt yttersta för att hitta en tid som passar dig.
+
+  - category: general
+    q: WVar ligger KSurf?
+    a: |
+      Surfcentret ligger på stranden invid Skanörs hamn, Falsterbo, precis invid restaurangen Badhytten.
+
+  - category: general
+    q: Vilka betalningssätt har ni?
+    a: |
+      Vi tar emot bank och kreditkort, samt Swish. Vi kan även skicka en faktura.
+
+  - category: general
+    q: Om jag är hungrig eller törstig?
+    a: |
+      Det finns möjlighet att avnjuta en härlig midda eller lunch efter din lektion på den nya restaurangen
+      Badhytten,<br/>
+      Läs mer på [www.badhytten.com](http://www.badhytten.com){:target="_blank"}.
+      Det finns även möjlighet att köpa lätt förtäring vid kiosken precis invid surfcentret.
+
+  - category: general
+    q: Vad är surfcentrets öppettider
+    a: |
+      Maj - september, 7 dagar i veckan 9:00 till 18:00
+
+  - category: general
+    q: Var hålls lektionerna?
+    a: |
+      Vi utgår från Skanör med omnejd, beroende på vädret och vindriktning.
+
+  - category: general
+    q: Finns det parkering?
+    a: |
+      Det finns en offentlig parkering invid stranden, med en p-automat.
+
+  - category: general
+    q: Vad behöver jag ta med mig?
+    a: |
+      Tag med en handduk, simkläder att ha under våtdräkten, solglasögon, solskydd samt gärna nåt att dricka på plats.<br/>
+      Ta med er kläder efter vädret, samt en extra tröja.
+
+  - category: general
+    q: Vad händer om jag gör mig illa?
+    a: |
+      Deltagande sker på egen risk. Därför kan det vara bra att titta efter en privat olyckasfallsförsäkring innan kursen.<br/>
+      Du behöver även ha en giltig hemförsäkring som täcker möjliga skador på person och gegendom.<br/>
+      Innan lektionstart, får alla deltagare skriva under våra allmänna villkor samt ansvarsfriskrivning.
+
+  - category: general
+    q: Vad händer om jag råkar ha sönder utrustningen?
+    a: |
+      Utrustningen är försäkrad och det ingår i priset<br/>
+      Dock så har vi hög självrisk, så snälla, var försiktig.<br/>
+      Innan lektionstart, får du skriva under och godkänna våra allmänna villkor.
+
+  - category: general
+    q: Vad händer om jag behöver omboka eller avboka?
+    a: |
+      Kontakta oss så fort du vet.<br/>
+      Se våra [villkor](/terms/){:target="_blank"} angående av- och ombokningsregler.
+
+  - category: general
+    q: Vad händer om vädret inte lämpar sig för min bokade lektion?
+    a: |
+      Om du har bokat en kitesurfing lektion, gäller vindgarantin.<br/>
+      Om vädret inte är lämpligt (gäller alla lektioner) kommer vi ringa dig samma morgon på lektionsdagen och
+      försöker hitta en alternativ tid.<br/>
+      Vädret är oförutsägbart och vi gör vårt bästa att boka lektioner, ibland kan det ske med kort varsel.<br/>
+      Vi avbokar inte p.g.a. regn.
+
+  - category: kitesurf
+    q: Vad är vindgarantin för kitesurfing lektioner?
+    a: |
+      Vi kan inte styra vädret, därför ingår det en "vindgaranti" i alla våra kitesurfing-lektioner.
+
+      Vindgarantin innebär:
+
+      Om det inte går att genomgöra i del eller i sin helhet de praktiska delarna av lektionen på grund av vindförhållanden,
+      garanterar vi en möjlighet att slutföra lektionen under samma eller nästkommande säsong, utan extra kostnad.<br/>
+      Om du bor eller besöker Stockholm, kommer du kunna slutföra din lektion på en kitesurfingskola i Stockholm,
+      som vi samarbetar med. Det genom ett presentkort som gäller i 12 månader.
+
+      Vindgarantin gäller om:
+
+      - De teoretiska delarna av lektionen är avklarade, men vi kan inte gå vidare med de praktiska delarna.
+      - Vinden är för hård eller för svag.
+      - Det slutar blåsa helt, eller vindstyrkan avtar så det inte blir möjligt att flyga en kite.
+      - Vinden tilltar och blir för stark för att flyga en kite.
+      - Vinden är opålitlig och byig.
+
+  - category: kitesurf
+    q: Behöver jag vara stark för att lära mig kitesurfing?
+    a: |
+      Nej, kitesurfing handlar inte om styrka.<br/>
+      Det handlar om rätt teknik och balans.
+
+  - category: kitesurf
+    q: Finns det en åldersgräns för att börja med kitesurfing?
+    a: |
+      Det förekommer att barn börjar så tidigt som 8 år med kitesurfing, men då under strikt uppsikt.<br/>
+      Generellt är dock snittåldern mellan 12-14 år, beroende på fysisk utveckling.<br/>
+      IKO rekommenderar minimiåldern på 12 år, då man måste kunna respektera och förstå kitens dragkraft.
+
+  - category: kitesurf
+    q: Vad är IKO?
+    a: |
+      International Kiteboarding Organization är en global kiteboarding organisation som specialiserar sig på utbildning
+      inom kitesurfing, utvecklar säkerhetsföreskrifter för att höja standarden inom hela kiteboarding industin.
+
+  - category: surf
+    q: Behöver jag vara fysiskt stark för att kunna surfa?
+    a: |
+      Nej, surfing handlar inte om fysisk styrka.<br/>
+      Det handlar om att hitta rätt balans. De flesta lär sig grunderna efter cirka en timme.
+
+  - category: sup
+    q: Behöver jag vara fysiskt stark för SUP?
+
+    a: |
+      Nej, SUP handlar inte om fysisk styrka.<br/>
+      Det handlar om att hitta rätt balans. De flesta lär sig grunderna efter cirka en timme.

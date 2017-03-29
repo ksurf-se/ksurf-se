@@ -38,7 +38,7 @@ terms:
       Vindgarantin innebär:
 
       Om det inte går att genomgöra i del eller i sin helhet de praktiska delarna av lektionen på grund av vindförhållanden,
-      garanterar vi en möjlighet att skulföra lektionen under samma eller nästkommande säsong, utan extra kostnad.<br/>
+      garanterar vi en möjlighet att slutföra lektionen under samma eller nästkommande säsong, utan extra kostnad.<br/>
       Om du bor eller besöker Stockholm, kommer du kunna slutföra din lektion på en kitesurfingskola i Stockholm,
       som vi samarbetar med. Det genom ett presentkort som gäller i 12 månader.
 
