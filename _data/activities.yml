@@ -82,12 +82,35 @@ activity_groups:
         New for 2017.<br/>
         We offer group, semi-private and private lessons.
         Life is better when you surf!
+
+      lesson_plan: |
+        Ksurf offers a range of surf coaching lessons for all abilities.
+        Choose a package including one 2 hour lesson or a 5 lesson 10 hour package.<br/>
+        All of our surf coaching lessons include a surfboard and wetsuit, as well as professional surf coaching
+        from a member of the KSurf team.
+
+        Standing up on a surfboard has never been so easy!<br/>
+        There will be a brief instructional demonstration and practice on the beach prior to heading out to the surf zone.
+        Our surf instructor will inspire you with the confidence, motivation, and knowledge
+        needed to stand up on your first surfing experience.
+
     sv:
       heading: Surfing
       tag_line: |
         Nytt för 2017.<br/>
         Vi erbjuder grupp, semi-privata samt privata kurser.
         Livet är bättre på en bräda!
+
+      lesson_plan: |
+        KSurf erbjuder en rad av surfing lektionspaket som lämpar sig för alla kunskapsnivåer.
+        Välj mellan 1 lektion (2 timmar) eller upp till 5 lektioner (10 timmar).
+
+        I alla lektioner ingår en bräda och våtdräkt, så väl som erfaren coach från vårt KSurf team.
+        Att ställa sig upp på en surfbräda blir inte lättare än så!
+
+        Vi börjar med teori och en praktisk genomgång på stranden innan vi beger oss ut i vattnet.
+        Vår instruktör kommer att inspirera och ingjuta det självförtroende, motivation, och kunskap du behöver
+        för att stå upp på en surfbräda för första gången.
 
   - &sup
     slug: sup
@@ -96,11 +119,26 @@ activity_groups:
       tag_line: |
         Improve you balance and soak up the sea!
         Challenge yourself with an yoga class or a fitness class on a standup paddleboard.
+
+      lesson_plan: |
+        Stand up paddle boards (SUP) offer a fun, relaxing way to play on the water.
+        Paddle boarding delivers a full-body workout and thus has become a popular training activity.
+        And since you stand at your full height, you can enjoy unique views of everything Skanör has to offer.
+
+        To get started, you just need some basic SUP gear (included) and techniques.
+
     sv:
       heading: SUP
       tag_line: |
         Förbättra din balans och njut av havet!
         Utmana dig själv med ett yoga eller fitness pass på en standup paddleboard.
+
+      lesson_plan: |
+        Stand up paddle boards (SUP) erbjuder ett roligt och avslappnade sätt att avnjuta havet.
+        Paddle boarding aktiverar hela kroppen och har därför blivit en populär form av träning.
+        Eftersom man står upprätt på brädan, kan man avnjuta de unika vyerna som Skanör erbjuder.
+
+        För att komma igång behöver man bara grundläggande teori och SUP utrustning (ingår).
 
 activities:
   - &kitesurf-private
@@ -118,6 +156,7 @@ activities:
         - All equipment provided
         - 2 hour lessons
         - From 1890 SEK / pp
+
       lesson_desc: |
         For private lessons we tailor the lessons to suit your individual needs.
 
@@ -137,7 +176,6 @@ activities:
         För privatlektioner skräddarsys kursplanen efter dina individuella behov.
 
         Vi hjälper dig att snabbt ta dig förbi de 3 nybörjarnivåerna så att du kan jobba vidare mot skicklighet.
-
 
     plans:
       - lessons: 1
@@ -170,6 +208,7 @@ activities:
         - All equipment provided
         - 2 hour lessons
         - From 1500 SEK / pp
+
       lesson_desc: |
         Semi-private lessons we tailor the lessons to suit your needs, you will be able to get the most out of these lessons if
         the two participants are on the same competency level. Please let us know when requesting booking, what level you are on.
@@ -188,6 +227,7 @@ activities:
         - All utrustning ingår
         - 2 timmar per lektion
         - Från 1500 SEK / pp
+
       lesson_desc: |
         Semi-privata lektioner skräddarsys efter era kunskaper, det är att föredra att båda deltagarna har ungefär samma kunskapsnivå.
         Berätta gärna när ni bokar på vilken kunskapsnivå ni ligger på.
@@ -228,8 +268,9 @@ activities:
         - All equipment provided
         - 2 hour lessons
         - From 1080 SEK / pp
+
       lesson_desc: |
-        Group lessons are most suited for a group of friends or co-workers with no kitreboarding experience, you will be able to get the most out of these lessons if
+        Group lessons are most suited for a group of friends or co-workers with no kitesurfing experience, you will be able to get the most out of these lessons if
         all participants are on the same competency level.
 
         If you are a complete beginner, it will take about 5 lessons (10 hours) to reach Level 3.<br/>
@@ -246,6 +287,7 @@ activities:
         - All utrustning ingår
         - 2 timmar per lektion
         - Från 1080 SEK / pp
+
       lesson_desc: |
         Grupplektioner lämpar sig bäst för en grupp vänner eller medarbetare utan tidigare erfarenhet av kitesurfing,
         ni kommer få mest nytta av lektionen om alla deltagare är på samma kunskapsnivå.
@@ -254,7 +296,6 @@ activities:
         - 2 lektioner för nivå 1
         - 2 lektioner för nivå 2
         - 1 lektion för nivå 3
-
 
     plans:
       - lessons: 1
@@ -284,7 +325,11 @@ activities:
         - 1 on 1 lessons, fully customised
         - All equipment provided
         - 2 hour lessons
+        - From 5 years and up
         - From 1400 SEK / pp
+
+      lesson_desc: |
+        For private lessons we tailor the lessons to suit your individual needs.
 
     sv:
       heading: Privatlektioner
@@ -292,14 +337,19 @@ activities:
         - 1 on 1 lektioner, skräddarsydd läroplan
         - All utrustning ingår
         - 2 timmar per lektion
+        - Från 5 år
         - Från 1400 SEK / pp
+
+      lesson_desc: |
+        För privatlektioner skräddarsys kursplanen efter dina individuella behov.
+
 
     plans:
       - lessons: 1
         price: 1400
         total_duration: 2
       - lessons: 2
-        price: 2800
+        price: 2750
         total_duration: 4
       - lessons: 3
         price: 4000
@@ -322,7 +372,13 @@ activities:
         - Perfect for couples or friends
         - All equipment provided
         - 2 hour lessons
+        - 2 participants
+        - From 6 years and up
         - From 800 SEK / pp
+
+      lesson_desc: |
+        Semi-private lessons we tailor the lessons to suit your needs, you will be able to get the most out of these lessons if
+        the two participants are on the same competency level. Please let us know when requesting booking, what level you are on.
 
     sv:
       heading: Semi-privata lektioner
@@ -330,14 +386,20 @@ activities:
         - Perfekt för par eller vänner
         - All utrustning ingår
         - 2 timmar per lektion
+        - 2 deltagare
+        - Från 6 år
         - Från 800 SEK / pp
+
+      lesson_desc: |
+        Semi-privata lektioner skräddarsys efter era kunskaper, det är att föredra att båda deltagarna har ungefär samma kunskapsnivå.
+        Berätta gärna när ni bokar på vilken kunskapsnivå ni ligger på.
 
     plans:
       - lessons: 1
         price: 800
         total_duration: 2
       - lessons: 2
-        price: 1600
+        price: 1550
         total_duration: 4
       - lessons: 3
         price: 2200
@@ -360,7 +422,13 @@ activities:
         - Perfect for a group of friends
         - All equipment provided
         - 2 hour lessons
+        - Up to 4 participants
+        - From 8 years and up
         - From 500 SEK / pp
+
+      lesson_desc: |
+        Group lessons are most suited for a group of friends or co-workers with no surfing experience,
+        you will be able to get the most out of these lessons if all participants are on the same competency level.
 
     sv:
       heading: Grupplektioner
@@ -368,14 +436,20 @@ activities:
         - Perfekt för en liten grupp vänner
         - All utrustning ingår
         - 2 timmar per lektion
+        - Upp till 4 deltagare
+        - Från 8 år
         - Från 500 SEK / pp
+
+      lesson_desc: |
+        Grupplektioner lämpar sig bäst för en grupp vänner eller medarbetare utan tidigare erfarenhet av surfing,
+        ni kommer få mest nytta av lektionen om alla deltagare är på samma kunskapsnivå.
 
     plans:
       - lessons: 1
         price: 500
         total_duration: 2
       - lessons: 2
-        price: 1000
+        price: 950
         total_duration: 4
       - lessons: 3
         price: 1400
@@ -397,14 +471,32 @@ activities:
       features:
         - All equipment provided
         - 1 hour lessons
+        - From 14 years and up
+        - 4 to 16 participants
         - From 300 SEK / pp
+
+      lesson_desc: |
+        SUP fitness is one of the most popular lessons KSurf surfcenter.
+        A basic water safety and land lesson is given before we go in the water.
+
+        The lessons is recommended to anyone who wants to try out stand up paddleboarding.
+        If you do not have a group, we will form one for you so there is no need to worry.
 
     sv:
       heading: Fitness-lektioner
       features:
         - All utrustning ingår
         - 1 timme per lektion
+        - Från 14 år
+        - 4 till 16 deltagare
         - Från 300 SEK / pp
+
+      lesson_desc: |
+        SUP Fitness är blan den mest populära kursen på KSurf surfcenter.
+        Efter en grundläggande säkerhetsgenomgång på land beger vi oss ut på vatten.
+
+        Lektionstypen rekommenderas starkt som första Stand up paddleboard upplevelse.
+        Om du inte har en egen grupp, så skapar vi en grupp åt dig.
 
     plans:
       - lessons: 1
@@ -433,14 +525,26 @@ activities:
       features:
         - All equipment provided
         - 1 hour lessons
+        - From 14 years and up
+        - 4 to 16 participants
         - From 300 SEK / pp
+
+      lesson_desc: |
+        With SUP Yoga you develop and improve your balance, strength, coordination and body posture.
+        The goal is to align your mind and body and let go of everyday stress.
 
     sv:
       heading: Yoga-lektioner
       features:
         - All utrustning ingår
         - 1 timme per lektion
+        - Från 14 år
+        - 4 till 16 deltagare
         - Från 300 SEK / pp
+
+      lesson_desc: |
+        SUP Yoga  utvecklar och förbättrar din balans, styrka koordination, samt hållning.
+        Målet är att förena din kropp och själ och släppa vardagsstressen.
 
     plans:
       - lessons: 1
