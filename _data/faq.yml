@@ -1,0 +1,263 @@
+---
+
+en:
+
+  - category: booking
+    q: How can I book and do I need to book in advance?
+    a: |
+      We recommend sending us a booking request so we can find the best day and time for your lessons.<br/>
+      You can send the request via the website or directly at our center.<br/>
+      You can also email or phone us.<br/>
+      If we are fully booked on the website we recommend you to call us.<br/>
+      We will do our best to find a day and time that fits you.
+
+  - category: general
+    q: Where KSurf located?
+    a: |
+      The center is located at Skanör hamn, Falsterbo just next to the restaurant Badhytten.
+
+  - category: general
+    q: What payment methods are accepted?
+    a: |
+      You can pay by Credit Card at the center, Swish us or get an invoice.
+
+  - category: general
+    q: What I'm hungry or thirsty?
+    a: |
+      You can enjoy a delicious meal or drink at the new restaurant Badhytten
+      after your session. <br/>
+      Read more at [www.badhytten.com](http://www.badhytten.com){:target="_blank"}.
+      You can also grab something small at the kiosk just next to the center.
+
+  - category: general
+    q: What are the open hours of KSurf surf center?
+    a: |
+      May - September, 7 days a week from 09:00 – 18:00
+
+  - category: general
+    q: Where are the lessons held?
+    a: |
+      We proceed from Skanör beach / Falsterbo beach depending on the conditions and the wind direction.
+
+  - category: general
+    q: How about parking?
+    a: |
+      There is a public beach car park, they normally charge for the day.
+
+  - category: general
+    q: What do I need to bring?
+    a: |
+      Please bring a towel, swimwear that you wear under your wetsuit, sunglasses, sunscreen and any refreshments you require.<br/>
+      Make sure you have appropriate clothing for the weather.
+
+  - category: general
+    q: What happens if I hurt myself?
+    a: |
+      All participation is at your own risk. Therefore look into your personal accident insurance before the course starts.<br/>
+      You should have your own valid home insurance that covers possible damage to person or property.<br/>
+      Before your lesson you will have to sign a registration form with all the terms & conditions as well as a release of liabilities.
+
+  - category: general
+    q: What happens if I break the equipment during my lesson?
+    a: |
+      Equipment insurance is included in the price.<br/>
+      But please be careful as our deductible is quite high.<br/>
+      Before your lesson you will have to sign a registration form with all the terms & conditions.
+
+  - category: general
+    q: What if I need to cancel or reschedule?
+    a: |
+      Contact us as soon as you can.<br/>
+      See our [terms & conditions](/en/terms/){:target="_blank"} for cancellation & reschedule policies.
+
+  - category: general
+    q: What if the weather conditions are not appropriate for my booked session?
+    a: |
+      If you booked kitesurfing lessons you have Wind warranty.<br/>
+      If the conditions are not appropriate for the lesson you booked (applies for all lessons) we will try to
+      call you on the morning of your lesson and try to rearrange or offer you another day.<br/>
+      The weather is always unpredictable and we try our best to schedule lessons when we think it will be most appropriate.<br/>
+      We do not cancel a lesson if it is raining.
+
+  - category: kitesurf
+    q: What is wind warranty for kitesurfing lessons?
+    a: |
+      We cannot control nature. This is why we have the so called  “wind warranty” on all our kite courses.
+
+      Wind warranty means:
+
+      If you somehow can not complete all or part of your practical kite course because of the wind,
+      you will have the opportunity to complete the course during the season and throughout the coming season without additional cost.
+      We have an optional offer if you're living in, or will be visiting Stockholm.
+      You will be able to finish your lessons with our cooperating kite school in Stockholm.
+      You will get a voucher which will be valid one year.
+
+      Wind warranty applies when:
+
+      - The theoretical parts of the lesson have been completed, and we cannot proceed with pratical parts of the lesson.
+      - The wind is too weak or too strong.
+      - It stops blowing, or that it decreases so that it is not possible to fly a kite.
+      - The wind increases and it starts to blow too much to fly a kite.
+      - The wind is extremely gusty.
+
+  - category: kitesurf
+    q: Don't I need to be strong to learn kitesurfing?
+    a: |
+      No, kitesurfing is not about strength.<br/>
+      It´s more about finding the right technique.
+
+  - category: kitesurf
+    q: What is the minimum age to learn kitesurfing?
+    a: |
+      Some children start kitesurfing early as 8 years, but they stay under strict & permanent supervision.<br/>
+      In general the average age to start is about 12-14 years old, depending on physical conditions.<br/>
+      IKO advices the minimum age of 12 years, because then children can understand and respect the power of a kite.
+
+  - category: kitesurf
+    q: What is IKO?
+    a: |
+      The International Kiteboarding Organization is the world’s leading kiteboarding organization specializing in kiteboarding education,
+      promoting safe practices and enhancing the standards for the industry.
+
+  - category: surf
+    q: Do I need to be strong to learn how to surf?
+    a: |
+      No, surfing is not about strength.<br/>
+      It´s more about to finding the right balance. Most people learn the basics within an hour.
+
+  - category: sup
+    q: Do I need to be strong to learn how to stand up paddle?
+    a: |
+      No, stand up paddle is not about strength.<br/>
+      It´s more about to finding the right balance. Most people learn the basics within an hour.
+
+sv:
+
+  - category: booking
+    q: Hur bokar jag och behöver jag förboka?
+    a: |
+      Vi rekomenderar starkt att du skickar en bokningsförfrågan så att vi kan hitta den tid och dag som passar bäst.<br/>
+      Du kan skicka förfrågan om bokning via hemsidan eller boka direkt på surfcentret.<br/>
+      Du kan även maila eller ringa oss.<br/>
+      Om det inte finns några lediga datum i kalendern, ring oss så ordnar vi nåt.<br/>
+      Vi kommer allid att göra vårt yttersta för att hitta en tid som passar dig.
+
+  - category: general
+    q: WVar ligger KSurf?
+    a: |
+      Surfcentret ligger på stranden invid Skanörs hamn, Falsterbo, precis invid restaurangen Badhytten.
+
+  - category: general
+    q: Vilka betalningssätt har ni?
+    a: |
+      Vi tar emot bank och kreditkort, samt Swish. Vi kan även skicka en faktura.
+
+  - category: general
+    q: Om jag är hungrig eller törstig?
+    a: |
+      Det finns möjlighet att avnjuta en härlig midda eller lunch efter din lektion på den nya restaurangen
+      Badhytten,<br/>
+      Läs mer på [www.badhytten.com](http://www.badhytten.com){:target="_blank"}.
+      Det finns även möjlighet att köpa lätt förtäring vid kiosken precis invid surfcentret.
+
+  - category: general
+    q: Vad är surfcentrets öppettider
+    a: |
+      Maj - september, 7 dagar i veckan 9:00 till 18:00
+
+  - category: general
+    q: Var hålls lektionerna?
+    a: |
+      Vi utgår från Skanör med omnejd, beroende på vädret och vindriktning.
+
+  - category: general
+    q: Finns det parkering?
+    a: |
+      Det finns en offentlig parkering invid stranden, med en p-automat.
+
+  - category: general
+    q: Vad behöver jag ta med mig?
+    a: |
+      Tag med en handduk, simkläder att ha under våtdräkten, solglasögon, solskydd samt gärna nåt att dricka på plats.<br/>
+      Ta med er kläder efter vädret, samt en extra tröja.
+
+  - category: general
+    q: Vad händer om jag gör mig illa?
+    a: |
+      Deltagande sker på egen risk. Därför kan det vara bra att titta efter en privat olyckasfallsförsäkring innan kursen.<br/>
+      Du behöver även ha en giltig hemförsäkring som täcker möjliga skador på person och gegendom.<br/>
+      Innan lektionstart, får alla deltagare skriva under våra allmänna villkor samt ansvarsfriskrivning.
+
+  - category: general
+    q: Vad händer om jag råkar ha sönder utrustningen?
+    a: |
+      Utrustningen är försäkrad och det ingår i priset<br/>
+      Dock så har vi hög självrisk, så snälla, var försiktig.<br/>
+      Innan lektionstart, får du skriva under och godkänna våra allmänna villkor.
+
+  - category: general
+    q: Vad händer om jag behöver omboka eller avboka?
+    a: |
+      Kontakta oss så fort du vet.<br/>
+      Se våra [villkor](/terms/){:target="_blank"} angående av- och ombokningsregler.
+
+  - category: general
+    q: Vad händer om vädret inte lämpar sig för min bokade lektion?
+    a: |
+      Om du har bokat en kitesurfing lektion, gäller vindgarantin.<br/>
+      Om vädret inte är lämpligt (gäller alla lektioner) kommer vi ringa dig samma morgon på lektionsdagen och
+      försöker hitta en alternativ tid.<br/>
+      Vädret är oförutsägbart och vi gör vårt bästa att boka lektioner, ibland kan det ske med kort varsel.<br/>
+      Vi avbokar inte p.g.a. regn.
+
+  - category: kitesurf
+    q: Vad är vindgarantin för kitesurfing lektioner?
+    a: |
+      Vi kan inte styra vädret, därför ingår det en "vindgaranti" i alla våra kitesurfing-lektioner.
+
+      Vindgarantin innebär:
+
+      Om det inte går att genomgöra i del eller i sin helhet de praktiska delarna av lektionen på grund av vindförhållanden,
+      garanterar vi en möjlighet att slutföra lektionen under samma eller nästkommande säsong, utan extra kostnad.<br/>
+      Om du bor eller besöker Stockholm, kommer du kunna slutföra din lektion på en kitesurfingskola i Stockholm,
+      som vi samarbetar med. Det genom ett presentkort som gäller i 12 månader.
+
+      Vindgarantin gäller om:
+
+      - De teoretiska delarna av lektionen är avklarade, men vi kan inte gå vidare med de praktiska delarna.
+      - Vinden är för hård eller för svag.
+      - Det slutar blåsa helt, eller vindstyrkan avtar så det inte blir möjligt att flyga en kite.
+      - Vinden tilltar och blir för stark för att flyga en kite.
+      - Vinden är opålitlig och byig.
+
+  - category: kitesurf
+    q: Behöver jag vara stark för att lära mig kitesurfing?
+    a: |
+      Nej, kitesurfing handlar inte om styrka.<br/>
+      Det handlar om rätt teknik och balans.
+
+  - category: kitesurf
+    q: Finns det en åldersgräns för att börja med kitesurfing?
+    a: |
+      Det förekommer att barn börjar så tidigt som 8 år med kitesurfing, men då under strikt uppsikt.<br/>
+      Generellt är dock snittåldern mellan 12-14 år, beroende på fysisk utveckling.<br/>
+      IKO rekommenderar minimiåldern på 12 år, då man måste kunna respektera och förstå kitens dragkraft.
+
+  - category: kitesurf
+    q: Vad är IKO?
+    a: |
+      International Kiteboarding Organization är en global kiteboarding organisation som specialiserar sig på utbildning
+      inom kitesurfing, utvecklar säkerhetsföreskrifter för att höja standarden inom hela kiteboarding industin.
+
+  - category: surf
+    q: Behöver jag vara fysiskt stark för att kunna surfa?
+    a: |
+      Nej, surfing handlar inte om fysisk styrka.<br/>
+      Det handlar om att hitta rätt balans. De flesta lär sig grunderna efter cirka en timme.
+
+  - category: sup
+    q: Behöver jag vara fysiskt stark för SUP?
+
+    a: |
+      Nej, SUP handlar inte om fysisk styrka.<br/>
+      Det handlar om att hitta rätt balans. De flesta lär sig grunderna efter cirka en timme.

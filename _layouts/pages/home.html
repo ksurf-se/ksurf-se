@@ -1,0 +1,164 @@
+---
+layout: default
+---
+
+{% assign i18n = site[@page.lang] %}
+{% assign activities_page = site.pages | where: 'role', 'activities' | where: 'lang', @page.lang | first %}
+
+<div class="parallax-header large"
+     data-parallax="scroll"
+     data-image-src="/images/home/banner-ksurf.jpg"
+     data-natural-height="1342"
+     data-natural-width="2000">
+  <h1 class="site-logo">
+    KSurf
+  </h1>
+</div>
+
+<section class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2 class="text-center text-uppercase surf-heading-3">
+        {{ page.surf_center_skanor }}
+      </h2>
+    </div>
+  </div>
+</section>
+
+{% assign section = page.activities_section %}
+<div class="parallax-header"
+     data-parallax="scroll"
+     data-image-src="/images/home/banner-activities.jpg"
+     data-natural-height="800"
+     data-natural-width="2000">
+  <h1>
+    {{ section.heading }}
+  </h1>
+</div>
+
+{% assign activity_groups = site.data.activities.activity_groups %}
+<section class="container">
+  <div class="row">
+
+    {% for group in activity_groups %}
+    {% assign group_i18n = group[@page.lang] %}
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading card-heading">
+          <h3>
+            {{ group_i18n.heading }}
+          </h3>
+        </div>
+        <div class="panel-body card-body">
+          <img src="{{ site.baseurl }}/images/activities/card-{{ group.slug }}.jpg" alt="{{ group_i18n.heading }}" class="img-responsive center-block"/>
+        </div>
+        <div class="panel-footer text-center">
+          <p data-mh="activities-mh-group">
+            {{ group_i18n.tag_line | safe }}
+          </p>
+          <a class="btn btn-block btn-primary" href="{{ site.baseurl }}{{ activities_page.url }}#{{ group.slug }}-activities">{{ i18n.buttons.learn_more }}</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+{% assign section = page.our_story_section %}
+<div class="parallax-header"
+     data-parallax="scroll"
+     data-image-src="/images/home/banner-about-us.jpg"
+     data-natural-height="800"
+     data-natural-width="2000">
+  <h1>
+    {{ section.heading }}
+  </h1>
+</div>
+
+<section class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-body text-center home-text">
+          {{ section.founded_by | safe }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-md-4 col-md-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-heading card-heading">
+          <h3 class="text-uppercase">
+            Yassine
+          </h3>
+        </div>
+        <div class="panel-body card-body">
+          <img src="{{ site.baseurl }}/images/home/home-yassine.jpg" alt="Yassine" class="img-responsive center-block"/>
+        </div>
+        <div class="panel-footer" data-mh="about-us-mh-group">
+          <p class="home-text">
+            {{ section.about_yassine | safe }}
+          </p>
+          <p class="home-text">
+            {{ section.more_about_yassine | safe }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading card-heading">
+          <h3 class="text-uppercase">
+            Julia
+          </h3>
+        </div>
+        <div class="panel-body card-body">
+          <img src="{{ site.baseurl }}/images/home/home-julia.jpg" alt="Julia" class="img-responsive center-block"/>
+        </div>
+        <div class="panel-footer" data-mh="about-us-mh-group">
+          <p class="home-text">
+            {{ section.about_julia | safe }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% assign section = page.location_section %}
+
+<div class="parallax-header"
+     data-parallax="scroll"
+     data-image-src="/images/home/banner-location.jpg"
+     data-natural-height="800"
+     data-natural-width="2000">
+  <h1>
+    {{ section.heading }}
+  </h1>
+</div>
+
+<section class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading card-heading">
+            <h3 style="text-transform: none">Lat: 55° 24' 55.59"N Long: 12° 49' 44.2" E</h3>
+        </div>
+        <div class="panel-body">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d149869.83500638095!2d12.863343120466377!3d55.486095254917885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46530f1e2dc59ffb%3A0x4f600380a32a7a3c!2sKsurf!5e0!3m2!1sen!2sse!4v1487103434699" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
+          </iframe>
+        </div>
+        <div class="panel-footer text-center">
+            {{ section.text }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

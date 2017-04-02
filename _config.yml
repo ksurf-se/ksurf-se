@@ -1,0 +1,108 @@
+# Config
+permalink: pretty
+markdown: kramdown
+sass:
+  style: compressed
+exclude:
+  - Makefile
+
+# Setup
+title: KSurf
+url: https://www.ksurf.se
+baseurl: ""
+
+languages:
+  - sv
+  - en
+
+nav:
+  - home
+#  - news
+  - activities
+  - contact
+#  - trips
+#  - store
+#  - partners
+
+contact:
+  street_address: Skanörs hamn
+  locality: Vellinge
+  postal_code: 239 30
+  country_name: Sverige
+
+  tel: 076 082 53 91
+  email: '&#105;&#110;&#102;&#111;&#064;&#107;&#115;&#117;&#114;&#102;&#046;&#115;&#101;'
+  url: https://www.ksurf.se
+
+  facebook_url: https://www.facebook.com/ksurf.se
+  instagram_url: https://www.instagram.com/ksurf.se/
+
+en: &DEFAULT_I18N
+
+  buttons:
+    learn_more: learn more
+    info_booking: info & booking
+    request_booking: request booking
+
+  booking_form:
+    heading: Booking request
+    cancel: Cancel
+    close: Close
+    send: Send booking request
+    thank_you: |
+      <strong>Thank you!</strong><br/>
+      We'll get in touch as soon as possible.
+
+    name:
+      label: Your name
+    email:
+      label: E-mail
+    phone:
+      label: Phone
+    lessons:
+      label: Lessons
+    start_date:
+      label: Desired start date
+    participants:
+      label: Participants
+    special_requests:
+      label: Special requests
+
+
+sv:
+  <<: *DEFAULT_I18N
+
+  buttons:
+    learn_more: läs mer
+    info_booking: info & bokning
+    request_booking: bokning
+
+  booking_form:
+    heading: Bokningsförfrågan
+    cancel: Avbryt
+    close: Stäng
+    send: Skicka bokningsförfrågan
+    thank_you: |
+      <strong>Tusen tack!</strong><br/>
+      Vi hör av oss så fort vi kan.
+
+    name:
+      label: Ditt namn
+    email:
+      label: E-mail
+    phone:
+      label: Mobil
+    lessons:
+      label: Lektioner
+    start_date:
+      label: Önskat startdatum
+    participants:
+      label: Deltagare
+    special_requests:
+      label: Önskemål
+
+
+fb_posts:
+  - https://www.facebook.com/ksurf.se/posts/1754096081282716
+  - https://www.facebook.com/ksurf.se/posts/1749800888378902
+  - https://www.facebook.com/ksurf.se/posts/1747142785311379

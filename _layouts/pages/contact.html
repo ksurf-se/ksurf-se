@@ -1,0 +1,99 @@
+---
+layout: default
+---
+
+<div class="parallax-header larger"
+     data-parallax="scroll"
+     data-image-src="{{ site.baseurl }}/images/contact/banner-contact.jpg"
+     data-position="bottom"
+     data-natural-height="800"
+     data-natural-width="2000" xmlns="http://www.w3.org/1999/html">
+  <h1>
+    {{ page.nav_text }}
+  </h1>
+</div>
+
+<section class="container">
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading card-heading">
+          <h3>
+            {{ page.call_us }} / {{ page.email_us }}
+          </h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <p>
+              <a class="tel btn btn-lg btn-primary btn-block" href="tel:{{ site.contact.tel | remove: ' '}}"><i class="fa fa-phone"></i> {{ site.contact.tel }}</a>
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>
+              <a class="tel btn btn-lg btn-primary btn-block" href="mailto:{{ site.contact.email | safe}}" style="text-transform: none"><i class="fa fa-envelope"></i> {{ site.contact.email | safe }}</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+
+        <div class="panel-body">
+          {% assign form = page.form %}
+          <form id="contact-me-form" action="https://formden.com/post/B2wPjxdm/" method="post">
+            <p class="text-center home-text">
+              {{ form.desc }}
+            </p>
+            <div class="form-group">
+              <label for="nameInput">
+                {{ form.name.label }}
+              </label>
+              <input required type="text" class="form-control" id="nameInput" placeholder="{{ form.name.placeholder }}" name="name">
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="emailInput">{{ form.email.label }}</label>
+              <input required type="email" class="form-control" id="emailInput" placeholder="{{ form.email.placeholder }}" name="email">
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="phoneInput">{{ form.phone.label }}</label>
+              <input required type="text" data-minlength="9" class="form-control" id="phoneInput" placeholder="{{ form.phone.placeholder }}" name="phone">
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="nameInput">{{ form.means_of_contact.label }}</label>
+
+              <div class="btn-group btn-group-justified" data-toggle="buttons">
+                <label class="btn btn-default active">
+                  <input type="radio" name="via" value="phone" checked> {{ form.means_of_contact.option_phone }}
+                </label>
+                <label class="btn btn-default">
+                  <input type="radio" name="via" value="mail"> {{ form.means_of_contact.option_email }}
+                </label>
+              </div>
+            </div>
+            <input type="hidden" name="subject" value="Please contact me">
+            <button type="submit" class="btn btn-primary btn-block">{{ form.submit_button }}</button>
+          </form>
+          <div class="alert alert-success form-alert-success text-center hidden" role="alert" style="margin-bottom: 0">
+            {{ form.thank_you | safe }}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>

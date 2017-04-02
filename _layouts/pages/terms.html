@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="parallax-header larger"
+     data-parallax="scroll"
+     data-image-src="{{ site.baseurl }}/images/terms/banner-terms.jpg"
+     data-position="top"
+     data-natural-height="800"
+     data-natural-width="2000">
+</div>
+
+<section class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+      <div class="panel panel-default">
+        <div class="panel-heading card-heading">
+          <h3 class="text-uppercase">
+            {{ page.heading }}
+          </h3>
+        </div>
+        <div class="panel-body">
+          {% for item in page.terms %}
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+            <p>
+              <strong><i class="fa fa-chevron-right"></i> {{ item.heading }}</strong>
+            </p>
+            {{ item.term | markdownify }}
+            <hr/>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

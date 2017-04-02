@@ -1,0 +1,21 @@
+
+$brand-primary: #1999d8;
+
+//** Background color for `<body>`.
+$body-bg: #f7f7f7;
+$text-color: #666;
+
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 16px;
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family: 'Open Sans Condensed', sans-serif;
+
+//** Navbar
+$navbar-height: 64px;
+$navbar-default-bg: #ffffff;
+
+$hr-border: #c2c2c2;
+
+$panel-border-radius: 0px;
+$panel-default-text:  $text-color;

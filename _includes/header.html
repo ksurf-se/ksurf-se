@@ -1,0 +1,60 @@
+{% assign home_page = site.pages | where: 'role', 'home' | where: 'lang', @page.lang | first %}
+
+<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Mobile nav -->
+      <div class="navbar-header">
+        <button type="button"
+                class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#navbar"
+                aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ site.baseurl }}{{ home_page.url }}">
+          <img alt="Brand" src="{{ site.baseurl }}/images/nav/ksurf-brand-logo.png">surf
+        </a>
+      </div>
+
+      <!-- Desktop nav -->
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right pull-right">
+          {% for nav in site.nav %}
+            {% assign nav_page = site.pages | where: 'role', nav | where: 'lang', @page.lang | first %}
+
+            <li {% if nav_page.role==page.role %}class="active"{% endif %}>
+              <a class="text-right" href="{{ site.baseurl }}{{ nav_page.url }}">{{ nav_page.nav_text }}</a>
+            </li>
+          {% endfor %}
+          <li class="dropdown">
+            <a href="#"
+               class="dropdown-toggle text-right"
+               data-toggle="dropdown"
+               role="button"
+               aria-haspopup="true"
+               aria-expanded="false"><span class="flag-link flag-{{ page.lang }}">&nbsp;</span> <span class="caret"></span></a>
+            <ul class="dropdown-menu lang-selector navbar-right">
+              {% assign sv_page = site.pages | where: 'role', @page.role | where: 'lang', 'sv' | first %}
+              {% assign en_page = site.pages | where: 'role', @page.role | where: 'lang', 'en' | first %}
+              <li class="text-right">
+                <a href="{{ site.baseurl }}{{ sv_page.url }}">
+                  Svenska <span class="flag-link flag-sv">&nbsp;</span>
+                </a>
+              </li>
+              <li class="text-right">
+                <a href="{{ site.baseurl }}{{ en_page.url }}">
+                  English <span class="flag-link flag-en">&nbsp;</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
