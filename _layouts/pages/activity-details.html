@@ -82,7 +82,10 @@ sv:
                      style="white-space: normal"
                      data-toggle="modal"
                      data-hours="{{ plan.total_duration }} hours / {{ plan.lessons }} lessons"
-                     data-target="#booking-modal">{{ site_i18n.buttons.request_booking }}</a>
+                     data-target="#booking-modal"
+                     ga-on="click"
+                     ga-event-category="conversion-subgoal"
+                     ga-event-action="booking-form-opened">{{ site_i18n.buttons.request_booking }}</a>
                 </div>
               </div>
             </div>
@@ -216,7 +219,12 @@ sv:
             </p>
             <input type="hidden" name="subject" value="Booking request - {{ act.slug  }}">
             <button type="button" class="btn btn-default" data-dismiss="modal">{{ form_i18n.cancel }}</button>
-            <button type="submit" class="btn btn-primary pull-right">{{ form_i18n.send }}</button>
+            <button type="submit"
+                    class="btn btn-primary pull-right"
+                    ga-on="click"
+                    ga-event-category="conversion-goal"
+                    ga-event-action="booking-form-sent"
+                    ga-event-value="{{ plan.price }}">{{ form_i18n.send }}</button>
 
           </form>
           <div class="form-alert-success hidden">

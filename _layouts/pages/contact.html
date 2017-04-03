@@ -27,16 +27,28 @@ layout: default
           <div class="row">
             <div class="col-md-6">
               <p>
-              <a class="tel btn btn-lg btn-primary btn-block" href="tel:{{ site.contact.tel | remove: ' '}}"><i class="fa fa-phone"></i> {{ site.contact.tel }}</a>
+                <a class="tel btn btn-lg btn-primary btn-block"
+                   href="tel:{{ site.contact.tel | remove: ' '}}"
+                   ga-on="click"
+                   ga-event-category="conversion-subgoal"
+                   ga-event-action="contact-phone-button-clicked">
+                  <i class="fa fa-phone"></i> {{ site.contact.tel }}
+                </a>
               </p>
             </div>
             <div class="col-md-6">
               <p>
-              <a class="tel btn btn-lg btn-primary btn-block" href="mailto:{{ site.contact.email | safe}}" style="text-transform: none"><i class="fa fa-envelope"></i> {{ site.contact.email | safe }}</a>
+                <a class="tel btn btn-lg btn-primary btn-block"
+                   href="mailto:{{ site.contact.email | safe}}"
+                   style="text-transform: none"
+                   ga-on="click"
+                   ga-event-category="conversion-subgoal"
+                   ga-event-action="contact-email-button-clicked">
+                  <i class="fa fa-envelope"></i> {{ site.contact.email | safe }}
+                </a>
               </p>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -85,7 +97,12 @@ layout: default
               </div>
             </div>
             <input type="hidden" name="subject" value="Please contact me">
-            <button type="submit" class="btn btn-primary btn-block">{{ form.submit_button }}</button>
+            <button type="submit"
+                    class="btn btn-primary btn-block"
+                    ga-on="click"
+                    ga-event-category="conversion-goal"
+                    ga-event-action="contact-form-sent"
+                    ga-event-value="1">{{ form.submit_button }}</button>
           </form>
           <div class="alert alert-success form-alert-success text-center hidden" role="alert" style="margin-bottom: 0">
             {{ form.thank_you | safe }}

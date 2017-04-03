@@ -12,12 +12,13 @@ export HELP_MESSAGE
 
 PYTHON_BIN := .venv/bin
 PWD := $(shell pwd)
+CACHE_TIME := 3000000
 
 .PHONY: serve help
 
 $(PYTHON_BIN)/activate:
 	test -d $(PYTHON_BIN) || virtualenv .venv
-	$(PYTHON_BIN)/pip install s3cmd
+	$(PYTHON_BIN)/pip install s3cmd awscli
 	touch $(PYTHON_BIN)/activate
 
 .venv: $(PYTHON_BIN)/activate
@@ -37,10 +38,15 @@ build:
 	docker run -it --rm --label=jekyll --volume=$(PWD):/srv/jekyll jekyll/jekyll:pages jekyll build
 
 deploy-test: check-aws-env .venv build
-	$(PYTHON_BIN)/s3cmd sync --add-header="Cache-Control:max-age=3600" --no-mime-magic --no-preserve --delete-removed --delete-after ./_site/ s3://test.ksurf.se/
+	$(PYTHON_BIN)/s3cmd sync --add-header="Cache-Control:max-age=$(CACHE_TIME)" --no-mime-magic --no-preserve --delete-removed --delete-after ./_site/ s3://test.ksurf.se/
+	$(PYTHON_BIN)/aws configure set preview.cloudfront true
+	$(PYTHON_BIN)/aws cloudfront create-invalidation --distribution-id E3KM3KMSV24EGT --paths '/*'
 
 deploy: check-aws-env .venv build
-	$(PYTHON_BIN)/s3cmd sync --add-header="Cache-Control:max-age=3600" --no-mime-magic --no-preserve --delete-removed --delete-after ./_site/ s3://www.ksurf.se/
+	$(PYTHON_BIN)/s3cmd sync --add-header="Cache-Control:max-age=$(CACHE_TIME)" --no-mime-magic --no-preserve --delete-removed --delete-after ./_site/ s3://www.ksurf.se/
+	$(PYTHON_BIN)/aws configure set preview.cloudfront true
+	$(PYTHON_BIN)/aws cloudfront create-invalidation --distribution-id E1J6DO1K0O6IEA --paths '/*'
+
 
 check-aws-env:
 ifndef AWS_ACCESS_KEY_ID
