@@ -12,9 +12,9 @@ $(function(){
     });
 
     $('.btn-booking-request-activity').click(function(){
-        console.log($(this).data('hours'));
         $('#lessonsInput').val($(this).data('hours'))
     });
+
 });
 
 formden.success = function(data, form_dom){

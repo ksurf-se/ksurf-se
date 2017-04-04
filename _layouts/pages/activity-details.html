@@ -85,6 +85,7 @@ sv:
                      data-target="#booking-modal"
                      ga-on="click"
                      ga-event-category="conversion-subgoal"
+                     ga-event-label="{{ act.group.slug }}-{{ act.slug }}-{{ plan.lessons }}"
                      ga-event-action="booking-form-opened">{{ site_i18n.buttons.request_booking }}</a>
                 </div>
               </div>
@@ -223,8 +224,8 @@ sv:
                     class="btn btn-primary pull-right"
                     ga-on="click"
                     ga-event-category="conversion-goal"
-                    ga-event-action="booking-form-sent"
-                    ga-event-value="{{ plan.price }}">{{ form_i18n.send }}</button>
+                    ga-event-label="{{ act.group.slug }}-{{ act.slug }}-{{ plan.lessons }}"
+                    ga-event-action="booking-form-sent">{{ form_i18n.send }}</button>
 
           </form>
           <div class="form-alert-success hidden">
