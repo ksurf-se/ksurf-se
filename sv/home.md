@@ -27,9 +27,8 @@ our_story_section:
   
   about_julia: |
     Julia introducerades för kitesurfing 2013.
-    Kite och surfing har blivit en stor del av hennes liv. Julia har precis avslutat sin
-    allmäntjänstgöring i Dalarna och kommer fortsätta sin läkarkarriär i Skåne.
-    Julia kommer att besvara dina fråg   or. Välkommen att ringa, skriva eller prata med henne på stranden.
+    Kite och surfing har blivit en stor del av hennes liv. Julia kommer att besvara dina frågor. 
+    Välkommen att ringa, skriva eller prata med henne på stranden.
 
 location_section:
 

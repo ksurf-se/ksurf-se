@@ -27,10 +27,9 @@ our_story_section:
     During the Swedish Championship of 2015, he won first place in the Big Air category.
   
   about_julia: |
-    Julia introducerades för kitesurfing 2013.
-    Kite och surfing har blivit en stor del av hennes liv. Julia har precis avslutat sin
-    allmäntjänstgöring i Dalarna och kommer fortsätta sin läkarkarriär i Skåne.
-    Julia kommer att besvara dina frågor. Välkommen att ringa, skriva eller prata med henne på stranden.
+    Julia was introduced to kitesurfing in 2013.
+    Kiting and surfing has become a big part of her life. Julia will answer your questions.
+    You are welcome to call, write or talk to her in person by the beach.
 
 location_section:
   heading: Location
