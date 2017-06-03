@@ -1,0 +1,114 @@
+---
+
+destinations:
+
+  - &dakhla
+    slug: dakhla
+
+    en:
+      name: Dakhla, Morocco
+      heading: Explore kitesurfing paradise and make friends for life!
+      pitch: |
+        Join Liquid Force Kite Camp in Dakhla for an unforgettable experience.
+        Spend a week surrounded by the Swedish Liquid Force team and  people  who share the same passion.
+        In a spot where you have endless space and conditions for any kiting discipline.
+
+      desc_1: |
+        Join the Swedish Liquid Force Team on a trip to the one of the best kitesurfing spots in the world: Dakhla.
+        It’s a kitesurfing paradise, located at the south of Morocco.
+        Your accommodation is right on the beach itself. What else!?
+        A huge lagoon set in a lunar landscape with reliable thermal winds blowing across the bay make it a stunning
+        playground with plenty of space for everybody.
+        The lagoon offers conditions for every level and every style.
+        Perfectly flat water, waist deep locations and great waves just beyond the foreland.
+
+      desc_2: |
+        Depending on your weight, the wind conditions are most suitible for 6m to 11m kite sizes.
+        Due to cold nights and quick heating of land compared to water during the day, perfect thermal winds are created,
+        building up to 20 knots (10+ m/s) and more throughout the day.
+        Average air temperatures are 22°C in winter, however it gets quite chilly in the evening,
+        so bring something to keep you warm.
+        Water is a bit colder, between 16 and 20°C, make sure to bring the water wear of your choice.
+        We recommend a long 2/3mm or 3/4mm wetsuit.
+
+    packages:
+      p1:
+        en:
+          heading: Level up
+          desc: |
+            Do you want to level up your riding skills and nail that special trick? We can help you!
+            Immerse in a week of intensive kiting with the support of our experienced coaches,
+            working together with you on your progression.
+            Lessons or coaching sessions with regular one-on-one feedback and analysis will take place every
+            day during this kite camp in Dakhla.
+            Required level is intermediate, advanced or expert.
+
+      p2:
+        en:
+          heading: Come ride with us
+          desc: |
+            Welcome to kite with us!
+            If you have your own equipment and want to get the most out of your kiting,
+            come and join us. You will have a good time riding with others and we will t
+            ake care of practicalities. You will get accommodation, food, transfer,
+            storage for your gear and a lifeguard boat in the water.
+            We also offer you on demand coaching with experienced instructors.
+
+    included:
+      en:
+        - Flight Copenhagen-Dakhla via Casablanca
+        - Flight Dakhla-Copenhagen via Casablanca
+        - Airport transfers
+        - 1 night in shared room at Hotel Le Lido in Casablanca incl. breakfast.
+        - 6 nights in shared bungallow at Hotel Dakhla Attitude incl. full board (breakfast, lunch and dinner)
+        - 1 checked luggage (23 kg) and 1 hand luggage (8 kg) per person
+        - Airport taxes and local tourist taxes
+
+    missing:
+      en:
+        - Beverages
+        - Kite equpment or luggage surcharge
+        - Personal travel insurance
+
+    extras:
+      en:
+        - Single room supplement 2400 SEK
+        - Kiting gear 300 EUR
+        - Extra kiting lessons, contact for pricing
+
+    travel_info:
+      en: |
+        Apart from your passport there is no Visa needed to travel from Europe to Morocco and you will just be asked to
+        fill out a form during entry and exit of the country.
+        For other nationalities, please drop us a message and we will look it up for you.
+        No extra vaccinations are required for traveling to Morocco.
+
+camps:
+
+  dakhla_2017_11:
+    destination: *dakhla
+    departure: 2017-11-17
+    return: 2017-11-24
+    open: yes
+    packages:
+
+      p1:
+        price: 14000 SEK
+
+      p2:
+        price: 11400 SEK
+
+  dakhla_2018_03:
+    destination: *dakhla
+    departure: 2018-03-11
+    return: 2018-03-19
+    open: yes
+    packages:
+
+      p1:
+        price: 14000 SEK
+
+      p2:
+        price: 11400 SEK
+
+...
