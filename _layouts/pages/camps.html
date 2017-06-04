@@ -46,6 +46,50 @@ layout: default
               </p>
             </div>
           </div>
+          <div class="row">
+
+            <div class="col-md-10 col-md-offset-1">
+              <hr>
+              <h4 class="text-uppercase heading-compact">
+                {{ page.upcoming_section.available_dates }}
+              </h4>
+              <div class="row">
+                {% for trip in group.items %}
+                {% assign trip_i18n = trip[page.lang] %}
+                {% assign camp_page = site.pages | where: 'role', @trip.slug | where: 'lang', @page.lang | first %}
+                <div class="col-md-6">
+
+                  <div class="media">
+                    <div class="media-left">
+                      <div class="panel panel-danger" style="width: 5em; margin-bottom: 10px;">
+                        <div class="panel-heading text-uppercase text-center">
+                          {{ trip.departure|date:"%Y" }}
+                        </div>
+                        <div class="panel-body text-uppercase text-center">
+                          <strong style="font-size: large">{{ trip.departure|date:"%d" }}</strong>
+                          {{ trip.departure|date:"%b" }}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="media-body">
+                      <p>
+                        {% for feature in trip.features[page.lang] %}
+                        <i class="fa fa-fw fa-angle-double-right"></i> {{ feature }}<br/>
+                        {% endfor %}
+                      </p>
+                    </div>
+                  </div>
+                  <p>
+                    <a class="btn btn-lg btn-primary btn-block"
+                       href="{{ site.baseurl }}{{ camp_page.url  }}">
+                      {{ site_i18n.buttons.info_booking }}
+                    </a>
+                  </p>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
           {% endfor %}
         </div>
       </div>

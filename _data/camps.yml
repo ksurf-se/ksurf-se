@@ -6,7 +6,7 @@ destinations:
     slug: dakhla
 
     en:
-      name: Dakhla, Morocco
+      name: Dakhla
       heading: Explore kitesurfing paradise and make friends for life!
       pitch: |
         Join Liquid Force Kite Camp in Dakhla for an unforgettable experience.
@@ -86,29 +86,34 @@ destinations:
 camps:
 
   dakhla_2017_11:
+    slug: dakhla-2017-11
     destination: *dakhla
     departure: 2017-11-17
     return: 2017-11-24
     open: yes
     packages:
-
       p1:
         price: 14000 SEK
-
       p2:
         price: 11400 SEK
+    features: &dakhla_2017_11_features
+      en:
+        - Flight from Copenhagen
+        - 7 days, 1 day in Casablanca
+        - From 11400 SEK per person
 
   dakhla_2018_03:
+    slug: dakhla-2018-03
     destination: *dakhla
     departure: 2018-03-11
     return: 2018-03-19
     open: yes
     packages:
-
       p1:
         price: 14000 SEK
-
       p2:
         price: 11400 SEK
+    features:
+      <<: *dakhla_2017_11_features
 
 ...
