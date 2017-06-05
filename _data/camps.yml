@@ -4,7 +4,7 @@ destinations:
 
   - &dakhla
     slug: dakhla
-
+    video: https://player.vimeo.com/video/165126773?autoplay=0
     en:
       name: Dakhla
       heading: Explore kitesurfing paradise and make friends for life!
@@ -14,20 +14,20 @@ destinations:
         In a spot where you have endless space and conditions for any kiting discipline.
 
       desc_1: |
-        Join the Swedish Liquid Force Team on a trip to the one of the best kitesurfing spots in the world: Dakhla.
-        It’s a kitesurfing paradise, located at the south of Morocco.
-        Your accommodation is right on the beach itself. What else!?
+        Join the Swedish Liquid Force Team on a trip to the one of the best kitesurfing spots in the world: Dakhla.<br/>
+        It’s a kitesurfing paradise, located at the south of Morocco.<br/>
+        Your accommodation is right on the beach itself. What else!?<br/>
         A huge lagoon set in a lunar landscape with reliable thermal winds blowing across the bay make it a stunning
-        playground with plenty of space for everybody.
-        The lagoon offers conditions for every level and every style.
+        playground with plenty of space for everybody.<br/>
+        The lagoon offers conditions for every level and every style.<br/>
         Perfectly flat water, waist deep locations and great waves just beyond the foreland.
 
       desc_2: |
         Depending on your weight, the wind conditions are most suitible for 6m to 11m kite sizes.
         Due to cold nights and quick heating of land compared to water during the day, perfect thermal winds are created,
-        building up to 20 knots (10+ m/s) and more throughout the day.
+        building up to 20 knots (11m/s) and more throughout the day.<br/>
         Average air temperatures are 22°C in winter, however it gets quite chilly in the evening,
-        so bring something to keep you warm.
+        so bring something to keep you warm.<br/>
         Water is a bit colder, between 16 and 20°C, make sure to bring the water wear of your choice.
         We recommend a long 2/3mm or 3/4mm wetsuit.
 
@@ -49,8 +49,8 @@ destinations:
           desc: |
             Welcome to kite with us!
             If you have your own equipment and want to get the most out of your kiting,
-            come and join us. You will have a good time riding with others and we will t
-            ake care of practicalities. You will get accommodation, food, transfer,
+            come and join us. You will have a good time riding with others and we will
+            take care of practicalities. You will get accommodation, food, transfer,
             storage for your gear and a lifeguard boat in the water.
             We also offer you on demand coaching with experienced instructors.
 
@@ -72,7 +72,7 @@ destinations:
 
     extras:
       en:
-        - Single room supplement 2400 SEK
+        - Private room supplement 2400 SEK
         - Kiting gear 300 EUR
         - Extra kiting lessons, contact for pricing
 

@@ -2,39 +2,29 @@
 layout: default
 
 en: &DEFAULT_I18N
-  heading:
-    lesson_packages: lesson packages
-    details: lesson details
-    faq: info & faq
-  hours: hours
-  lessons: lessons
-  per_person: per participant
+  packages_heading: packages
+
 
 sv:
   <<: *DEFAULT_I18N
-  heading:
-    lesson_packages: kurspaket
-    details: kursbeskrivning
-    faq: info & faq
-  hours: timmar
-  lessons: lektioner
-  per_person: per deltagare
-
+  packages_heading: resepaket
 ---
 
-{% assign act = site.data.activities.activities | where: 'slug', @page.role | first %}
-{% assign act_i18n = act[@page.lang] %}
-{% assign group_i18n = act.group[@page.lang] %}
+{% assign camp = site.data.camps.camps | where:'slug', @page.role | first %}
+
+{% assign dest = camp.destination %}
+{% assign dest_i18n = dest[@page.lang] %}
 {% assign site_i18n = site[page.lang] %}
 {% assign layout_i18n = layout[page.lang] %}
 
-<div class="parallax-header"
+<div id="trips-heading"
+     class="parallax-header larger"
      data-parallax="scroll"
-     data-image-src="/images/activities/banner-{{ act.group.slug }}.jpg"
+     data-image-src="https://unsplash.it/2000/800"
      data-natural-height="800"
      data-natural-width="2000">
   <h1>
-    {{ group_i18n.heading }}
+    {{ dest_i18n.name }} {{ camp.departure | date:'%Y' }}
   </h1>
 </div>
 
@@ -44,97 +34,57 @@ sv:
       <div class="panel panel-default">
         <div class="panel-heading card-heading">
           <h3>
-           {{ act_i18n.heading }}
+           {{ dest_i18n.name }} {{ camp.departure | date:'%b %Y' }}
           </h3>
         </div>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-md-4 col-md-offset-1">
-              <img src="{{ site.baseurl }}/images/activities/card-{{ act.slug }}.jpg" class="img-responsive"/>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="row">
+              &nbsp; Huge calendar markers
             </div>
-            <div class="col-md-6">
-              <p>
-                <ul class="fa-ul">
-                  {% for feature in act_i18n.features %}
-                  <li><i class="fa-li fa fa-chevron-right"></i>{{ feature }}</li>
-                  {% endfor %}
-                </ul>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="panel-footer card-heading">
-          <h3>
-             {{ layout_i18n.heading.lesson_packages }}
-          </h3>
-        </div>
-        <div class="panel-footer">
-          <div class="row">
-            {% for plan in act.plans %}
-            <div class="col-md-2 {% if forloop.first %}col-md-offset-1{% endif %}">
-              <div class="panel panel-primary panel-pricing">
-                <div class="panel-heading">
-                  <p class="hours">{{ plan.total_duration }}</p>
-                  <p class="hours-unit">{{ layout_i18n.hours }}</p>
-                  <p class="hours-unit">{{ plan.lessons }} {{ layout_i18n.lessons }}</p>
-                </div>
-                <div class="panel-body">
-                  <p class="price">{{ plan.price }}</p>
-                  <p class="currency">SEK</p>
-                  {% if act.max_participants > 1 %}
-                    <p class="per">{{ layout_i18n.per_person }}</p>
-                  {% endif %}
-                  <a class="tel btn btn-lg btn-primary btn-block btn-booking-request-activity"
-                     href="#{{ plan.total_duration }}hours"
-                     style="white-space: normal"
-                     data-toggle="modal"
-                     data-hours="{{ plan.total_duration }} hours / {{ plan.lessons }} lessons"
-                     data-target="#booking-modal"
-                     ga-on="click"
-                     ga-event-category="conversion-subgoal"
-                     ga-event-label="{{ act.group.slug }}-{{ act.slug }}-{{ plan.lessons }}"
-                     ga-event-action="booking-form-opened">{{ site_i18n.buttons.request_booking }}</a>
-                </div>
+            <div class="row">
+              <div class="col-md-3 col-md-offset-1">
+                <img src="https://unsplash.it/600/400" class="img-responsive"/>
+              </div>
+              <div class="col-md-7">
+                <p>{{ dest_i18n.desc_1 }}</p>
               </div>
             </div>
-            {% endfor %}
-          </div>
-        </div>
-        <div class="panel-footer card-heading">
-          <h3>
-             {{ layout_i18n.heading.details }}
-          </h3>
-        </div>
-        <div class="panel-footer">
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-              {{ group_i18n.lesson_plan | markdownify }}
-              {{ act_i18n.lesson_desc | markdownify }}
+            <div class="row">
+              &nbsp;
             </div>
-          </div>
-        </div>
-        <div class="panel-footer card-heading">
-          <h3>
-             {{ layout_i18n.heading.faq }}
-          </h3>
-        </div>
-        <div class="panel-footer">
-          {% assign categories = "booking,general" | split: "," | unshift: @act.group.slug %}
-          {% for category in categories %}
-            {% assign faqs = site.data.faq[@page.lang] | where: 'category', @category %}
-            {% for faq in faqs %}
-              <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                  <p>
-                    <strong><i class="fa fa-chevron-right"></i> {{ faq.q }}</strong>
-                  </p>
-                  {{ faq.a | markdownify }}
-                  <hr/>
-                </div>
+            <div class="row">
+              <div class="col-md-3 col-md-push-8">
+                <img src="https://unsplash.it/600/400" class="img-responsive"/>
               </div>
-            {% endfor %}
-          {% endfor %}
-        </div>
+              <div class="col-md-7 col-md-offset-1 col-md-pull-3">
+                <p>{{ dest_i18n.desc_2 }}</p>
+              </div>
+
+            </div>
+          </li>
+          {% if dest.video != null %}
+          <li class="list-group-item">
+           <div class="row">
+             <div class="col-md-10 col-md-offset-1">
+               <div class="embed-responsive embed-responsive-16by9">
+                 <iframe class="embed-responsive-item" src="{{ dest.video }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+               </div>
+             </div>
+           </div>
+          </li>
+          {% endif %}
+          <li class="list-group-item card-heading">
+            <h3 class="text-center text-uppercase">
+              {{ layout_i18n.packages_heading }}
+            </h3>
+          </li>
+
+          <li class="list-group-item">
+          </li>
+
+        </ul>
+
       </div>
     </div>
 
@@ -158,7 +108,7 @@ sv:
             <div class="form-group">
               <label class="hidden-sm hidden-xs" for="nameInput">{{ form_i18n.name.label }}</label>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-fw fa-user"></i></span>
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
                 <input name="name" type="text" class="form-control" id="nameInput" placeholder="{{ form_i18n.name.label }}">
               </div>
             </div>
@@ -166,7 +116,7 @@ sv:
             <div class="form-group">
               <label class="hidden-sm hidden-xs" for="emailInput">{{ form_i18n.email.label }}</label>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-fw fa-at"></i></span>
+                <span class="input-group-addon"><i class="fa fa-at"></i></span>
                 <input name="email" type="email" class="form-control" id="emailInput" placeholder="{{ form_i18n.email.label }}">
               </div>
             </div>
@@ -174,7 +124,7 @@ sv:
             <div class="form-group">
               <label class="hidden-sm hidden-xs" for="phoneInput">{{ form_i18n.phone.label }}</label>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-fw fa-phone"></i></span>
+                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
                 <input name="phone" type="text" class="form-control" id="phoneInput" placeholder="{{ form_i18n.phone.label }}">
               </div>
             </div>
@@ -182,7 +132,7 @@ sv:
             <div class="form-group">
               <label class="hidden-sm hidden-xs" for="lessonsInput">{{ form_i18n.lessons.label }}</label>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-fw fa-signal"></i></span>
+                <span class="input-group-addon"><i class="fa fa-signal"></i></span>
                 <select class="form-control" id="lessonsInput" name="lessons">
                   {% for plan in act.plans %}
                   <option value="{{ plan.total_duration }} hours / {{ plan.lessons }} lessons">
@@ -196,9 +146,8 @@ sv:
             <div class="form-group">
               <label class="hidden-sm hidden-xs" for="dateInput">{{ form_i18n.start_date.label }}</label>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-fw fa-calendar"></i></span>
-                <input name="start_date" style="background-color: white;"
-                       type="text" class="form-control" readonly="true" id="dateInput" placeholder="{{ form_i18n.start_date.label }}">
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                <input name="start_date" type="text" class="form-control" readonly="true" id="dateInput" placeholder="{{ form_i18n.start_date.label }}">
               </div>
             </div>
 
@@ -206,7 +155,7 @@ sv:
             <div class="form-group">
               <label class="hidden-sm hidden-xs" for="participantsInput">{{ form_i18n.participants.label }}</label>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-fw fa-users"></i></span>
+                <span class="input-group-addon"><i class="fa fa-users"></i></span>
                 <select class="form-control" id="participantsInput" name="participants">
                   {% for num in (1..act.max_participants) %}
                   <option>
