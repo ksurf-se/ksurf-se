@@ -3,17 +3,29 @@ layout: default
 
 en: &DEFAULT_I18N
   packages_heading: packages
+  details_heading: details
+  included_heading: Included in all packages
+  supplements_heading: Optional supplements
+  excluding_heading: Not included
+  travel_heading: travel info
+  per_person: per person
 
 
 sv:
   <<: *DEFAULT_I18N
   packages_heading: resepaket
+  details_heading: mer information
+  included_heading: Ingår i alla paket
+  supplements_heading: Valfria tillägg
+  excluding_heading: Ingår inte
+  travel_heading: resinfo
+  per_person: per person
 ---
-
+ Not included
 {% assign camp = site.data.camps.camps | where:'slug', @page.role | first %}
 
 {% assign dest = camp.destination %}
-{% assign dest_i18n = dest[@page.lang] %}
+{% assign dest_i18n = dest[page.lang] %}
 {% assign site_i18n = site[page.lang] %}
 {% assign layout_i18n = layout[page.lang] %}
 
@@ -39,26 +51,52 @@ sv:
         </div>
         <ul class="list-group">
           <li class="list-group-item">
+
             <div class="row">
-              &nbsp; Huge calendar markers
-            </div>
-            <div class="row">
-              <div class="col-md-3 col-md-offset-1">
-                <img src="https://unsplash.it/600/400" class="img-responsive"/>
+              <div class="col-md-3 col-md-offset-1 col-sm-4">
+                <div class="row">
+                  <div class="col-xs-5 col-sm-5">
+                    <div class="panel panel-danger panel-date" style="width: 100%">
+                      <div class="panel-heading text-uppercase text-center">
+                        {{ camp.departure|date:"%Y" }}
+                      </div>
+                      <div class="panel-body text-uppercase text-center">
+                        <strong style="font-size: large">{{ camp.departure|date:"%d" }}</strong><br/>
+                        {{ camp.departure|date:"%b" }}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-2 col-sm-2 text-center" style="padding-top: 4rem">
+                    <i class="fa fa-2x fa-arrow-right hidden-xs"></i>
+                    <i class="fa fa-2x fa-long-arrow-right hidden-sm hidden-md hidden-lg"></i>
+                  </div>
+                  <div class="col-xs-5 col-sm-5 text-center">
+                    <div class="panel panel-danger panel-date"  style="width: 100%">
+                      <div class="panel-heading text-uppercase text-center">
+                        {{ camp.return|date:"%Y" }}
+                      </div>
+                      <div class="panel-body text-uppercase text-center">
+                        <strong style="font-size: large">{{ camp.return|date:"%d" }}</strong><br/>
+                        {{ camp.return|date:"%b" }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <div class="col-md-7">
-                <p>{{ dest_i18n.desc_1 }}</p>
+              <div class="col-md-7 col-sm-8">
+                {{ dest_i18n.desc_1 | markdownify }}
               </div>
             </div>
             <div class="row">
               &nbsp;
             </div>
             <div class="row">
-              <div class="col-md-3 col-md-push-8">
+              <div class="col-md-3 col-md-push-8 col-sm-4 col-sm-push-8">
                 <img src="https://unsplash.it/600/400" class="img-responsive"/>
               </div>
-              <div class="col-md-7 col-md-offset-1 col-md-pull-3">
-                <p>{{ dest_i18n.desc_2 }}</p>
+              <div class="col-md-7 col-md-offset-1 col-md-pull-3 col-sm-8 col-sm-pull-4">
+                {{ dest_i18n.desc_2 | markdownify }}
               </div>
 
             </div>
@@ -81,8 +119,95 @@ sv:
           </li>
 
           <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 col-sm-12">
+                <div class="row">
+                  {% for dpackhash in dest.packages %}
+                  {% assign pack_key = dpackhash[0] %}
+                  {% assign dpack = dpackhash[1] %}
+                  {% assign dpack_i18n = dpack[page.lang] %}
+                  {% assign cpack = camp.packages[pack_key] %}
+                  <div class="col-sm-6">
+
+                    <div class="panel panel-primary panel-pricing">
+                      <div class="panel-heading card-heading">
+                        <h3>
+                          {{dpack_i18n.heading}}
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+                        <div data-mh="camps-packages-mh-group">
+                          {{ dpack_i18n.desc | markdownify }}
+                        </div>
+                        <div class="text-center">
+                          <p class="price">{{ cpack.price }}</p>
+                          <p class="currency">SEK</p>
+                        </div>
+                        <a class="tel btn btn-lg btn-primary btn-block btn-booking-request-camp"
+                           href="#{{ pack_key }}"
+                           style="white-space: normal"
+                           data-toggle="modal"
+                           data-package="{{ pack_key }}"
+                           data-target="#booking-modal"
+                           ga-on="click"
+                           ga-event-category="conversion-subgoal"
+                           ga-event-label="camp-{{ camp.slug }}-{{ pack_key }}"
+                           ga-event-action="booking-form-opened">{{ site_i18n.buttons.request_booking }}</a>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+
+              </div>
+            </div>
           </li>
 
+          <li class="list-group-item card-heading">
+            <h3 class="text-center text-uppercase">
+              {{ layout_i18n.details_heading }}
+            </h3>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-5 col-md-offset-1">
+                <h3>{{ layout_i18n.included_heading }}</h3>
+                <ul class="fa-ul">
+                  {% for incl_item in dest.included[page.lang] %}
+                  <li><i class="fa-li fa fa-angle-double-right"></i> {{ incl_item }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <div class="col-md-5">
+                <h3>{{ layout_i18n.supplements_heading }}</h3>
+                <ul class="fa-ul">
+                  {% for extra_item in dest.extras[page.lang] %}
+                  <li><i class="fa-li fa fa-angle-double-right"></i> {{ extra_item }}</li>
+                  {% endfor %}
+                </ul>
+                <h3>{{ layout_i18n.excluding_heading }}</h3>
+                <ul class="fa-ul">
+                  {% for missing_item in dest.missing[page.lang] %}
+                  <li><i class="fa-li fa fa-angle-double-right"></i> {{ missing_item }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+
+          </li>
+          <li class="list-group-item card-heading">
+            <h3 class="text-center text-uppercase">
+              {{ layout_i18n.travel_heading }}
+            </h3>
+          </li>
+
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                {{ dest.travel_info[page.lang] | markdownify }}
+              </div>
+            </div>
+          </li>
         </ul>
 
       </div>
@@ -103,12 +228,12 @@ sv:
       </div>
 
         <div class="modal-body">
-          <form action="https://formden.com/post/NwbH7UeX/" method="post">
+          <form action="https://formden.com/post/H1Dy9Po6/" method="post">
 
             <div class="form-group">
               <label class="hidden-sm hidden-xs" for="nameInput">{{ form_i18n.name.label }}</label>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <span class="input-group-addon"><i class="fa fa-fw fa-user"></i></span>
                 <input name="name" type="text" class="form-control" id="nameInput" placeholder="{{ form_i18n.name.label }}">
               </div>
             </div>
@@ -116,7 +241,7 @@ sv:
             <div class="form-group">
               <label class="hidden-sm hidden-xs" for="emailInput">{{ form_i18n.email.label }}</label>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-at"></i></span>
+                <span class="input-group-addon"><i class="fa fa-fw fa-at"></i></span>
                 <input name="email" type="email" class="form-control" id="emailInput" placeholder="{{ form_i18n.email.label }}">
               </div>
             </div>
@@ -124,19 +249,23 @@ sv:
             <div class="form-group">
               <label class="hidden-sm hidden-xs" for="phoneInput">{{ form_i18n.phone.label }}</label>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                <span class="input-group-addon"><i class="fa fa-fw fa-phone"></i></span>
                 <input name="phone" type="text" class="form-control" id="phoneInput" placeholder="{{ form_i18n.phone.label }}">
               </div>
             </div>
 
             <div class="form-group">
-              <label class="hidden-sm hidden-xs" for="lessonsInput">{{ form_i18n.lessons.label }}</label>
+              <label class="hidden-sm hidden-xs" for="packageInput">{{ form_i18n.package.label }}</label>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-signal"></i></span>
-                <select class="form-control" id="lessonsInput" name="lessons">
-                  {% for plan in act.plans %}
-                  <option value="{{ plan.total_duration }} hours / {{ plan.lessons }} lessons">
-                  {{ plan.lessons }} {{ layout_i18n.lessons }} / {{ plan.total_duration }} {{ layout_i18n.hours }} / {{ plan.price }} SEK {% if act.max_participants > 1 %}pp{% endif %}
+                <span class="input-group-addon"><i class="fa fa-fw fa-suitcase"></i></span>
+                <select class="form-control" id="packageInput" name="package">
+                  {% for dpackhash in dest.packages %}
+                  {% assign pack_key = dpackhash[0] %}
+                  {% assign dpack = dpackhash[1] %}
+                  {% assign dpack_i18n = dpack[page.lang] %}
+                  {% assign cpack = camp.packages[pack_key] %}
+                  <option value="{{ pack_key }}">
+                    {{ dpack_i18n.heading }} {{ cpack.price }} SEK
                   </option>
                   {% endfor %}
                 </select>
@@ -144,20 +273,11 @@ sv:
             </div>
 
             <div class="form-group">
-              <label class="hidden-sm hidden-xs" for="dateInput">{{ form_i18n.start_date.label }}</label>
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                <input name="start_date" type="text" class="form-control" readonly="true" id="dateInput" placeholder="{{ form_i18n.start_date.label }}">
-              </div>
-            </div>
-
-            {% if act.max_participants > 1 %}
-            <div class="form-group">
               <label class="hidden-sm hidden-xs" for="participantsInput">{{ form_i18n.participants.label }}</label>
               <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                <span class="input-group-addon"><i class="fa fa-fw fa-users"></i></span>
                 <select class="form-control" id="participantsInput" name="participants">
-                  {% for num in (1..act.max_participants) %}
+                  {% for num in (1..10) %}
                   <option>
                     {{ num }} {{ form_i18n.participants.label }}
                   </option>
@@ -165,23 +285,21 @@ sv:
                 </select>
               </div>
             </div>
-            {% endif %}
 
             <div class="form-group">
               <label for="requestsInput">{{ form_i18n.special_requests.label }}</label>
               <textarea class="form-control" rows="3" id="requestsInput" name="special_requests"></textarea>
             </div>
             <p>
-              {% assign terms_page = site.pages | where: 'role', 'terms' | where: 'lang', @page.lang | first %}
-              <a href="{{ site.baseurl }}{{ terms_page.url }}" target="_blank">{{ terms_page.nav_text }}</a>
+
             </p>
-            <input type="hidden" name="subject" value="Booking request - {{ act.slug  }}">
+            <input type="hidden" name="subject" value="Camp form - {{ camp.slug }}">
             <button type="button" class="btn btn-default" data-dismiss="modal">{{ form_i18n.cancel }}</button>
             <button type="submit"
                     class="btn btn-primary pull-right"
                     ga-on="click"
                     ga-event-category="conversion-goal"
-                    ga-event-label="{{ act.group.slug }}-{{ act.slug }}-{{ plan.lessons }}"
+                    ga-event-label="camp-{{ camp.slug }}"
                     ga-event-action="booking-form-sent">{{ form_i18n.send }}</button>
 
           </form>

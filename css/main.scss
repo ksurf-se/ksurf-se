@@ -71,6 +71,11 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+/* Font awesome lists */
+#ksurf ul.fa-ul{
+  margin-left: 1.5em;
+}
+
 /* Nav Brand */
 #ksurf .navbar {
   text-transform: uppercase;
@@ -153,8 +158,13 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+#ksurf .panel.panel-date {
+  width: 5em;
+  margin-bottom: 10px;
+}
+
 #ksurf .panel.panel-pricing{
-  @extend .text-center;
+
   .panel-heading{
     .hours{
       font-weight: 600;
@@ -171,7 +181,7 @@ h1, h2, h3, h4, h5 {
   }
   .panel-body{
     .price{
-      font-weight: 600;
+      font-weight: 400;
       font-size: 4rem;
       margin: 0;
     }
@@ -193,6 +203,7 @@ h1, h2, h3, h4, h5 {
     }
   }
 }
+
 
 /* Footer */
 #footer {

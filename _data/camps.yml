@@ -32,27 +32,34 @@ destinations:
         We recommend a long 2/3mm or 3/4mm wetsuit.
 
     packages:
-      p1:
-        en:
-          heading: Level up
-          desc: |
-            Do you want to level up your riding skills and nail that special trick? We can help you!
-            Immerse in a week of intensive kiting with the support of our experienced coaches,
-            working together with you on your progression.
-            Lessons or coaching sessions with regular one-on-one feedback and analysis will take place every
-            day during this kite camp in Dakhla.
-            Required level is intermediate, advanced or expert.
-
-      p2:
+      ride_with_us:
         en:
           heading: Come ride with us
           desc: |
             Welcome to kite with us!
+
             If you have your own equipment and want to get the most out of your kiting,
-            come and join us. You will have a good time riding with others and we will
-            take care of practicalities. You will get accommodation, food, transfer,
+            come and join us.
+
+            You will have a good time riding with others and we will take care of practicalities.
+
+            You will get accommodation, food, transfer,
             storage for your gear and a lifeguard boat in the water.
+
             We also offer you on demand coaching with experienced instructors.
+      level_up:
+        en:
+          heading: Level up
+          desc: |
+            Do you want to level up your riding skills and nail that special trick? We can help you!
+
+            Immerse in a week of intensive kiting with the support of our experienced coaches,
+            working together with you on your progression.
+
+            Lessons or coaching sessions with regular one-on-one feedback and analysis will take place every
+            day during this kite camp in Dakhla.
+
+            Required level is intermediate, advanced or expert.
 
     included:
       en:
@@ -72,16 +79,18 @@ destinations:
 
     extras:
       en:
-        - Private room supplement 2400 SEK
-        - Kiting gear 300 EUR
+        - Private room 2400 SEK
+        - Kiting gear 300 EUR (~3000 SEK)
         - Extra kiting lessons, contact for pricing
 
     travel_info:
       en: |
         Apart from your passport there is no Visa needed to travel from Europe to Morocco and you will just be asked to
         fill out a form during entry and exit of the country.
+
         For other nationalities, please drop us a message and we will look it up for you.
-        No extra vaccinations are required for traveling to Morocco.
+
+        No extra vaccinations are required for traveling to Morocco. But check with your doctor before traveling.
 
 camps:
 
@@ -92,10 +101,10 @@ camps:
     return: 2017-11-24
     open: yes
     packages:
-      p1:
-        price: 14000 SEK
-      p2:
-        price: 11400 SEK
+      ride_with_us:
+        price: 11 400
+      level_up:
+        price: 14 000
     features: &dakhla_2017_11_features
       en:
         - Flight from Copenhagen
@@ -109,10 +118,10 @@ camps:
     return: 2018-03-19
     open: yes
     packages:
-      p1:
-        price: 14000 SEK
-      p2:
-        price: 11400 SEK
+      ride_with_us:
+        price: 11 400
+      level_up:
+        price: 14 000
     features:
       <<: *dakhla_2017_11_features
 

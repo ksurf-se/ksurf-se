@@ -72,7 +72,7 @@ sv:
           <div class="row">
             {% for plan in act.plans %}
             <div class="col-md-2 {% if forloop.first %}col-md-offset-1{% endif %}">
-              <div class="panel panel-primary panel-pricing">
+              <div class="panel panel-primary panel-pricing text-center">
                 <div class="panel-heading">
                   <p class="hours">{{ plan.total_duration }}</p>
                   <p class="hours-unit">{{ layout_i18n.hours }}</p>
@@ -226,13 +226,13 @@ sv:
               {% assign terms_page = site.pages | where: 'role', 'terms' | where: 'lang', @page.lang | first %}
               <a href="{{ site.baseurl }}{{ terms_page.url }}" target="_blank">{{ terms_page.nav_text }}</a>
             </p>
-            <input type="hidden" name="subject" value="Booking request - {{ act.slug  }}">
+            <input type="hidden" name="subject" value="Activity form - {{ act.slug  }}">
             <button type="button" class="btn btn-default" data-dismiss="modal">{{ form_i18n.cancel }}</button>
             <button type="submit"
                     class="btn btn-primary pull-right"
                     ga-on="click"
                     ga-event-category="conversion-goal"
-                    ga-event-label="{{ act.group.slug }}-{{ act.slug }}-{{ plan.lessons }}"
+                    ga-event-label="{{ act.group.slug }}-{{ act.slug }}"
                     ga-event-action="booking-form-sent">{{ form_i18n.send }}</button>
 
           </form>

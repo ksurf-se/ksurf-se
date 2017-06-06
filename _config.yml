@@ -41,14 +41,14 @@ en: &DEFAULT_I18N
 
   buttons:
     learn_more: learn more
-    info_booking: info & booking
-    request_booking: request booking
+    info_pricing: info & pricing
+    request_booking: get in touch
 
   booking_form:
-    heading: Booking request
+    heading: I am interested
     cancel: Cancel
     close: Close
-    send: Send booking request
+    send: Send request
     thank_you: |
       <strong>Thank you!</strong><br/>
       We'll get in touch as soon as possible.
@@ -61,6 +61,8 @@ en: &DEFAULT_I18N
       label: Phone
     lessons:
       label: Lessons
+    package:
+      label: Package
     start_date:
       label: Desired start date
     participants:
@@ -74,14 +76,14 @@ sv:
 
   buttons:
     learn_more: läs mer
-    info_booking: info & bokning
-    request_booking: bokning
+    info_booking: info & priser
+    request_booking: intresse-<br/>anmälan
 
   booking_form:
-    heading: Bokningsförfrågan
+    heading: Intresseanmälan
     cancel: Avbryt
     close: Stäng
-    send: Skicka bokningsförfrågan
+    send: Skicka förfrågan
     thank_you: |
       <strong>Tusen tack!</strong><br/>
       Vi hör av oss så fort vi kan.
@@ -94,6 +96,8 @@ sv:
       label: Mobil
     lessons:
       label: Lektioner
+    package:
+      label: Paket
     start_date:
       label: Önskat startdatum
     participants:
