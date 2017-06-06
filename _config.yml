@@ -76,7 +76,7 @@ sv:
 
   buttons:
     learn_more: läs mer
-    info_booking: info & priser
+    info_pricing: info & priser
     request_booking: intresse-<br/>anmälan
 
   booking_form:
