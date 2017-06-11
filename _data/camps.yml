@@ -5,7 +5,7 @@ destinations:
   - &dakhla
     slug: dakhla
     video: https://player.vimeo.com/video/165126773?autoplay=0
-    en:
+    en: &dakhla_en
       name: Dakhla
       heading: Explore kitesurfing paradise and make friends for life!
       pitch: |
@@ -30,10 +30,12 @@ destinations:
         so bring something to keep you warm.<br/>
         Water is a bit colder, between 16 and 20°C, make sure to bring the water wear of your choice.
         We recommend a long 2/3mm or 3/4mm wetsuit.
+    sv:
+      <<: *dakhla_en
 
     packages:
       ride_with_us:
-        en:
+        en: &ride_with_us_en
           heading: Come ride with us
           desc: |
             Welcome to kite with us!
@@ -47,8 +49,11 @@ destinations:
             storage for your gear and a lifeguard boat in the water.
 
             We also offer you on demand coaching with experienced instructors.
+        sv:
+          <<: *ride_with_us_en
+
       level_up:
-        en:
+        en: &level_up_en
           heading: Level up
           desc: |
             Do you want to level up your riding skills and nail that special trick? We can help you!
@@ -60,9 +65,11 @@ destinations:
             day during this kite camp in Dakhla.
 
             Required level is intermediate, advanced or expert.
+        sv:
+          <<: *level_up_en
 
     included:
-      en:
+      en: &included_en
         - Flight Copenhagen-Dakhla via Casablanca
         - Flight Dakhla-Copenhagen via Casablanca
         - Airport transfers
@@ -70,27 +77,31 @@ destinations:
         - 6 nights in shared bungallow at Hotel Dakhla Attitude incl. full board (breakfast, lunch and dinner)
         - 1 checked luggage (23 kg) and 1 hand luggage (8 kg) per person
         - Airport taxes and local tourist taxes
+      sv: *included_en
 
     missing:
-      en:
+      en: &missing_en
         - Beverages
-        - Kite equpment or luggage surcharge
+        - Kite equipment or luggage surcharge
         - Personal travel insurance
+      sv: *missing_en
 
     extras:
-      en:
+      en: &extras_en
         - Private room 2400 SEK
         - Kiting gear 300 EUR (~3000 SEK)
         - Extra kiting lessons, contact for pricing
+      sv: *extras_en
 
     travel_info:
-      en: |
+      en: &travel_info_en |
         Apart from your passport there is no Visa needed to travel from Europe to Morocco and you will just be asked to
         fill out a form during entry and exit of the country.
 
         For other nationalities, please drop us a message and we will look it up for you.
 
         No extra vaccinations are required for traveling to Morocco. But check with your doctor before traveling.
+      sv: *travel_info_en
 
 camps:
 
@@ -110,6 +121,7 @@ camps:
         - Flight from Copenhagen
         - 7 days, 1 day in Casablanca
         - From 11400 SEK per person
+      sv: *included_en
 
   dakhla_2018_03:
     slug: dakhla-2018-03

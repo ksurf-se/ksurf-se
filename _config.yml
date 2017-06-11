@@ -43,6 +43,7 @@ en: &DEFAULT_I18N
     learn_more: learn more
     info_pricing: info & pricing
     request_booking: get in touch
+    request_booking_short: get in touch
 
   booking_form:
     heading: I am interested
@@ -77,7 +78,8 @@ sv:
   buttons:
     learn_more: läs mer
     info_pricing: info & priser
-    request_booking: intresse-<br/>anmälan
+    request_booking: intresseanmälan
+    request_booking_short: intresse-<br/>anmälan
 
   booking_form:
     heading: Intresseanmälan

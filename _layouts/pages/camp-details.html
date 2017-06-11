@@ -21,7 +21,7 @@ sv:
   travel_heading: resinfo
   per_person: per person
 ---
- Not included
+
 {% assign camp = site.data.camps.camps | where:'slug', @page.role | first %}
 
 {% assign dest = camp.destination %}
@@ -32,7 +32,7 @@ sv:
 <div id="trips-heading"
      class="parallax-header larger"
      data-parallax="scroll"
-     data-image-src="https://unsplash.it/2000/800"
+     data-image-src="{{ site.baseurl }}/images/camps/banner-{{ dest.slug }}.jpg"
      data-natural-height="800"
      data-natural-width="2000">
   <h1>
@@ -93,7 +93,7 @@ sv:
             </div>
             <div class="row">
               <div class="col-md-3 col-md-push-8 col-sm-4 col-sm-push-8">
-                <img src="https://unsplash.it/600/400" class="img-responsive"/>
+                <img src="{{ site.baseurl }}/images/camps/card-alt-{{ dest.slug }}.jpg" class="img-responsive"/>
               </div>
               <div class="col-md-7 col-md-offset-1 col-md-pull-3 col-sm-8 col-sm-pull-4">
                 {{ dest_i18n.desc_2 | markdownify }}

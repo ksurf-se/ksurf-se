@@ -11,7 +11,7 @@ layout: default
 <div id="trips-heading"
      class="parallax-header larger"
      data-parallax="scroll"
-     data-image-src="https://unsplash.it/2000/800"
+     data-image-src="{{ site.baseurl }}/images/camps/banner-camps.jpg"
      data-natural-height="800"
      data-natural-width="2000">
   <h1>
@@ -35,7 +35,7 @@ layout: default
 
           <div class="row">
             <div class="col-sm-5 col-md-4 col-md-offset-1">
-              <img src="https://unsplash.it/600/400" class="img-responsive"/>
+              <img src="{{ site.baseurl }}/images/camps/card-{{ dest.slug }}.jpg" class="img-responsive"/>
             </div>
             <div class="col-sm-7 col-md-6">
               <h3 class="text-uppercase heading-compact">
@@ -72,16 +72,16 @@ layout: default
                       </div>
                     </div>
                     <div class="media-body">
-                      <p>
+                      <ul class="fa-ul">
                         {% for feature in trip.features[page.lang] %}
-                        <i class="fa fa-fw fa-angle-double-right"></i> {{ feature }}<br/>
+                        <li><i class="fa-li fa fa-angle-double-right"></i> {{ feature }}</li>
                         {% endfor %}
-                      </p>
+                      </ul>
                     </div>
                   </div>
                   <p>
                     <a class="btn btn-lg btn-primary btn-block"
-                       href="{{ site.baseurl }}{{ camp_page.url  }}">
+                       href="{{ site.baseurl }}{{ camp_page.url }}">
                       {{ site_i18n.buttons.info_pricing }}
                     </a>
                   </p>
