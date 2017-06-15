@@ -11,8 +11,8 @@ our_story_section:
   heading: Our story
   
   founded_by: |
-    KSURF was founded by Yassine and Julia.<br/>
-    Our goal is to create a meeting place for people of all ages and make the ocean accessible to everybody!<br/>
+    KSURF was founded by Yassine and Julia.
+    Our goal is to create a meeting place for people of all ages and make the ocean accessible to everybody!<br/><br/>
     We offer Kitesurfing lessons, SUP fitness/SUP, rentals and activities for children, like surfing and skimboarding.
     
   about_yassine: |
@@ -38,4 +38,7 @@ location_section:
 activities_section:
   heading: Activities
 
+kite_camps_section:
+  heading: Kite camps
+  sub_heading: upcoming camps
 ---

@@ -4,6 +4,7 @@ layout: default
 
 {% assign i18n = site[@page.lang] %}
 {% assign activities_page = site.pages | where: 'role', 'activities' | where: 'lang', @page.lang | first %}
+{% assign camps_page = site.pages | where: 'role', 'camps' | where: 'lang', @page.lang | first %}
 
 <div class="parallax-header large"
      data-parallax="scroll"
@@ -65,6 +66,58 @@ layout: default
   </div>
 </section>
 
+
+{% assign section = page.kite_camps_section %}
+<div class="parallax-header"
+     data-parallax="scroll"
+     data-image-src="/images/camps/banner-camps.jpg"
+     data-natural-height="800"
+     data-natural-width="2000">
+  <h1>
+    {{ section.heading }}
+  </h1>
+</div>
+
+{% assign open_camps = site.data.camps.camps | where: 'open', true | group_by_exp:'camp','camp.destination.slug' %}
+
+<section class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="panel panel-default">
+        <div class="panel-heading card-heading">
+          <h3>
+           {{ section.sub_heading }}
+          </h3>
+        </div>
+        <div class="panel-body">
+          {% for group in open_camps %}
+          {% assign dest = site.data.camps.destinations | where: 'slug', group.name | first %}
+          {% assign dest_i18n = dest[page.lang] %}
+
+          <div class="row">
+            <div class="col-sm-5" data-mh="camps-mh-group">
+              <img src="{{ site.baseurl }}/images/camps/card-{{ dest.slug }}.jpg" class="img-responsive"/>
+            </div>
+            <div class="col-sm-7" data-mh="camps-mh-group">
+              <h3 class="text-uppercase heading-compact">
+                {{ dest_i18n.name }}
+              </h3>
+              <p>
+                {{ dest_i18n.pitch }}
+              </p>
+              <a class="btn btn-lg btn-primary btn-block"
+                 href="{{ site.baseurl }}{{ camps_page.url }}">
+                {{ i18n.buttons.learn_more }}
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% assign section = page.our_story_section %}
 <div class="parallax-header"
      data-parallax="scroll"
@@ -78,56 +131,75 @@ layout: default
 
 <section class="container">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
-        <div class="panel-body text-center home-text">
-          {{ section.founded_by | safe }}
+        <div class="panel-heading card-heading">
+          <h3 class="text-uppercase">
+            KSurf
+          </h3>
         </div>
-
+        <div class="panel-body home-text">
+          <div class="row">
+            <div class="col-xs-12 text-center ">
+              {{ section.founded_by | mardownify }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row">
 
-    <div class="col-md-4 col-md-offset-2">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-heading card-heading">
           <h3 class="text-uppercase">
             Yassine
           </h3>
         </div>
-        <div class="panel-body card-body">
-          <img src="{{ site.baseurl }}/images/home/home-yassine.jpg" alt="Yassine" class="img-responsive center-block"/>
-        </div>
-        <div class="panel-footer" data-mh="about-us-mh-group">
-          <p class="home-text">
-            {{ section.about_yassine | safe }}
-          </p>
-          <p class="home-text">
-            {{ section.more_about_yassine | safe }}
-          </p>
+        <div class="panel-body home-text">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="{{ site.baseurl }}/images/home/home-yassine.jpg" alt="Yassine" class="img-responsive"/>
+            </div>
+            <div class="col-md-8">
+              <p class="home-text">
+                {{ section.about_yassine | safe }}
+              </p>
+              <p class="home-text">
+                {{ section.more_about_yassine | safe }}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="col-md-4">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-heading card-heading">
           <h3 class="text-uppercase">
             Julia
           </h3>
         </div>
-        <div class="panel-body card-body">
-          <img src="{{ site.baseurl }}/images/home/home-julia.jpg" alt="Julia" class="img-responsive center-block"/>
-        </div>
-        <div class="panel-footer" data-mh="about-us-mh-group">
-          <p class="home-text">
-            {{ section.about_julia | safe }}
-          </p>
+        <div class="panel-body home-text">
+          <div class="row">
+            <div class="col-md-4 col-md-push-8">
+              <img src="{{ site.baseurl }}/images/home/home-julia.jpg" alt="Julia" class="img-responsive"/>
+            </div>
+            <div class="col-md-8 col-md-pull-4">
+              <p class="home-text">
+                {{ section.about_julia | safe }}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 </section>
 
 
@@ -155,7 +227,7 @@ layout: default
           </iframe>
         </div>
         <div class="panel-footer text-center">
-            {{ section.text }}
+          {{ section.text }}
         </div>
       </div>
     </div>

@@ -12,8 +12,8 @@ our_story_section:
   heading: Om oss
   
   founded_by: |
-    KSURF grundades av Yassine och Julia.<br/>
-    Vårt mål är att skapa en mötesplats för människor i alla åldrar och att göra havet tillgängligt för alla!<br/>
+    KSURF grundades av Yassine och Julia.
+    Vårt mål är att skapa en mötesplats för människor i alla åldrar och att göra havet tillgängligt för alla!<br/><br/>
     Vi erbjuder Kitesurfing lektioner, SUP fitness/SUP, uthyrning samt aktiviteter för barn, som surfing och skimboarding.
 
   about_yassine: |
@@ -37,5 +37,9 @@ location_section:
 
 activities_section:
   heading: Aktiviteter
+
+kite_camps_section:
+  heading: Kite camps
+  sub_heading: kommande kite camps
   
 ---

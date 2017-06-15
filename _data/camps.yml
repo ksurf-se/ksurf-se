@@ -117,11 +117,11 @@ camps:
       level_up:
         price: 14 000
     features: &dakhla_2017_11_features
-      en:
+      en:  &dakhla_2017_11_features_en
         - Flight from Copenhagen
         - 7 days, 1 day in Casablanca
         - From 11400 SEK per person
-      sv: *included_en
+      sv: *dakhla_2017_11_features_en
 
   dakhla_2018_03:
     slug: dakhla-2018-03
