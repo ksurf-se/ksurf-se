@@ -1,4 +1,4 @@
-{% assign home_page = site.pages | where: 'role', 'home' | where: 'lang', @page.lang | first %}
+{% assign home_page = site.pages | where: 'role', 'home' | where: 'lang', page.lang | first %}
 
 <header>
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav navbar-right pull-right">
           {% for nav in site.nav %}
-            {% assign nav_page = site.pages | where: 'role', nav | where: 'lang', @page.lang | first %}
+            {% assign nav_page = site.pages | where: 'role', nav | where: 'lang', page.lang | first %}
 
             <li {% if nav_page.role==page.role %}class="active"{% endif %}>
               <a class="text-right" href="{{ site.baseurl }}{{ nav_page.url }}">{{ nav_page.nav_text }}</a>
@@ -38,8 +38,8 @@
                aria-haspopup="true"
                aria-expanded="false"><span class="flag-link flag-{{ page.lang }}">&nbsp;</span> <span class="caret"></span></a>
             <ul class="dropdown-menu lang-selector navbar-right">
-              {% assign sv_page = site.pages | where: 'role', @page.role | where: 'lang', 'sv' | first %}
-              {% assign en_page = site.pages | where: 'role', @page.role | where: 'lang', 'en' | first %}
+              {% assign sv_page = site.pages | where: 'role', page.role | where: 'lang', 'sv' | first %}
+              {% assign en_page = site.pages | where: 'role', page.role | where: 'lang', 'en' | first %}
               <li class="text-right">
                 <a href="{{ site.baseurl }}{{ sv_page.url }}">
                   Svenska <span class="flag-link flag-sv">&nbsp;</span>

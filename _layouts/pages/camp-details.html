@@ -22,7 +22,7 @@ sv:
   per_person: per person
 ---
 
-{% assign camp = site.data.camps.camps | where:'slug', @page.role | first %}
+{% assign camp = site.data.camps.camps | where:'slug', page.role | first %}
 
 {% assign dest = camp.destination %}
 {% assign dest_i18n = dest[page.lang] %}

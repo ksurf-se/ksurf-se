@@ -6,7 +6,7 @@ layout: default
 
 {% for group in activity_groups %}
 
-{% assign group_i18n = group[@page.lang] %}
+{% assign group_i18n = group[page.lang] %}
 
 <div id="{{ group.slug }}-activities"
      class="parallax-header"
@@ -23,8 +23,8 @@ layout: default
 <section class="container">
   <div class="row">
     {% for act in activities %}
-    {% assign activity_page = site.pages | where: 'role', @act.slug | where: 'lang', @page.lang | first %}
-    {% assign act_i18n = act[@page.lang] %}
+    {% assign activity_page = site.pages | where: 'role', act.slug | where: 'lang', page.lang | first %}
+    {% assign act_i18n = act[page.lang] %}
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading card-heading text-" data-mh="activities-{{ group.slug }}-mh-heading-group">

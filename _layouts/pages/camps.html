@@ -56,7 +56,7 @@ layout: default
               <div class="row">
                 {% for trip in group.items %}
                 {% assign trip_i18n = trip[page.lang] %}
-                {% assign camp_page = site.pages | where: 'role', @trip.slug | where: 'lang', @page.lang | first %}
+                {% assign camp_page = site.pages | where: 'role', trip.slug | where: 'lang', page.lang | first %}
                 <div class="col-md-6">
 
                   <div class="media">

@@ -5,6 +5,8 @@ sass:
   style: compressed
 exclude:
   - Makefile
+  - .idea
+  - .git
 
 # Setup
 title: KSurf

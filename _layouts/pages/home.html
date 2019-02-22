@@ -2,9 +2,9 @@
 layout: default
 ---
 
-{% assign i18n = site[@page.lang] %}
-{% assign activities_page = site.pages | where: 'role', 'activities' | where: 'lang', @page.lang | first %}
-{% assign camps_page = site.pages | where: 'role', 'camps' | where: 'lang', @page.lang | first %}
+{% assign i18n = site[page.lang] %}
+{% assign activities_page = site.pages | where: 'role', 'activities' | where: 'lang', page.lang | first %}
+{% assign camps_page = site.pages | where: 'role', 'camps' | where: 'lang', page.lang | first %}
 
 <div class="parallax-header large"
      data-parallax="scroll"
@@ -42,7 +42,7 @@ layout: default
   <div class="row">
 
     {% for group in activity_groups %}
-    {% assign group_i18n = group[@page.lang] %}
+    {% assign group_i18n = group[page.lang] %}
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading card-heading">
