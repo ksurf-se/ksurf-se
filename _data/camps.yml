@@ -155,8 +155,8 @@ camps:
         price: 14 000
     features:
       en: &dakhla_2019_05_17_features_en
-        - Flight from Copenhagen
         - 10 days
+        - Flight from Copenhagen
         - From 9 000 SEK per person
       sv: *dakhla_2019_05_17_features_en
 
@@ -173,8 +173,8 @@ camps:
         price: 14 000
     features:
       en: &dakhla_2019_09_21_features_en
-        - Flight from Copenhagen
         - 10 days
+        - Flight from Copenhagen
         - From 9 000 SEK per person
       sv: *dakhla_2019_09_21_features_en
 
@@ -191,8 +191,8 @@ camps:
         price: 14 000
     features:
       en: &dakhla_2019_09_29_features_en
-        - Flight from Copenhagen
         - 8 days
+        - Flight from Copenhagen
         - From 9 000 SEK per person
       sv: *dakhla_2019_09_29_features_en
 
@@ -209,8 +209,8 @@ camps:
         price: 14 000
     features:
       en: &dakhla_2019_10_25_features_en
-        - Flight from Copenhagen
         - 7 days
+        - Flight from Copenhagen
         - From 11 000 SEK per person
       sv: *dakhla_2019_10_25_features_en
 
@@ -227,8 +227,8 @@ camps:
         price: 14 000
     features:
       en: &dakhla_2019_11_29_features_en
-        - Flight from Copenhagen
         - 10 days
+        - Flight from Copenhagen
         - From 8 000 SEK per person
       sv: *dakhla_2019_11_29_features_en
 
