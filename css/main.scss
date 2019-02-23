@@ -161,6 +161,18 @@ h1, h2, h3, h4, h5 {
 #ksurf .panel.panel-date {
   width: 5em;
   margin-bottom: 10px;
+
+  .panel-heading {
+    padding: 5px;
+  }
+
+  .panel-body {
+    padding: 5px;
+  }
+}
+
+#ksurf .media-camp-trip {
+  padding-top: 1.6em;
 }
 
 #ksurf .panel.panel-pricing{

@@ -4,6 +4,9 @@ layout: default
 en: &DEFAULT_I18N
   packages_heading: packages
   details_heading: details
+  weather_heading: weather, wind and water
+  accommodation_heading: accommodation and food
+  activities_heading: activities
   included_heading: Included in all packages
   supplements_heading: Optional supplements
   excluding_heading: Not included
@@ -15,6 +18,9 @@ sv:
   <<: *DEFAULT_I18N
   packages_heading: resepaket
   details_heading: mer information
+  weather_heading: väder, vind och vatten
+  accommodation_heading: boende och mat
+  activities_heading: aktiviteter
   included_heading: Ingår i alla paket
   supplements_heading: Valfria tillägg
   excluding_heading: Ingår inte
@@ -22,7 +28,7 @@ sv:
   per_person: per person
 ---
 
-{% assign camp = site.data.camps.camps | where:'slug', page.role | first %}
+{% assign camp = site.data.camps.camps | where: "slug", page.role | first %}
 
 {% assign dest = camp.destination %}
 {% assign dest_i18n = dest[page.lang] %}
@@ -46,19 +52,19 @@ sv:
       <div class="panel panel-default">
         <div class="panel-heading card-heading">
           <h3>
-           {{ dest_i18n.name }} {{ camp.departure | date:'%b %Y' }}
+           {{ dest_i18n.name }} {{ camp.departure | date:'%d %b %Y' }}
           </h3>
         </div>
         <ul class="list-group">
           <li class="list-group-item">
 
             <div class="row">
-              <div class="col-md-3 col-md-offset-1 col-sm-4">
+              <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
                 <div class="row">
                   <div class="col-xs-5 col-sm-5">
-                    <div class="panel panel-danger panel-date" style="width: 100%">
+                    <div class="panel panel-success panel-date" style="width: 100%">
                       <div class="panel-heading text-uppercase text-center">
-                        {{ camp.departure|date:"%Y" }}
+                        <i class="fas fa-plane-departure"></i>
                       </div>
                       <div class="panel-body text-uppercase text-center">
                         <strong style="font-size: large">{{ camp.departure|date:"%d" }}</strong><br/>
@@ -71,9 +77,9 @@ sv:
                     <i class="fa fa-2x fa-long-arrow-right hidden-sm hidden-md hidden-lg"></i>
                   </div>
                   <div class="col-xs-5 col-sm-5 text-center">
-                    <div class="panel panel-danger panel-date"  style="width: 100%">
+                    <div class="panel panel-warning panel-date"  style="width: 100%">
                       <div class="panel-heading text-uppercase text-center">
-                        {{ camp.return|date:"%Y" }}
+                        <i class="fas fa-plane-arrival"></i>
                       </div>
                       <div class="panel-body text-uppercase text-center">
                         <strong style="font-size: large">{{ camp.return|date:"%d" }}</strong><br/>
@@ -84,34 +90,15 @@ sv:
                 </div>
 
               </div>
-              <div class="col-md-7 col-sm-8">
-                {{ dest_i18n.desc_1 | markdownify }}
-              </div>
             </div>
-            <div class="row">
-              &nbsp;
-            </div>
-            <div class="row">
-              <div class="col-md-3 col-md-push-8 col-sm-4 col-sm-push-8">
-                <img src="{{ site.baseurl }}/images/camps/card-alt-{{ dest.slug }}.jpg" class="img-responsive"/>
-              </div>
-              <div class="col-md-7 col-md-offset-1 col-md-pull-3 col-sm-8 col-sm-pull-4">
-                {{ dest_i18n.desc_2 | markdownify }}
-              </div>
 
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 col-sm-12">
+                {{ dest_i18n.pitch | markdownify }}
+              </div>
             </div>
           </li>
-          {% if dest.video != null %}
-          <li class="list-group-item">
-           <div class="row">
-             <div class="col-md-10 col-md-offset-1">
-               <div class="embed-responsive embed-responsive-16by9">
-                 <iframe class="embed-responsive-item" src="{{ dest.video }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-               </div>
-             </div>
-           </div>
-          </li>
-          {% endif %}
+
           <li class="list-group-item card-heading">
             <h3 class="text-center text-uppercase">
               {{ layout_i18n.packages_heading }}
@@ -158,10 +145,62 @@ sv:
                   </div>
                   {% endfor %}
                 </div>
-
               </div>
             </div>
           </li>
+
+          <li class="list-group-item card-heading">
+            <h3 class="text-center text-uppercase">
+              {{ layout_i18n.weather_heading }}
+            </h3>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-3 col-md-push-8 col-sm-4 col-sm-push-8">
+                <img src="{{ site.baseurl }}/images/camps/card-alt-{{ dest.slug }}.jpg" class="img-responsive"/>
+              </div>
+              <div class="col-md-7 col-md-offset-1 col-md-pull-3 col-sm-8 col-sm-pull-4">
+                {{ dest_i18n.weather | markdownify }}
+              </div>
+            </div>
+          </li>
+
+          <li class="list-group-item card-heading">
+            <h3 class="text-center text-uppercase">
+              {{ layout_i18n.accommodation_heading }}
+            </h3>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-4 col-sm-5 col-md-offset-1">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe width="560" height="315" src="//www.youtube.com/embed/crlwi0fN0FM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-7">
+                {{ dest_i18n.accommodation_1 | markdownify }}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 col-sm-12 col-md-offset-1">
+                {{ dest_i18n.accommodation_2 | markdownify }}
+              </div>
+            </div>
+          </li>
+
+          <li class="list-group-item card-heading">
+            <h3 class="text-center text-uppercase">
+              {{ layout_i18n.activities_heading }}
+            </h3>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-md-10 col-sm-12 col-md-offset-1">
+                {{ dest_i18n.activities | markdownify }}
+              </div>
+            </div>
+          </li>
+
 
           <li class="list-group-item card-heading">
             <h3 class="text-center text-uppercase">
@@ -193,8 +232,8 @@ sv:
                 </ul>
               </div>
             </div>
-
           </li>
+
           <li class="list-group-item card-heading">
             <h3 class="text-center text-uppercase">
               {{ layout_i18n.travel_heading }}

@@ -4,32 +4,63 @@ destinations:
 
   - &dakhla
     slug: dakhla
-    video: https://player.vimeo.com/video/165126773?autoplay=0
+    video: https://player.vimeo.com/video/292892342?background=1
     en: &dakhla_en
       name: Dakhla
       heading: Explore kitesurfing paradise and make friends for life!
       pitch: |
-        Join Liquid Force Kite Camp in Dakhla for an unforgettable experience.
-        Spend a week surrounded by the Swedish Liquid Force team and  people  who share the same passion.
-        In a spot where you have endless space and conditions for any kiting discipline.
+        Dakhla is south Morocco's kitesurfing paradise!
 
-      desc_1: |
-        Join the Swedish Liquid Force Team on a trip to the one of the best kitesurfing spots in the world: Dakhla.<br/>
-        It’s a kitesurfing paradise, located at the south of Morocco.<br/>
-        Your accommodation is right on the beach itself. What else!?<br/>
-        A huge lagoon set in a lunar landscape with reliable thermal winds blowing across the bay make it a stunning
-        playground with plenty of space for everybody.<br/>
-        The lagoon offers conditions for every level and every style.<br/>
+        White sand beaches, a windy turquoise lagoon and ocean with waves offer dream conditions for surfing & kiting!<br/>
+        Spend a week or two surrounded by our experienced team and friendly people all of share the same passion.
+
+        In a spot with endless space and conditions for any kiting discipline.
+
+      weather: |
+        Warm & sunny weather and an average air temperatures around 22°C, with a bit cooler evenings.
+
+        Perfect thermal winds are created due to cold nights and quick heating of land compared to water during the day,
+        building up to 20 knots (11m/s) and more throughout the day.
+
+        The water is usyally between 16 and 20°C, bring the water wear of your choice. We recommend a long 2/3mm or 3/4mm wetsuit.
+
+      accommodation_1: |
+        #### Accommodation
+        We will stay at the best camp in Dakhla. The hotel is located on the Dakhla lagoon, 100 metres from the shore
+        between the ocean and the desert. Relax and enjoy breathtaking experiences of south Morocco.
+
+        Dakhla Club Hotel & Spa offers comfortable accommodation right at the lagoon and the kitespot. <br/>
+
+      accommodation_2: |
+        #### Food
+        La Table du Capitaine restaurant pays tribute to healthy and delicious dining.  <br/>
+        Its local and Mediterranean flavours create delicious fusions between the land and the sea.
+        Meals are served as a buffet in the main part of the restaurant which opens onto the lagoon and is
+        filled with the bright sounds of birdsong. At sunset, everyone recharges their batteries under nine majestic
+        chandeliers in simple earth-like shapes. <br/>
+        Highly symbolic.
+
+        All your meals during the stay at Dakhla Club Hotel & Spa are included in the price. <br/>
+        3 delicious healthy meals will be served daily. But please let us know if you have any specific dietary requirements.
+
+      activities: |
+        A huge lagoon set in a lunar landscape with reliable thermal winds blowing across the bay make this a stunning
+        playground with plenty of space for everybody. Dakhla offers conditions for every level and all water based activities.
         Perfectly flat water, waist deep locations and great waves just beyond the foreland.
 
-      desc_2: |
-        Depending on your weight, the wind conditions are most suitible for 6m to 11m kite sizes.
-        Due to cold nights and quick heating of land compared to water during the day, perfect thermal winds are created,
-        building up to 20 knots (11m/s) and more throughout the day.<br/>
-        Average air temperatures are 22°C in winter, however it gets quite chilly in the evening,
-        so bring something to keep you warm.<br/>
-        Water is a bit colder, between 16 and 20°C, make sure to bring the water wear of your choice.
-        We recommend a long 2/3mm or 3/4mm wetsuit.
+        During your stay in Dakhla, you can practice kitesurfing, surf, fish, mountain bike, relax in the Spa or on the beach. <br/>
+        If you are a surfer you can venture to the surf spot, and when the spot is flat without wind, take a stand up paddle board
+        and enjoy the clear turquoise waters.
+
+        We will  also organize a Downwind for those who are IKO level 3 to the Dragon Island, Speed Spot and the White Dune.
+
+        #### Example schedule
+        - 09:15 Breakfast
+        - 10:30 Free time for kitesurfing, surfing, paddling, sightseeing, beach & other activities
+        - 13:00 Lunch and relax
+        - 14.30 Free time for kitesurfing, surfing, paddling, sightseeing, beach & other activities
+        - 20:00 Dinner and relax
+
     sv:
       <<: *dakhla_en
 
@@ -49,6 +80,7 @@ destinations:
             storage for your gear and a lifeguard boat in the water.
 
             We also offer you on demand coaching with experienced instructors.
+
         sv:
           <<: *ride_with_us_en
 
@@ -65,6 +97,8 @@ destinations:
             day during this kite camp in Dakhla.
 
             Required level is intermediate, advanced or expert.
+            If you are a beginner you feel need more lessons contact us and will help you to find a right package for you.
+
         sv:
           <<: *level_up_en
 
@@ -73,17 +107,20 @@ destinations:
         - Flight Copenhagen-Dakhla via Casablanca
         - Flight Dakhla-Copenhagen via Casablanca
         - Airport transfers
-        - 1 night in shared room at Hotel Le Lido in Casablanca incl. breakfast.
-        - 6 nights in shared bungallow at Hotel Dakhla Attitude incl. full board (breakfast, lunch and dinner)
+        - Shared bungalow at Hotel Dakhla Club & SPA incl. full board (breakfast, lunch and dinner)
         - 1 checked luggage (23 kg) and 1 hand luggage (8 kg) per person
+        - 1 checked kitesurf luggage (23 kg)
         - Airport taxes and local tourist taxes
       sv: *included_en
 
     missing:
       en: &missing_en
-        - Beverages
-        - Kite equipment or luggage surcharge
-        - Personal travel insurance
+        - Drinks at the bar & alcoholic beverages
+        - Kite equipment rental
+        - Luggage surcharge
+        - Travel and health insurance
+        - Kitesurfing lessons (unless provided by package)
+        - Additional activities like excursions, downwinder or other services
       sv: *missing_en
 
     extras:
@@ -105,12 +142,102 @@ destinations:
 
 camps:
 
+  dakhla_2019_05_17:
+    slug: dakhla-2019-05-17
+    destination: *dakhla
+    departure: 2019-05-17
+    return: 2019-05-26
+    open: yes
+    packages:
+      ride_with_us:
+        price: 9 000
+      level_up:
+        price: 14 000
+    features:
+      en: &dakhla_2019_05_17_features_en
+        - Flight from Copenhagen
+        - 10 days, 1 day in Casablanca
+        - From 9 000 SEK per person
+      sv: *dakhla_2019_05_17_features_en
+
+  dakhla_2019_09_21:
+    slug: dakhla-2019-09-21
+    destination: *dakhla
+    departure: 2019-09-21
+    return: 2019-09-30
+    open: yes
+    packages:
+      ride_with_us:
+        price: 9 000
+      level_up:
+        price: 14 000
+    features:
+      en: &dakhla_2019_09_21_features_en
+        - Flight from Copenhagen
+        - 10 days, 1 day in Casablanca
+        - From 9 000 SEK per person
+      sv: *dakhla_2019_09_21_features_en
+
+  dakhla_2019_09_29:
+    slug: dakhla-2019-09-29
+    destination: *dakhla
+    departure: 2019-09-29
+    return: 2019-10-05
+    open: yes
+    packages:
+      ride_with_us:
+        price: 9 000
+      level_up:
+        price: 14 000
+    features:
+      en: &dakhla_2019_09_29_features_en
+        - Flight from Copenhagen
+        - 8 days, 1 day in Casablanca
+        - From 9 000 SEK per person
+      sv: *dakhla_2019_09_29_features_en
+
+  dakhla_2019_10_25:
+    slug: dakhla-2019-10-25
+    destination: *dakhla
+    departure: 2019-10-25
+    return: 2019-11-01
+    open: yes
+    packages:
+      ride_with_us:
+        price: 11 000
+      level_up:
+        price: 14 000
+    features:
+      en: &dakhla_2019_10_25_features_en
+        - Flight from Copenhagen
+        - 7 days, 1 day in Casablanca
+        - From 11 000 SEK per person
+      sv: *dakhla_2019_10_25_features_en
+
+  dakhla_2019_11_29:
+    slug: dakhla-2019-11-29
+    destination: *dakhla
+    departure: 2019-11-29
+    return: 2019-12-08
+    open: yes
+    packages:
+      ride_with_us:
+        price: 8 000
+      level_up:
+        price: 14 000
+    features:
+      en: &dakhla_2019_11_29_features_en
+        - Flight from Copenhagen
+        - 10 days, 1 day in Casablanca
+        - From 8 000 SEK per person
+      sv: *dakhla_2019_11_29_features_en
+
   dakhla_2017_11:
     slug: dakhla-2017-11
     destination: *dakhla
     departure: 2017-11-17
     return: 2017-11-24
-    open: yes
+    open: no
     packages:
       ride_with_us:
         price: 11 400
@@ -128,7 +255,7 @@ camps:
     destination: *dakhla
     departure: 2018-03-11
     return: 2018-03-19
-    open: yes
+    open: no
     packages:
       ride_with_us:
         price: 11 400
