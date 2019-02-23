@@ -156,7 +156,7 @@ camps:
     features:
       en: &dakhla_2019_05_17_features_en
         - Flight from Copenhagen
-        - 10 days, 1 day in Casablanca
+        - 10 days
         - From 9 000 SEK per person
       sv: *dakhla_2019_05_17_features_en
 
@@ -174,7 +174,7 @@ camps:
     features:
       en: &dakhla_2019_09_21_features_en
         - Flight from Copenhagen
-        - 10 days, 1 day in Casablanca
+        - 10 days
         - From 9 000 SEK per person
       sv: *dakhla_2019_09_21_features_en
 
@@ -192,7 +192,7 @@ camps:
     features:
       en: &dakhla_2019_09_29_features_en
         - Flight from Copenhagen
-        - 8 days, 1 day in Casablanca
+        - 8 days
         - From 9 000 SEK per person
       sv: *dakhla_2019_09_29_features_en
 
@@ -210,7 +210,7 @@ camps:
     features:
       en: &dakhla_2019_10_25_features_en
         - Flight from Copenhagen
-        - 7 days, 1 day in Casablanca
+        - 7 days
         - From 11 000 SEK per person
       sv: *dakhla_2019_10_25_features_en
 
@@ -228,7 +228,7 @@ camps:
     features:
       en: &dakhla_2019_11_29_features_en
         - Flight from Copenhagen
-        - 10 days, 1 day in Casablanca
+        - 10 days
         - From 8 000 SEK per person
       sv: *dakhla_2019_11_29_features_en
 

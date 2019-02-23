@@ -29,7 +29,7 @@ clean:
 	rm -rf _site
 
 serve:
-	docker run -it --rm --label=jekyll --volume=$(PWD):/srv/jekyll -p 4000:4000 jekyll/jekyll:$(JEKYLL_VERSION) jekyll serve --drafts
+	docker run -it --rm --label=jekyll --volume=$(PWD):/srv/jekyll -p 4000:4000 jekyll/jekyll:$(JEKYLL_VERSION) jekyll serve --drafts --trace
 
 help:
 	docker run -it --rm --label=jekyll jekyll/jekyll:$(JEKYLL_VERSION) jekyll --help
