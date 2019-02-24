@@ -326,6 +326,23 @@ sv:
             </div>
 
             <div class="form-group">
+              <label class="hidden-sm hidden-xs" for="airportInput">{{ form_i18n.airport.label }}</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-fw fa-plane-departure"></i></span>
+                <select class="form-control" id="airportInput" name="airport">
+
+                  <option>
+                    Copenhagen (Kastrup)
+                  </option>
+                  <option>
+                    Stockholm (Arlandla)
+                  </option>
+
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
               <label for="requestsInput">{{ form_i18n.special_requests.label }}</label>
               <textarea class="form-control" rows="3" id="requestsInput" name="special_requests"></textarea>
             </div>

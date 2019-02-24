@@ -70,6 +70,8 @@ en: &DEFAULT_I18N
       label: Desired start date
     participants:
       label: Participants
+    airport:
+      label: Flight from
     special_requests:
       label: Special requests
 
@@ -106,6 +108,8 @@ sv:
       label: Önskat startdatum
     participants:
       label: Deltagare
+    airport:
+      label: Flyg från
     special_requests:
       label: Önskemål
 
