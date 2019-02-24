@@ -44,7 +44,7 @@ destinations:
         3 delicious healthy meals will be served daily. But please let us know if you have any specific dietary requirements.
 
       activities: |
-        A huge lagoon set in a lunar landscape with reliable thermal winds blowing across the bay make this a stunning
+        A huge lagoon in the shape of a lunar crescent with reliable thermal winds blowing across the bay make this a stunning
         playground with plenty of space for everybody. Dakhla offers conditions for every level and all water based activities.
         Perfectly flat water, waist deep locations and great waves just beyond the foreland.
 
@@ -104,8 +104,8 @@ destinations:
 
     included:
       en: &included_en
-        - Flight Copenhagen-Dakhla via Casablanca
-        - Flight Dakhla-Copenhagen via Casablanca
+        - Flight Stockholm/Copenhagen -> Dakhla via Casablanca
+        - Flight Dakhla -> Stockholm/Copenhagen via Casablanca
         - Airport transfers
         - Shared bungalow at Hotel Dakhla Club & SPA incl. full board (breakfast, lunch and dinner)
         - 1 checked luggage (23 kg) and 1 hand luggage (8 kg) per person
@@ -132,6 +132,8 @@ destinations:
 
     travel_info:
       en: &travel_info_en |
+        *If flying from Stockholm, we will spend first and last night in Casablanca, due to connecting flights to/from Dakhla.
+
         Apart from your passport there is no Visa needed to travel from Europe to Morocco and you will just be asked to
         fill out a form during entry and exit of the country.
 
@@ -155,8 +157,8 @@ camps:
         price: 14 000
     features:
       en: &dakhla_2019_05_17_features_en
-        - 10 days
-        - Flight from Copenhagen
+        - 10 days, 9 nights in Morocco
+        - Flight from Copenhagen or Stockholm*
         - From 9 000 SEK per person
       sv: *dakhla_2019_05_17_features_en
 
@@ -173,8 +175,8 @@ camps:
         price: 14 000
     features:
       en: &dakhla_2019_09_21_features_en
-        - 10 days
-        - Flight from Copenhagen
+        - 10 days, 9 nights in Morocco
+        - Flight from Copenhagen or Stockholm*
         - From 9 000 SEK per person
       sv: *dakhla_2019_09_21_features_en
 
@@ -191,8 +193,8 @@ camps:
         price: 14 000
     features:
       en: &dakhla_2019_09_29_features_en
-        - 8 days
-        - Flight from Copenhagen
+        - 8 days, 7 nights in Morocco
+        - Flight from Copenhagen or Stockholm*
         - From 9 000 SEK per person
       sv: *dakhla_2019_09_29_features_en
 
@@ -209,8 +211,8 @@ camps:
         price: 14 000
     features:
       en: &dakhla_2019_10_25_features_en
-        - 7 days
-        - Flight from Copenhagen
+        - 7 days, 6 nights in Morocco
+        - Flight from Copenhagen or Stockholm*
         - From 11 000 SEK per person
       sv: *dakhla_2019_10_25_features_en
 
@@ -227,8 +229,8 @@ camps:
         price: 14 000
     features:
       en: &dakhla_2019_11_29_features_en
-        - 10 days
-        - Flight from Copenhagen
+        - 10 days, 9 nights in Morocco
+        - Flight from Copenhagen or Stockholm*
         - From 8 000 SEK per person
       sv: *dakhla_2019_11_29_features_en
 
