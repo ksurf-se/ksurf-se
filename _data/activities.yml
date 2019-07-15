@@ -242,16 +242,16 @@ activities:
         price: 1500
         total_duration: 2
       - lessons: 2
-        price: 2800
+        price: 2400
         total_duration: 4
       - lessons: 3
-        price: 3900
+        price: 3800
         total_duration: 6
       - lessons: 4
-        price: 4800
+        price: 4100
         total_duration: 8
       - lessons: 5
-        price: 5000
+        price: 4900
         total_duration: 10
 
   - &kitesurf-group
@@ -299,19 +299,19 @@ activities:
 
     plans:
       - lessons: 1
-        price: 1080
+        price: 900
         total_duration: 2
       - lessons: 2
-        price: 2040
+        price: 1630
         total_duration: 4
       - lessons: 3
-        price: 2600
+        price: 2080
         total_duration: 6
       - lessons: 4
-        price: 3200
+        price: 2560
         total_duration: 8
       - lessons: 5
-        price: 3500
+        price: 2800
         total_duration: 10
 
   - &surf-private
@@ -346,19 +346,19 @@ activities:
 
     plans:
       - lessons: 1
-        price: 1400
+        price: 1540
         total_duration: 2
       - lessons: 2
-        price: 2750
+        price: 3080
         total_duration: 4
       - lessons: 3
-        price: 4000
+        price: 4400
         total_duration: 6
       - lessons: 4
-        price: 5000
+        price: 5500
         total_duration: 8
       - lessons: 5
-        price: 6000
+        price: 6380
         total_duration: 10
 
   - &surf-semi
@@ -396,19 +396,19 @@ activities:
 
     plans:
       - lessons: 1
-        price: 800
+        price: 880
         total_duration: 2
       - lessons: 2
-        price: 1550
+        price: 1760
         total_duration: 4
       - lessons: 3
-        price: 2200
+        price: 2420
         total_duration: 6
       - lessons: 4
-        price: 3000
+        price: 3300
         total_duration: 8
       - lessons: 5
-        price: 3600
+        price: 3960
         total_duration: 10
 
   - &surf-group
@@ -446,19 +446,19 @@ activities:
 
     plans:
       - lessons: 1
-        price: 500
+        price: 550
         total_duration: 2
       - lessons: 2
-        price: 950
+        price: 1100
         total_duration: 4
       - lessons: 3
-        price: 1400
+        price: 1540
         total_duration: 6
       - lessons: 4
-        price: 1900
+        price: 2090
         total_duration: 8
       - lessons: 5
-        price: 2300
+        price: 2530
         total_duration: 10
 
   - &sup-fitness
@@ -563,41 +563,41 @@ activities:
         price: 1200
         total_duration: 5
 
-  - &sup-kids
-    slug: sup-kids
-    group: *sup
-    max_participants: 16
-
-    en:
-      heading: SUP for kids
-      features:
-        - All equipment provided
-        - From 6 years and up
-        - 1 hour lessons
-        - From 250 SEK / pp
-
-    sv:
-      heading: SUP för barn
-      features:
-        - All utrustning ingår
-        - Från 6 år
-        - 1 timme per lektion
-        - Från 250 SEK / pp
-
-    plans:
-      - lessons: 1
-        price: 250
-        total_duration: 1
-      - lessons: 2
-        price: 500
-        total_duration: 2
-      - lessons: 3
-        price: 750
-        total_duration: 3
-      - lessons: 4
-        price: 890
-        total_duration: 4
-      - lessons: 5
-        price: 1000
-        total_duration: 5
+#  - &sup-kids
+#    slug: sup-kids
+#    group: *sup
+#    max_participants: 16
+#
+#    en:
+#      heading: SUP for kids
+#      features:
+#        - All equipment provided
+#        - From 6 years and up
+#        - 1 hour lessons
+#        - From 250 SEK / pp
+#
+#    sv:
+#      heading: SUP för barn
+#      features:
+#        - All utrustning ingår
+#        - Från 6 år
+#        - 1 timme per lektion
+#        - Från 250 SEK / pp
+#
+#    plans:
+#      - lessons: 1
+#        price: 250
+#        total_duration: 1
+#      - lessons: 2
+#        price: 500
+#        total_duration: 2
+#      - lessons: 3
+#        price: 750
+#        total_duration: 3
+#      - lessons: 4
+#        price: 890
+#        total_duration: 4
+#      - lessons: 5
+#        price: 1000
+#        total_duration: 5
 ...

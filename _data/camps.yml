@@ -144,24 +144,6 @@ destinations:
 
 camps:
 
-  dakhla_2019_05_17:
-    slug: dakhla-2019-05-17
-    destination: *dakhla
-    departure: 2019-05-17
-    return: 2019-05-26
-    open: yes
-    packages:
-      ride_with_us:
-        price: 9 000
-      level_up:
-        price: 14 000
-    features:
-      en: &dakhla_2019_05_17_features_en
-        - 10 days, 9 nights in Morocco
-        - Flight from Copenhagen or Stockholm*
-        - From 9 000 SEK per person
-      sv: *dakhla_2019_05_17_features_en
-
   dakhla_2019_09_21:
     slug: dakhla-2019-09-21
     destination: *dakhla
@@ -265,5 +247,23 @@ camps:
         price: 14 000
     features:
       <<: *dakhla_2017_11_features
+
+  dakhla_2019_05_17:
+    slug: dakhla-2019-05-17
+    destination: *dakhla
+    departure: 2019-05-17
+    return: 2019-05-26
+    open: no
+    packages:
+      ride_with_us:
+        price: 9 000
+      level_up:
+        price: 14 000
+    features:
+      en: &dakhla_2019_05_17_features_en
+        - 10 days, 9 nights in Morocco
+        - Flight from Copenhagen or Stockholm*
+        - From 9 000 SEK per person
+      sv: *dakhla_2019_05_17_features_en
 
 ...
