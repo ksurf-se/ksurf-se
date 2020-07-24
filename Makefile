@@ -28,7 +28,7 @@ clean:
 	rm -rf .venv
 	rm -rf _site
 
-serve:
+serve: build
 	docker run -it --rm --label=jekyll --volume=$(PWD):/srv/jekyll -p 4000:4000 jekyll/jekyll:$(JEKYLL_VERSION) jekyll serve --drafts --trace
 
 help:
