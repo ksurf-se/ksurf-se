@@ -10,19 +10,11 @@ endef
 
 export HELP_MESSAGE
 
-PYTHON_BIN := .venv/bin
 PWD := $(shell pwd)
 CACHE_TIME := 3000000
 JEKYLL_VERSION := 3.8
 
 .PHONY: serve help
-
-$(PYTHON_BIN)/activate:
-	test -d $(PYTHON_BIN) || virtualenv .venv
-	$(PYTHON_BIN)/pip install s3cmd awscli
-	touch $(PYTHON_BIN)/activate
-
-.venv: $(PYTHON_BIN)/activate
 
 clean:
 	rm -rf .venv
@@ -38,21 +30,12 @@ build:
 	docker run -it --rm --label=jekyll --volume=$(PWD):/srv/jekyll jekyll/jekyll:$(JEKYLL_VERSION) jekyll clean
 	docker run -it --rm --label=jekyll --volume=$(PWD):/srv/jekyll jekyll/jekyll:$(JEKYLL_VERSION) jekyll build
 
-deploy-test: check-aws-env .venv build
-	$(PYTHON_BIN)/s3cmd sync --add-header="Cache-Control:max-age=$(CACHE_TIME)" --no-mime-magic --no-preserve --delete-removed --delete-after ./_site/ s3://test.ksurf.se/
-	$(PYTHON_BIN)/aws configure set preview.cloudfront true
-	$(PYTHON_BIN)/aws cloudfront create-invalidation --distribution-id E3KM3KMSV24EGT --paths '/*'
+deploy-test: build
+	aws-vault exec ksurf --no-session -- aws s3 sync --cache-control max-age=$(CACHE_TIME),public --delete ./_site/ s3://test.ksurf.se/
+	AWS_PAGER="" aws-vault exec ksurf --no-session -- aws cloudfront create-invalidation --distribution-id E3KM3KMSV24EGT --paths "/*"
+	echo "Done"
 
-deploy: check-aws-env .venv build
-	$(PYTHON_BIN)/s3cmd sync --add-header="Cache-Control:max-age=$(CACHE_TIME)" --no-mime-magic --no-preserve --delete-removed --delete-after ./_site/ s3://www.ksurf.se/
-	$(PYTHON_BIN)/aws configure set preview.cloudfront true
-	$(PYTHON_BIN)/aws cloudfront create-invalidation --distribution-id E1J6DO1K0O6IEA --paths '/*'
-
-
-check-aws-env:
-ifndef AWS_ACCESS_KEY_ID
-	$(error AWS_ACCESS_KEY_ID is undefined)
-endif
-ifndef AWS_SECRET_ACCESS_KEY
-	$(error AWS_SECRET_ACCESS_KEY is undefined)
-endif
+deploy: build
+	aws-vault exec ksurf --no-session -- aws s3 sync --cache-control max-age=$(CACHE_TIME),public --delete ./_site/ s3://www.ksurf.se/
+	AWS_PAGER="" aws-vault exec ksurf --no-session -- aws cloudfront create-invalidation --distribution-id E1J6DO1K0O6IEA --paths "/*"
+	echo "Done"
