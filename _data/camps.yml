@@ -149,7 +149,7 @@ camps:
     destination: *dakhla
     departure: 2019-09-21
     return: 2019-09-30
-    open: yes
+    open: no
     packages:
       ride_with_us:
         price: 9 000
@@ -167,7 +167,7 @@ camps:
     destination: *dakhla
     departure: 2019-09-29
     return: 2019-10-05
-    open: yes
+    open: no
     packages:
       ride_with_us:
         price: 9 000
@@ -185,7 +185,7 @@ camps:
     destination: *dakhla
     departure: 2019-10-25
     return: 2019-11-01
-    open: yes
+    open: no
     packages:
       ride_with_us:
         price: 11 000
@@ -203,7 +203,7 @@ camps:
     destination: *dakhla
     departure: 2019-11-29
     return: 2019-12-08
-    open: yes
+    open: no
     packages:
       ride_with_us:
         price: 8 000

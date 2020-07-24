@@ -53,6 +53,13 @@ layout: default
               <h4 class="text-uppercase heading-compact">
                 {{ page.upcoming_section.available_dates }} {{ page.upcoming_section.for_year }}
               </h4>
+              {% if open_camps == empty %}
+              <div class="row">
+                <div class="col-md-12">
+                  {{ page.upcoming_section.no_camps_available }}
+                </div>
+              </div>
+              {% endif %}
               <div class="row">
                 {% for trip in open_camps %}
                 {% assign trip_i18n = trip[page.lang] %}
